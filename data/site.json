@@ -1,0 +1,51 @@
+{
+  "_comment": "Single source of truth for business facts. Run `npm run build` after editing; it rewrites these values everywhere they appear across the four pages, including JSON-LD, Open Graph tags and sitemap.xml.",
+
+  "name": "Thalathoor Heritage Homestay",
+  "shortName": "Thalathoor",
+  "tagline": "Heritage Homestay",
+  "loaderTagline": "A heritage kept green",
+  "foundingYear": 2013,
+
+  "baseUrl": "https://www.thalathoorheritage.com",
+
+  "contact": {
+    "whatsapp": "919447489949",
+    "phoneDisplay": "+91 94474 89949",
+    "phoneHref": "+919447489949",
+    "phoneSchema": "+91-9447489949",
+    "email": "k.shyamala.nair@gmail.com"
+  },
+
+  "address": {
+    "street": "Thalathoor Heritage, Perumbala",
+    "locality": "Kasaragod",
+    "region": "Kerala",
+    "postalCode": "671317",
+    "country": "IN",
+    "display": "Thalathoor Heritage, Perumbala, Kasaragod, Kerala 671317"
+  },
+
+  "map": {
+    "link": "https://maps.app.goo.gl/TSk8uLsRXq9odp1N7",
+    "embed": "https://www.google.com/maps?q=Thalathoor+Heritage+Homestay+Kasaragod+Kerala&output=embed"
+  },
+
+  "links": {
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1809068-d4415061-Reviews-Thalathoor_Heritage-Kasaragod_Kasaragod_District_Kerala.html",
+    "instagram": "https://www.instagram.com/thalathoor_heritage_/",
+    "facebook": null
+  },
+
+  "credit": {
+    "text": "Handcrafted by",
+    "name": "Octane",
+    "url": "https://octane.team"
+  },
+
+  "gettingHere": [
+    { "place": "Kasaragod Railway Station", "distance": "~6 km · 20 min" },
+    { "place": "Mangaluru airport", "distance": "~65 km · 1.5 hr" },
+    { "place": "Kannur airport", "distance": "~91 km · 2.5 hr" }
+  ]
+}

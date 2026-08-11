@@ -7,6 +7,7 @@ before deploying** — the npm setup exists only to regenerate image, video and
 font assets, whose output is committed.
 
 ```
+data/           EDIT CONTENT HERE — see "Editing content" below
 index.html      landing page: hero, house, rooms, kitchen, nature, events, gallery, FAQ, contact
 menu.html       full menu by course
 events.html     supper club, retreats, weddings
@@ -16,6 +17,41 @@ css/fonts.css   GENERATED @font-face declarations — do not edit
 js/main.js      one IIFE; every feature is guarded so the file serves all pages
 assets/         images/ (sources) · images/opt/ (generated) · fonts/ · logo/ · icons/
 ```
+
+## Editing content
+
+Most things you would want to change live in `data/*.json`. Edit the JSON, then:
+
+```sh
+npm run build
+```
+
+That rewrites the generated regions of the four pages, the JSON-LD block and
+`sitemap.xml`. Do not hand-edit anything between `<!-- @data:name -->` and
+`<!-- /@data:name -->` — the next build overwrites it.
+
+| File | Controls |
+|---|---|
+| `site.json` | phone, WhatsApp, email, address, domain, map, TripAdvisor and Instagram URLs, the "Handcrafted by" credit, and the Getting-here distances |
+| `reviews.json` | the six review cards, the trust strip figures, and the JSON-LD rating |
+| `rooms.json` | the two room cards, including prices |
+| `faq.json` | the nine Practical-information entries |
+| `menu.json` | the sixteen dish cards on menu.html, grouped by course |
+| `signature-dishes.json` | the six-dish grid in the kitchen section |
+| `gallery.json` | gallery tiles: image, tags, label, alt, height |
+
+Scalar facts are handled differently from repeating blocks. The WhatsApp number,
+`tel:` link, email, canonical domain and JSON-LD phone are *normalised in place*
+wherever they appear — matched by shape rather than by a template placeholder.
+That is why every page stays valid, standalone HTML you can still open directly.
+Changing `contact.whatsapp` and rebuilding updates all 17 links at once.
+
+Prose — the house story, the kitchen copy, section headings — is hand-written in
+the HTML and is never touched by the build.
+
+`gallery.json` deliberately holds no `srcset`, `width` or `height`: those come
+from `assets/images/opt/manifest.json` at build time. To add a photo, drop it in
+`assets/images/`, run `npm run assets`, and add one entry.
 
 ## Running locally
 
@@ -44,16 +80,18 @@ Two things worth configuring on the host:
 Run after adding or replacing anything in `assets/images/`:
 
 ```sh
+npm run build           # data/*.json -> the four HTML pages + JSON-LD + sitemap
 npm run assets          # images + video + logo
 npm run assets:images   # AVIF + JPEG variants -> assets/images/opt/
 npm run assets:video    # hero loop + poster
 npm run assets:svg      # re-minify logo.svg
-npm run check           # fail on broken asset refs; warn on unreferenced files
+npm run check           # drift check + broken asset refs
 ```
 
-`npm run check` is the useful one to wire into CI. It catches references to
-files that do not exist — the bug that had `gallery.html` pointing at an
-`outhome2.jpg` that was never in the repo.
+`npm run check` is the one to wire into CI. It does two things: fails if any page
+has drifted from `data/` (someone edited inside a marker instead of the JSON),
+and fails on references to files that do not exist — the bug that had
+`gallery.html` pointing at an `outhome2.jpg` that was never in the repo.
 
 ### Why these formats
 
@@ -107,15 +145,16 @@ All three families are SIL OFL 1.1; see `assets/fonts/OFL.txt`.
   variables, never a hard-coded family name.
 - **Gallery `data-tag`** is a space-separated token list, so one tile can appear
   under several filters. Every `data-filter` button must match at least one tile.
+- **Content goes in `data/`, not the HTML.** If you find yourself editing the
+  same fact in two places, it belongs in `data/site.json`.
 
 ## Known gaps
 
-- Instagram and Facebook links were removed from the footer; no URLs were
-  available. The TripAdvisor link is live.
-- The trust strip and JSON-LD `aggregateRating` carry hard-coded figures
-  (4.8 / 5, 115 reviews, #1 of 11). Update all three places together when the
-  listing moves: the strip in `index.html`, the "Read all 115 reviews" link
-  text, and the JSON-LD block.
+- No Facebook URL yet; `links.facebook` in `site.json` is `null` and the link is
+  simply omitted. Set it and rebuild to add it back.
+- TripAdvisor figures (4.8 / 5, 115 reviews, #1 of 11) live in
+  `data/reviews.json`. One edit there updates the trust strip, the "Read all N
+  reviews" link and the JSON-LD `aggregateRating` together.
 - `assets/logo/logo-full.png` and the UUID-named PNG are unreferenced source
   masters, kept deliberately. They are never served, so they cost page weight
   nothing — `npm run check` lists them as unreferenced.

@@ -411,6 +411,11 @@ button{font-family:inherit}
 .site-footer__since{font-size:12px;color:var(--ink-faint)}
 .site-footer__links{display:flex;gap:20px;font-size:14px}
 .site-footer__copy{font-size:12px;color:var(--ink-faint)}
+.site-footer__credit{font-size:12px;color:var(--ink-faint)}
+.site-footer__credit a{color:var(--ink-soft);font-weight:600}
+.site-footer__credit a:hover{color:var(--green)}
+/* Inner pages carry only the credit line, not the full footer row. */
+.site-footer--slim{padding:30px 0 40px;text-align:center;border-top:1px solid var(--line);margin-top:20px}
 
 /* ---------- Sticky WhatsApp ---------- */
 .wa-fab{

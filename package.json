@@ -6,11 +6,13 @@
   "license": "UNLICENSED",
   "type": "module",
   "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "check": "node scripts/build-pages.mjs --check && node scripts/check-assets.mjs",
     "assets": "npm run assets:images && npm run assets:video && npm run assets:svg",
     "assets:images": "node scripts/optimize-images.mjs",
     "assets:video": "node scripts/optimize-video.mjs",
     "assets:svg": "svgo --precision=2 --multipass -q assets/logo/logo.svg -o assets/logo/logo.svg",
-    "check": "node scripts/check-assets.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs",
     "serve": "node scripts/serve.mjs"
   },
   "devDependencies": {

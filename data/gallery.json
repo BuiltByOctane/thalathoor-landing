@@ -1,0 +1,303 @@
+{
+  "_comment": "Gallery tiles. srcset, width and height are generated from assets/images/opt/manifest.json at build time, so only these fields are maintained by hand. `tags` is a list; every filter button must be covered by at least one tile.",
+  "filters": [
+    "All",
+    "Heritage",
+    "Nature",
+    "Food",
+    "Video"
+  ],
+  "tiles": [
+    {
+      "image": "main.mp4",
+      "type": "video",
+      "tags": [
+        "Heritage",
+        "Video"
+      ],
+      "label": "Video",
+      "alt": "Walkthrough video of the house and grounds",
+      "height": 340
+    },
+    {
+      "image": "home1.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Front elevation of the heritage house",
+      "height": 320
+    },
+    {
+      "image": "nature1.jpg",
+      "type": "image",
+      "tags": [
+        "Nature"
+      ],
+      "label": "Nature",
+      "alt": "Paddy fields beside the house",
+      "height": 320
+    },
+    {
+      "image": "room2.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The Thamburatti room interior",
+      "height": 280
+    },
+    {
+      "image": "food5.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 360
+    },
+    {
+      "image": "5.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The heritage house among arecanut trees",
+      "height": 260
+    },
+    {
+      "image": "4.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Verandah of the heritage house",
+      "height": 300
+    },
+    {
+      "image": "food4.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 240
+    },
+    {
+      "image": "food3.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 300
+    },
+    {
+      "image": "room1.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The Royal Thampuraan room, with a double bed and natural light",
+      "height": 340
+    },
+    {
+      "image": "2.jpg",
+      "type": "image",
+      "tags": [
+        "Nature"
+      ],
+      "label": "Nature",
+      "alt": "The natural rainwater pond on the property",
+      "height": 240
+    },
+    {
+      "image": "food1.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 280
+    },
+    {
+      "image": "food2.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 300
+    },
+    {
+      "image": "food6.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 260
+    },
+    {
+      "image": "6.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The heritage house and courtyard",
+      "height": 320
+    },
+    {
+      "image": "1.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The heritage house at Thalathoor seen from the garden",
+      "height": 320
+    },
+    {
+      "image": "food7.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 260
+    },
+    {
+      "image": "food8.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 260
+    },
+    {
+      "image": "food9.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 260
+    },
+    {
+      "image": "food10.jpg",
+      "type": "image",
+      "tags": [
+        "Food"
+      ],
+      "label": "Food",
+      "alt": "A home-cooked Kasaragod dish served at Thalathoor",
+      "height": 260
+    },
+    {
+      "image": "inhome1.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Interior room with a teakwood ceiling",
+      "height": 260
+    },
+    {
+      "image": "inhome2.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Sitting area inside the heritage house",
+      "height": 260
+    },
+    {
+      "image": "inhome3.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Interior of the heritage house with local handicrafts",
+      "height": 260
+    },
+    {
+      "image": "outhome1.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Exterior of the heritage house",
+      "height": 260
+    },
+    {
+      "image": "home2.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The heritage house from the garden side",
+      "height": 260
+    },
+    {
+      "image": "pattayapora.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Paddy field beside the property",
+      "height": 260
+    },
+    {
+      "image": "pond2.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "The natural rainwater pond inside the property",
+      "height": 260
+    },
+    {
+      "image": "chinnu1.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Around the heritage house",
+      "height": 260
+    },
+    {
+      "image": "chinnu2.jpg",
+      "type": "image",
+      "tags": [
+        "Heritage"
+      ],
+      "label": "Heritage",
+      "alt": "Around the heritage house",
+      "height": 260
+    }
+  ]
+}

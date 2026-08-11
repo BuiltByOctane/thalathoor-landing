@@ -1,0 +1,53 @@
+{
+  "_comment": "Room cards on index.html. Prices are seasonal; editing priceFrom here also updates the prefilled WhatsApp enquiry text.",
+  "rooms": [
+    {
+      "name": "Royal Thampuraan",
+      "tier": "Premium",
+      "meta": "250 sq ft · 1 room",
+      "description": "The most spacious room in the house, defined by its ancestral character and soft natural light. A comfortable bed, air-conditioning and an attached bathroom make for a quiet, restful stay.",
+      "image": "room1.jpg",
+      "facts": [
+        {
+          "label": "Sleeps",
+          "value": "2 adults"
+        },
+        {
+          "label": "Opens to",
+          "value": "Plantation view"
+        },
+        {
+          "label": "Amenities",
+          "value": "AC · attached bath · wifi"
+        }
+      ],
+      "priceFrom": "₹6,500",
+      "priceUnit": "/ night",
+      "ctaLabel": "Check dates"
+    },
+    {
+      "name": "Thamburatti",
+      "tier": "Standard",
+      "meta": "200 sq ft · 1 room",
+      "description": "A cosy room with an intimate layout and the calm, old-world character of the house. Thoughtfully arranged for quiet comfort within a warm heritage setting.",
+      "image": "room2.jpg",
+      "facts": [
+        {
+          "label": "Sleeps",
+          "value": "2 adults"
+        },
+        {
+          "label": "Opens to",
+          "value": "Plantation view"
+        },
+        {
+          "label": "Amenities",
+          "value": "AC · attached bath · wifi · fan"
+        }
+      ],
+      "priceFrom": "₹6,000",
+      "priceUnit": "/ night",
+      "ctaLabel": "Check dates"
+    }
+  ]
+}

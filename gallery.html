@@ -73,14 +73,19 @@
     </header>
 
     <div class="gallery-filters">
-      <button class="gallery-filter is-active" data-filter="All">All</button>
-      <button class="gallery-filter" data-filter="Heritage">Heritage</button>
-      <button class="gallery-filter" data-filter="Nature">Nature</button>
-      <button class="gallery-filter" data-filter="Food">Food</button>
-      <button class="gallery-filter" data-filter="Video">Video</button>
+      <!-- @data:gallery-filters -->
+      <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+      <button class="gallery-filter is-active" data-filter="All" aria-pressed="true">All</button>
+      <button class="gallery-filter" data-filter="Heritage" aria-pressed="false">Heritage</button>
+      <button class="gallery-filter" data-filter="Nature" aria-pressed="false">Nature</button>
+      <button class="gallery-filter" data-filter="Food" aria-pressed="false">Food</button>
+      <button class="gallery-filter" data-filter="Video" aria-pressed="false">Video</button>
+      <!-- /@data:gallery-filters -->
     </div>
 
     <div class="masonry">
+      <!-- @data:gallery -->
+      <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
       <div class="masonry-item masonry-item--h340" data-tag="Heritage Video"
         data-lightbox-src="assets/images/main.mp4" data-lightbox-type="video"
         data-lightbox-poster="assets/images/opt/hero-poster.jpg">
@@ -89,114 +94,108 @@
           <img class="media-fill" src="assets/images/opt/hero-poster.jpg"
             width="640" height="360" alt="Walkthrough video of the house and grounds"
             fetchpriority="high" decoding="async">
-        </picture><span class="teaser-item__play"></span><span
-          class="masonry-item__tag">Video</span></div>
-      <div class="masonry-item masonry-item--h320" data-tag="Heritage" data-lightbox-src="assets/images/home1.jpg" data-lightbox-type="image">
+        </picture><span class="teaser-item__play"></span><span class="masonry-item__tag">Video</span></div>
+      <div class="masonry-item masonry-item--h320" data-tag="Heritage"
+        data-lightbox-src="assets/images/home1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/home1-480.avif 480w, assets/images/opt/home1-768.avif 768w, assets/images/opt/home1-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/home1-768.jpg"
             srcset="assets/images/opt/home1-480.jpg 480w, assets/images/opt/home1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="Front elevation of the heritage house"
             fetchpriority="high" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span></div>
-      <div class="masonry-item masonry-item--h320" data-tag="Nature" data-lightbox-src="assets/images/nature1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h320" data-tag="Nature"
+        data-lightbox-src="assets/images/nature1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/nature1-480.avif 480w, assets/images/opt/nature1-768.avif 768w, assets/images/opt/nature1-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/nature1-768.jpg"
             srcset="assets/images/opt/nature1-480.jpg 480w, assets/images/opt/nature1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="Paddy fields beside the house"
             fetchpriority="high" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Nature</span></div>
-      <div class="masonry-item masonry-item--h280" data-tag="Heritage" data-lightbox-src="assets/images/room2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Nature</span></div>
+      <div class="masonry-item masonry-item--h280" data-tag="Heritage"
+        data-lightbox-src="assets/images/room2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/room2-480.avif 480w, assets/images/opt/room2-768.avif 768w, assets/images/opt/room2-959.avif 959w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/room2-768.jpg"
             srcset="assets/images/opt/room2-480.jpg 480w, assets/images/opt/room2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="959" height="1280" alt="The Thamburatti room interior"
             fetchpriority="high" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h360" data-tag="Food" data-lightbox-src="assets/images/food5.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h360" data-tag="Food"
+        data-lightbox-src="assets/images/food5.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food5-480.avif 480w, assets/images/opt/food5-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food5-480.jpg"
             srcset="assets/images/opt/food5-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/5.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/5.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/5-480.avif 480w, assets/images/opt/5-768.avif 768w, assets/images/opt/5-800.avif 800w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/5-768.jpg"
             srcset="assets/images/opt/5-480.jpg 480w, assets/images/opt/5-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="800" height="600" alt="The heritage house among arecanut trees"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h300" data-tag="Heritage" data-lightbox-src="assets/images/4.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h300" data-tag="Heritage"
+        data-lightbox-src="assets/images/4.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/4-480.avif 480w, assets/images/opt/4-768.avif 768w, assets/images/opt/4-800.avif 800w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/4-768.jpg"
             srcset="assets/images/opt/4-480.jpg 480w, assets/images/opt/4-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="800" height="600" alt="Verandah of the heritage house"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h240" data-tag="Food" data-lightbox-src="assets/images/food4.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h240" data-tag="Food"
+        data-lightbox-src="assets/images/food4.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food4-480.avif 480w, assets/images/opt/food4-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food4-480.jpg"
             srcset="assets/images/opt/food4-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h300" data-tag="Food" data-lightbox-src="assets/images/food3.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h300" data-tag="Food"
+        data-lightbox-src="assets/images/food3.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food3-480.avif 480w, assets/images/opt/food3-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food3-480.jpg"
             srcset="assets/images/opt/food3-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span></div>
-      <div class="masonry-item masonry-item--h340" data-tag="Heritage" data-lightbox-src="assets/images/room1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h340" data-tag="Heritage"
+        data-lightbox-src="assets/images/room1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/room1-480.avif 480w, assets/images/opt/room1-768.avif 768w, assets/images/opt/room1-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/room1-768.jpg"
             srcset="assets/images/opt/room1-480.jpg 480w, assets/images/opt/room1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="The Royal Thampuraan room, with a double bed and natural light"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h240" data-tag="Nature" data-lightbox-src="assets/images/2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h240" data-tag="Nature"
+        data-lightbox-src="assets/images/2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/2-480.avif 480w, assets/images/opt/2-768.avif 768w, assets/images/opt/2-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/2-768.jpg"
             srcset="assets/images/opt/2-480.jpg 480w, assets/images/opt/2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="The natural rainwater pond on the property"
             loading="lazy" decoding="async">
-        </picture><span class="masonry-item__tag">Nature</span>
-      </div>
-      <div class="masonry-item masonry-item--h280" data-tag="Food" data-lightbox-src="assets/images/food1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Nature</span></div>
+      <div class="masonry-item masonry-item--h280" data-tag="Food"
+        data-lightbox-src="assets/images/food1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food1-480.avif 480w, assets/images/opt/food1-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food1-480.jpg"
             srcset="assets/images/opt/food1-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span></div>
-      <div class="masonry-item masonry-item--h300" data-tag="Food" data-lightbox-src="assets/images/food2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h300" data-tag="Food"
+        data-lightbox-src="assets/images/food2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food2-480.avif 480w, assets/images/opt/food2-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food2-480.jpg"
@@ -204,170 +203,151 @@
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
         </picture><span class="masonry-item__tag">Food</span></div>
-      <div class="masonry-item masonry-item--h260" data-tag="Food" data-lightbox-src="assets/images/food6.jpg" data-lightbox-type="image">
+      <div class="masonry-item masonry-item--h260" data-tag="Food"
+        data-lightbox-src="assets/images/food6.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food6-480.avif 480w, assets/images/opt/food6-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food6-480.jpg"
             srcset="assets/images/opt/food6-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h320" data-tag="Heritage" data-lightbox-src="assets/images/6.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h320" data-tag="Heritage"
+        data-lightbox-src="assets/images/6.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/6-480.avif 480w, assets/images/opt/6-600.avif 600w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/6-480.jpg"
             srcset="assets/images/opt/6-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="600" height="400" alt="The heritage house and courtyard"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h320" data-tag="Heritage" data-lightbox-src="assets/images/1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h320" data-tag="Heritage"
+        data-lightbox-src="assets/images/1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/1-480.avif 480w, assets/images/opt/1-768.avif 768w, assets/images/opt/1-800.avif 800w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/1-768.jpg"
             srcset="assets/images/opt/1-480.jpg 480w, assets/images/opt/1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="800" height="599" alt="The heritage house at Thalathoor seen from the garden"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span></div>
-      <div class="masonry-item masonry-item--h260" data-tag="Food" data-lightbox-src="assets/images/food7.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Food"
+        data-lightbox-src="assets/images/food7.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food7-480.avif 480w, assets/images/opt/food7-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food7-480.jpg"
             srcset="assets/images/opt/food7-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Food" data-lightbox-src="assets/images/food8.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Food"
+        data-lightbox-src="assets/images/food8.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food8-480.avif 480w, assets/images/opt/food8-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food8-480.jpg"
             srcset="assets/images/opt/food8-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Food" data-lightbox-src="assets/images/food9.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Food"
+        data-lightbox-src="assets/images/food9.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food9-480.avif 480w, assets/images/opt/food9-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food9-480.jpg"
             srcset="assets/images/opt/food9-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Food" data-lightbox-src="assets/images/food10.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Food"
+        data-lightbox-src="assets/images/food10.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/food10-480.avif 480w, assets/images/opt/food10-576.avif 576w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/food10-480.jpg"
             srcset="assets/images/opt/food10-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Food</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/inhome1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Food</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/inhome1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/inhome1-480.avif 480w, assets/images/opt/inhome1-768.avif 768w, assets/images/opt/inhome1-959.avif 959w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/inhome1-768.jpg"
             srcset="assets/images/opt/inhome1-480.jpg 480w, assets/images/opt/inhome1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="959" height="1280" alt="Interior room with a teakwood ceiling"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/inhome2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/inhome2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/inhome2-480.avif 480w, assets/images/opt/inhome2-768.avif 768w, assets/images/opt/inhome2-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/inhome2-768.jpg"
             srcset="assets/images/opt/inhome2-480.jpg 480w, assets/images/opt/inhome2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="Sitting area inside the heritage house"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/inhome3.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/inhome3.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/inhome3-480.avif 480w, assets/images/opt/inhome3-768.avif 768w, assets/images/opt/inhome3-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/inhome3-768.jpg"
             srcset="assets/images/opt/inhome3-480.jpg 480w, assets/images/opt/inhome3-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="Interior of the heritage house with local handicrafts"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/outhome1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/outhome1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/outhome1-480.avif 480w, assets/images/opt/outhome1-768.avif 768w, assets/images/opt/outhome1-959.avif 959w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/outhome1-768.jpg"
             srcset="assets/images/opt/outhome1-480.jpg 480w, assets/images/opt/outhome1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="959" height="1280" alt="Exterior of the heritage house"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/home2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/home2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/home2-480.avif 480w, assets/images/opt/home2-768.avif 768w, assets/images/opt/home2-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/home2-768.jpg"
             srcset="assets/images/opt/home2-480.jpg 480w, assets/images/opt/home2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="The heritage house from the garden side"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/pattayapora.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/pattayapora.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/pattayapora-480.avif 480w, assets/images/opt/pattayapora-768.avif 768w, assets/images/opt/pattayapora-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/pattayapora-768.jpg"
             srcset="assets/images/opt/pattayapora-480.jpg 480w, assets/images/opt/pattayapora-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="Paddy field beside the property"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/pond2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/pond2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/pond2-480.avif 480w, assets/images/opt/pond2-768.avif 768w, assets/images/opt/pond2-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/pond2-768.jpg"
             srcset="assets/images/opt/pond2-480.jpg 480w, assets/images/opt/pond2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="The natural rainwater pond inside the property"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/chinnu1.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/chinnu1.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/chinnu1-480.avif 480w, assets/images/opt/chinnu1-768.avif 768w, assets/images/opt/chinnu1-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/chinnu1-768.jpg"
             srcset="assets/images/opt/chinnu1-480.jpg 480w, assets/images/opt/chinnu1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="960" height="1280" alt="Around the heritage house"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-      <div class="masonry-item masonry-item--h260" data-tag="Heritage" data-lightbox-src="assets/images/chinnu2.jpg" data-lightbox-type="image">
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <div class="masonry-item masonry-item--h260" data-tag="Heritage"
+        data-lightbox-src="assets/images/chinnu2.jpg" data-lightbox-type="image">
         <picture>
           <source type="image/avif" srcset="assets/images/opt/chinnu2-480.avif 480w, assets/images/opt/chinnu2-768.avif 768w, assets/images/opt/chinnu2-959.avif 959w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw">
           <img class="media-fill" src="assets/images/opt/chinnu2-768.jpg"
             srcset="assets/images/opt/chinnu2-480.jpg 480w, assets/images/opt/chinnu2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:760px) 50vw, 33vw"
             width="959" height="1280" alt="Around the heritage house"
             loading="lazy" decoding="async">
-        </picture><span
-          class="masonry-item__tag">Heritage</span>
-      </div>
-
-
-
-
-
+        </picture><span class="masonry-item__tag">Heritage</span></div>
+      <!-- /@data:gallery -->
     </div>
 
   </div>
@@ -381,6 +361,13 @@
   <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
     target="_blank" rel="noopener" class="wa-fab"><span aria-hidden="true">💬</span><span class="wa-fab__label">WhatsApp
       us</span></a>
+
+  <footer class="site-footer site-footer--slim">
+    <!-- @data:credit -->
+    <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+        <div class="site-footer__credit">Handcrafted by <a href="https://octane.team" target="_blank" rel="noopener">Octane</a></div>
+    <!-- /@data:credit -->
+  </footer>
 
   <script src="js/main.js" defer></script>
 </body>

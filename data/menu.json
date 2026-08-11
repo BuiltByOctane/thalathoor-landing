@@ -1,0 +1,145 @@
+{
+  "_comment": "menu.html dish cards, grouped by course. `image` is the source filename in assets/images/; srcset and dimensions are generated from the image manifest at build time. `veg` renders the green vegetarian marker.",
+  "sections": [
+    {
+      "id": "breakfast",
+      "title": "Breakfast",
+      "note": "Served every morning",
+      "dishes": [
+        {
+          "name": "Puttu & Kadala",
+          "local": "പുട്ട്",
+          "description": "Steamed rice-and-coconut cylinders with a black chickpea curry - the classic Malabar start to the day.",
+          "image": "puttu-kadala.jpg",
+          "veg": true
+        },
+        {
+          "name": "Appam & Stew",
+          "local": "അപ്പം",
+          "description": "Lace-edged fermented rice hoppers with a mild coconut-milk vegetable stew.",
+          "image": "appamstew.jpg",
+          "veg": true
+        },
+        {
+          "name": "Idiyappam",
+          "local": "ഇടിയപ്പം",
+          "description": "Soft steamed rice string-hoppers, eaten with sweetened coconut milk or curry.",
+          "image": "idiyappam.jpg",
+          "veg": true
+        },
+        {
+          "name": "Banana Flower Cutlet",
+          "local": "വാഴക്കൂമ്പ് കട്ട്ലറ്റ്",
+          "description": "Banana flower cutlet, delicately spiced and fried golden, a rustic Kerala savoury perfect with a warm cup of tea.",
+          "image": "bananaflwrcutlet.jpg",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "mains",
+      "title": "Lunch & mains",
+      "note": "The heart of the table",
+      "dishes": [
+        {
+          "name": "Kerala rice sadya",
+          "local": "ഊണ്",
+          "description": "Red parboiled rice with a rotating spread of seasonal vegetable curries served on a plantain leaf.",
+          "image": "sadhya.jpg",
+          "veg": true
+        },
+        {
+          "name": "Biriyani",
+          "local": "ബിരിയാണി",
+          "description": "Fragrant basmati rice layered with tender chicken and warm spices, slow cooked to bring together the flavours of a traditional Malabar kitchen.",
+          "image": "cb.jpg",
+          "veg": false
+        },
+        {
+          "name": "Gee Rice Chicken Curry / Casunet curry",
+          "local": "നെയ്ച്ചോറും ചിക്കൻ കറിയും / കാഷ്യൂനട്ട് കറിയും",
+          "description": "Fragrant ghee rice served with tender chicken simmered in a rich, gently spiced curry, a comforting Malabar classic made for a hearty meal.",
+          "image": "geerice.jpg",
+          "veg": true
+        },
+        {
+          "name": "Dhal, Rice, and Fish Curry",
+          "local": "പരിപ്പ്, ചോറ്, മീൻകറി",
+          "description": "Warm rice served with creamy dal and a traditional Kerala fish curry, a simple homestyle meal full of comforting flavours.",
+          "image": "dhalfish.jpg",
+          "veg": false
+        },
+        {
+          "name": "Kappa and Fish Curry",
+          "local": "കപ്പയും മീൻകറിയും",
+          "description": "Soft cassava served with a traditional Kerala fish curry, a rustic combination of earthy flavours and gentle spice.",
+          "image": "kappafish.jpg",
+          "veg": true
+        },
+        {
+          "name": "Mutton Biriyani",
+          "local": "മട്ടൻ ബിരിയാണി",
+          "description": "Tender mutton layered with fragrant rice and warm spices, slow cooked to create a rich and comforting Malabar classic.",
+          "image": "muttoncb.jpg",
+          "veg": false
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "title": "Tea-time & snacks",
+      "note": "Verandah, late afternoon",
+      "dishes": [
+        {
+          "name": "Ari Unda",
+          "local": "അരിയുണ്ട",
+          "description": "Roasted rice and coconut shaped into little bites, a simple traditional Kerala snack with a gentle sweetness.",
+          "image": "ariunda.jpg",
+          "veg": true
+        },
+        {
+          "name": "Chakka Pappadam",
+          "local": "ചക്ക പപ്പടം",
+          "description": "Ripe jackfruit blended with traditional spices and crisp fried, a light and crunchy Kerala snack with a hint of sweetness.",
+          "image": "chakkapapaddam.jpg",
+          "veg": true
+        },
+        {
+          "name": "Ada",
+          "local": "അട",
+          "description": "Delicate rice parcels filled with sweet coconut and jaggery, gently steamed to create a soft and comforting traditional Kerala treat.",
+          "image": "ada.jpg",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "sweets",
+      "title": "Sweets & payasam",
+      "note": "To finish",
+      "dishes": [
+        {
+          "name": "Chakka Pradhaman",
+          "local": "ചക്ക പ്രഥമൻ",
+          "description": "Ripe jackfruit slow cooked with jaggery and coconut milk, a rich and comforting Kerala dessert with a deep, natural sweetness.",
+          "image": "chakkapayasam.jpg",
+          "veg": true
+        },
+        {
+          "name": "Palada payasam",
+          "local": "പാലട",
+          "description": "Slow-cooked milk payasam with rice ada, delicately sweet.",
+          "image": "palada.jpg",
+          "veg": true
+        },
+        {
+          "name": "Pazham Pradhaman",
+          "local": "പഴം പ്രഥമൻ",
+          "description": "Ripe banana slow cooked with jaggery and coconut milk, a rich and traditional Kerala dessert with a warm, natural sweetness.",
+          "image": "PazhamPradhaman.jpg",
+          "veg": true
+        }
+      ]
+    }
+  ]
+}
