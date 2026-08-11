@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json.bak
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Local server / temp
+*.log
+.cache/
