@@ -232,6 +232,75 @@
     });
   }
 
+  /* ---------------- Reviews carousel ----------------
+     The track scrolls natively with scroll-snap, so touch and keyboard already
+     work without this; the arrows and dots are progressive enhancement, and are
+     hidden by CSS when JS is unavailable. State is derived from scrollLeft
+     rather than tracked separately, so dragging and clicking stay in sync. */
+  var track = document.querySelector('.review-track');
+  if (track) {
+    var cards = Array.prototype.slice.call(track.querySelectorAll('.review-card'));
+    var reviewDots = Array.prototype.slice.call(document.querySelectorAll('.review-dot'));
+    var prev = document.querySelector('.review-arrow--prev');
+    var next = document.querySelector('.review-arrow--next');
+
+    var nearestIndex = function () {
+      var best = 0;
+      var bestGap = Infinity;
+      cards.forEach(function (card, i) {
+        var gap = Math.abs(card.offsetLeft - track.scrollLeft);
+        if (gap < bestGap) { bestGap = gap; best = i; }
+      });
+      return best;
+    };
+
+    var scrollToCard = function (i) {
+      var card = cards[Math.max(0, Math.min(cards.length - 1, i))];
+      if (!card) return;
+      // Not scrollIntoView: that would also scroll the page vertically.
+      track.scrollTo({ left: card.offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+    };
+
+    var syncState = function () {
+      // With more than one card in view the last cards share the final scroll
+      // position, so not every card is a reachable snap point. Hide the dots
+      // that could never become active; recomputed on resize.
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      var i = nearestIndex();
+      reviewDots.forEach(function (d, idx) {
+        var card = cards[idx];
+        var reachable = card && card.offsetLeft <= maxScroll + 2;
+        d.hidden = !reachable;
+        var active = reachable && idx === i;
+        d.classList.toggle('is-active', active);
+        d.setAttribute('aria-current', active ? 'true' : 'false');
+      });
+      // A 2px tolerance: fractional scroll offsets never hit the ends exactly.
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= maxScroll - 2;
+    };
+
+    if (prev) prev.addEventListener('click', function () { scrollToCard(nearestIndex() - 1); });
+    if (next) next.addEventListener('click', function () { scrollToCard(nearestIndex() + 1); });
+    reviewDots.forEach(function (dot, idx) {
+      dot.addEventListener('click', function () { scrollToCard(idx); });
+    });
+
+    var scrollTick = null;
+    track.addEventListener('scroll', function () {
+      if (scrollTick) window.clearTimeout(scrollTick);
+      scrollTick = window.setTimeout(syncState, 80);
+    }, { passive: true });
+    window.addEventListener('resize', syncState);
+
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); scrollToCard(nearestIndex() + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); scrollToCard(nearestIndex() - 1); }
+    });
+
+    syncState();
+  }
+
   /* ---------------- Gallery filters ----------------
      `data-tag` holds a space-separated token list, so one tile can appear under
      several filters. It was previously an exact string match, which meant the

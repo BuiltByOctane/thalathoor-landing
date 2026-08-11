@@ -82,19 +82,35 @@ function reviewsRegion() {
         </div>
       </div>`;
 
-  const cards = reviews.map((r) => {
+  // Only featured reviews are shown; the rest stay in the JSON to be swapped in.
+  const shown = reviews.filter((r) => r.featured !== false);
+
+  const cards = shown.map((r, i) => {
     const by = [r.name, r.place, r.date].filter(Boolean).join(' · ');
-    return `        <figure class="review-card">
-          <div class="review-card__stars" aria-label="${r.stars} out of ${esc(rating.best)}">${'★'.repeat(r.stars)}</div>
-          <h3 class="review-card__title">${esc(r.title)}</h3>
-          <blockquote class="review-card__quote">${esc(r.text)}</blockquote>
-          <figcaption class="review-card__by">${esc(by)}</figcaption>
-        </figure>`;
+    return `          <figure class="review-card" role="group" aria-roledescription="review" aria-label="${i + 1} of ${shown.length}">
+            <div class="review-card__stars" aria-label="${r.stars} out of ${esc(rating.best)}">${'★'.repeat(r.stars)}</div>
+            <h3 class="review-card__title">${esc(r.title)}</h3>
+            <blockquote class="review-card__quote">${esc(r.text)}</blockquote>
+            <figcaption class="review-card__by">${esc(by)}</figcaption>
+          </figure>`;
   }).join('\n');
 
+  const dots = shown.map((_, i) =>
+    `          <button type="button" class="review-dot${i === 0 ? ' is-active' : ''}" data-index="${i}" aria-label="Go to review ${i + 1}"></button>`
+  ).join('\n');
+
+  // The track is a native scroll-snap row, so it is swipeable and keyboard
+  // scrollable with no JavaScript; main.js only adds the arrows and dots.
   return `${strip}
-      <div class="review-cols">
+      <div class="review-carousel">
+        <div class="review-track" tabindex="0" role="region" aria-label="Guest reviews">
 ${cards}
+        </div>
+        <button type="button" class="review-arrow review-arrow--prev" aria-label="Previous reviews">←</button>
+        <button type="button" class="review-arrow review-arrow--next" aria-label="Next reviews">→</button>
+        <div class="review-dots">
+${dots}
+        </div>
       </div>
       <div class="section-outro section-outro--tight">
         <a href="${site.links.tripadvisor}" target="_blank" rel="noopener" class="section-outro__link">Read all ${esc(rating.count)} reviews on
@@ -177,13 +193,33 @@ function gettingHereRegion() {
   ).join('\n');
 }
 
+/**
+ * Footer social links. The brand marks are inlined from assets/logo/brand/
+ * rather than linked, so they cost no extra requests; they are ~1-3 KB each.
+ * See assets/logo/brand/NOTICE.md before touching them.
+ */
 function footerLinksRegion(indent) {
   const i = ' '.repeat(indent);
-  const out = [];
-  if (site.links.instagram) out.push(`${i}<a href="${site.links.instagram}" target="_blank" rel="noopener">Instagram</a>`);
-  if (site.links.facebook) out.push(`${i}<a href="${site.links.facebook}" target="_blank" rel="noopener">Facebook</a>`);
-  if (site.links.tripadvisor) out.push(`${i}<a href="${site.links.tripadvisor}" target="_blank" rel="noopener">TripAdvisor</a>`);
-  return out.join('');
+  const SOCIALS = [
+    ['instagram', 'Instagram', 'instagram.svg'],
+    ['facebook', 'Facebook', null],
+    ['tripadvisor', 'Tripadvisor', 'tripadvisor.svg'],
+  ];
+
+  return SOCIALS.flatMap(([key, label, file]) => {
+    const url = site.links[key];
+    if (!url) return [];
+    let icon = '';
+    if (file) {
+      const svg = fs.readFileSync(path.join(ROOT, 'assets', 'logo', 'brand', file), 'utf8')
+        .trim()
+        // Decorative: the link already carries its own text label.
+        .replace('<svg', '<svg class="site-footer__social-icon" aria-hidden="true" focusable="false"')
+        .replace(' role="img"', '');
+      icon = svg;
+    }
+    return [`${i}<a class="site-footer__social" href="${url}" target="_blank" rel="noopener">${icon}<span>${esc(label)}</span></a>`];
+  }).join('\n');
 }
 
 function creditRegion(indent) {

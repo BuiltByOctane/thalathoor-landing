@@ -1,5 +1,5 @@
 {
-  "_comment": "Reviews and rating from the TripAdvisor listing. `rating` feeds both the trust strip and the JSON-LD aggregateRating, and reviewCount is interpolated into the 'Read all N reviews' link.",
+  "_comment": "Reviews and rating from the TripAdvisor listing. Only reviews with featured:true render in the carousel; the rest are kept here so they can be swapped in without retyping. `rating` feeds the trust strip, the 'Read all N reviews' link and the JSON-LD aggregateRating.",
   "rating": {
     "value": "4.8",
     "count": 115,
@@ -15,7 +15,8 @@
       "text": "A peaceful stay in an 80+ year old traditional Tharavadu, hosted by warm, inspiring Shyamala Ma'am. Every meal was freshly prepared authentic Malabar cuisine and was the highlight of the trip.",
       "name": "Yuvaraj",
       "place": "Chennai (Madras), India",
-      "date": "July 2026"
+      "date": "July 2026",
+      "featured": true
     },
     {
       "stars": 5,
@@ -23,7 +24,8 @@
       "text": "Felt like joining a family from the moment of arrival, thanks to Shyamala Madam's warmth. Her home-cooked Malabar dishes, from fresh fish curry to kappa made with local, organic ingredients, were the real highlight.",
       "name": "Odyssey04998055244",
       "place": "",
-      "date": "November 2025"
+      "date": "November 2025",
+      "featured": false
     },
     {
       "stars": 5,
@@ -31,7 +33,8 @@
       "text": "One night here felt like visiting family, with the kids greeted with mango pudding on arrival. Though Shyamala aunty is vegetarian herself, she cooked a full non-veg Malabar spread including fish cutlets and fish curry beautifully.",
       "name": "Tharani T",
       "place": "",
-      "date": "December 2024"
+      "date": "December 2024",
+      "featured": true
     },
     {
       "stars": 5,
@@ -39,7 +42,8 @@
       "text": "Three nights in a 200-year-old home with modern comforts, hosted by a caring, resourceful aunty who arranged a boat ride and a local Theyyam performance. Meals were eaten together like family, full of laughter.",
       "name": "Preeti Kothari",
       "place": "",
-      "date": "November 2024"
+      "date": "November 2024",
+      "featured": true
     },
     {
       "stars": 5,
@@ -47,7 +51,8 @@
       "text": "A short but memorable stay surrounded by palm groves, with spotless, recently modernized rooms. Mrs. Nair even whipped up a special butter chicken on request alongside her usual home cooking.",
       "name": "Sightseer35908895304",
       "place": "",
-      "date": "February 2025"
+      "date": "February 2025",
+      "featured": false
     },
     {
       "stars": 5,
@@ -55,7 +60,8 @@
       "text": "A lovely visit with great home-style vegetarian food and engaging conversation with the host. Also got to see the nearby hanging bridge and part of a local Theyyam performance.",
       "name": "sjagadish",
       "place": "Bengaluru, India",
-      "date": "March 2024"
+      "date": "March 2024",
+      "featured": true
     }
   ]
 }

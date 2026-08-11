@@ -33,7 +33,7 @@ That rewrites the generated regions of the four pages, the JSON-LD block and
 | File | Controls |
 |---|---|
 | `site.json` | phone, WhatsApp, email, address, domain, map, TripAdvisor and Instagram URLs, the "Handcrafted by" credit, and the Getting-here distances |
-| `reviews.json` | the six review cards, the trust strip figures, and the JSON-LD rating |
+| `reviews.json` | the review carousel, the trust strip figures, and the JSON-LD rating. Only entries with `featured: true` render; the rest are kept so they can be swapped in without retyping |
 | `rooms.json` | the two room cards, including prices |
 | `faq.json` | the nine Practical-information entries |
 | `menu.json` | the sixteen dish cards on menu.html, grouped by course |
@@ -147,6 +147,12 @@ All three families are SIL OFL 1.1; see `assets/fonts/OFL.txt`.
   under several filters. Every `data-filter` button must match at least one tile.
 - **Content goes in `data/`, not the HTML.** If you find yourself editing the
   same fact in two places, it belongs in `data/site.json`.
+- **Carousels degrade.** The reviews track is a native CSS scroll-snap row, so
+  it is swipeable and keyboard-scrollable with no JavaScript; the arrows and
+  dots are enhancement and are hidden under `.no-js`.
+- **Third-party brand marks** live in `assets/logo/brand/` and are inlined into
+  the footer at build time. Read `assets/logo/brand/NOTICE.md` before changing
+  them — never recolour or redraw a trademark.
 
 ## Known gaps
 

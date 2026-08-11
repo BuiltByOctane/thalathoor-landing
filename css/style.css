@@ -367,8 +367,53 @@ button{font-family:inherit}
 .trust-item + .trust-item{border-left:1px solid rgba(255,255,255,.14)}
 .trust-item__headline{font-size:30px;line-height:1;color:#fff}
 .trust-item__source{font:600 10px/1.4 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);margin-top:9px}
-.review-cols{columns:2;column-gap:20px;max-width:960px;margin:0 auto}
-.review-card{break-inside:avoid;margin:0 0 20px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 26px 22px}
+/* Horizontal carousel. The track is a native scroll-snap row, so it is
+   swipeable and keyboard-scrollable with no JavaScript; main.js only wires the
+   arrows and dots on top. Two cards per view on desktop, one on mobile. */
+.review-carousel{position:relative;max-width:1000px;margin:0 auto}
+.review-track{
+  display:flex;gap:20px;
+  overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  padding:4px;margin:-4px;
+  scrollbar-width:none;
+}
+.review-track::-webkit-scrollbar{display:none}
+.review-track:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:22px}
+.review-card{
+  flex:0 0 calc(50% - 10px);
+  scroll-snap-align:start;
+  display:flex;flex-direction:column;
+  margin:0;background:var(--card);border:1px solid var(--line);
+  border-radius:20px;padding:26px 26px 22px;
+}
+.review-card__by{margin-top:auto}
+
+.review-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);
+  font-size:17px;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px -8px rgba(34,48,31,.35);
+  transition:background .2s ease,color .2s ease,opacity .2s ease;
+}
+.review-arrow:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.review-arrow--prev{left:-22px}
+.review-arrow--next{right:-22px}
+.review-arrow[disabled]{opacity:.35;cursor:default}
+.review-arrow[disabled]:hover{background:var(--card);color:var(--ink);border-color:var(--line)}
+.no-js .review-arrow{display:none}
+
+.review-dots{display:flex;justify-content:center;gap:9px;margin-top:22px}
+.review-dot{
+  width:9px;height:9px;padding:0;border:none;border-radius:999px;cursor:pointer;
+  background:rgba(34,48,31,.22);transition:all .3s ease;
+}
+.review-dot.is-active{width:26px;background:var(--green)}
+/* main.js hides dots for snap positions that cannot be reached at the current
+   width; be explicit rather than relying on the UA [hidden] rule. */
+.review-dot[hidden]{display:none}
+.no-js .review-dots{display:none}
 .review-card__stars{color:var(--green);font-size:18px;margin-bottom:10px}
 .review-card__title{font-size:19px;line-height:1.2;color:var(--ink);margin:0 0 10px}
 .review-card__quote{font-family:var(--font-display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink-soft);margin:0 0 16px;quotes:none}
@@ -409,7 +454,11 @@ button{font-family:inherit}
 .site-footer__mark{height:68px;width:auto}
 .site-footer__name{font-family:var(--font-display);font-weight:600;font-size:19px}
 .site-footer__since{font-size:12px;color:var(--ink-faint)}
-.site-footer__links{display:flex;gap:20px;font-size:14px}
+.site-footer__links{display:flex;align-items:center;gap:18px;font-size:14px}
+.site-footer__social{display:inline-flex;align-items:center;gap:8px;color:var(--ink-soft)}
+.site-footer__social:hover{color:var(--green)}
+/* Brand marks keep their own colours; see assets/logo/brand/NOTICE.md. */
+.site-footer__social-icon{width:18px;height:18px;flex:none;display:block}
 .site-footer__copy{font-size:12px;color:var(--ink-faint)}
 .site-footer__credit{font-size:12px;color:var(--ink-faint)}
 .site-footer__credit a{color:var(--ink-soft);font-weight:600}
@@ -555,7 +604,7 @@ button{font-family:inherit}
 @media (max-width:900px){
   .nav__links,.nav__cta{display:none}
   .nav__burger{display:block}
-  .review-cols{columns:1}
+  .review-card{flex:0 0 100%}
   .meal-facts{grid-template-columns:repeat(2,1fr)}
 }
 
