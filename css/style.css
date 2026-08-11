@@ -36,7 +36,10 @@ body{
   color:var(--ink);
   font-family:var(--font-body);
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  /* No overflow-x:hidden here. It used to mask a real overflow (a nowrap .btn
+     forced the document to 436px on a 360px phone, exposing bare background
+     beside the 100vw hero). Hiding it would hide the next one too; run
+     `npm run check:responsive` instead. */
 }
 body::before{
   content:"";
@@ -82,7 +85,8 @@ button{font-family:inherit}
 .btn{
   display:inline-flex;align-items:center;gap:9px;
   padding:15px 28px;border-radius:999px;font-weight:600;font-size:15px;
-  white-space:nowrap;border:none;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+  max-width:100%;border:none;cursor:pointer;text-align:center;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
 }
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:var(--green);color:#fff;box-shadow:0 14px 30px -12px rgba(46,125,71,.9)}
@@ -117,7 +121,10 @@ button{font-family:inherit}
 /* The loader is dismissed by main.js (see `is-done`), not by a fixed-delay
    animation. It previously held the page for a hard 1.65s regardless of how
    fast the content was ready. */
-.loader.is-done{opacity:0;visibility:hidden}
+/* pointer-events goes first: `visibility` transitions discretely, so without
+   this the loader keeps intercepting taps for the whole 450ms fade - half a
+   second where the page looks ready but nothing responds. */
+.loader.is-done{opacity:0;visibility:hidden;pointer-events:none}
 .loader__tint{position:absolute;inset:0;background:#20301a;opacity:.9}
 .loader__logo{
   position:relative;width:132px;height:132px;display:flex;align-items:center;justify-content:center;
@@ -240,11 +247,14 @@ button{font-family:inherit}
   align-items:center;justify-content:center;animation:scrollcue 1.8s ease-in-out infinite;
 }
 @keyframes scrollcue{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(6px);opacity:1}}
-.hero__dots{position:absolute;bottom:30px;right:40px;z-index:5;display:flex;gap:9px}
+.hero__dots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:16px}
 .hero__dot{
+  position:relative;
   width:9px;height:9px;border-radius:999px;border:none;cursor:pointer;padding:0;
   background:rgba(255,255,255,.5);transition:all .4s ease;
 }
+/* Touch target grows to ~29px without changing the dot's appearance. */
+.hero__dot::after{content:"";position:absolute;inset:-10px}
 .hero__dot.is-active{width:26px;background:var(--mint)}
 
 /* ---------- Section headings & intros ----------
@@ -254,7 +264,7 @@ button{font-family:inherit}
 .section-intro--404{padding:90px 0 60px}
 .section-outro{text-align:center;margin-top:34px}
 .section-outro--tight{margin-top:14px}
-.section-outro__link{font-size:14px;font-weight:600}
+.section-outro__link{display:inline-block;padding:6px 0;font-size:14px;font-weight:600}
 .section-outro--gallery{margin-top:32px}
 
 .title-xl{font-size:clamp(36px,5vw,64px);line-height:1;margin:0}
@@ -360,7 +370,7 @@ button{font-family:inherit}
 .event-card__tag{font:600 10.5px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--mint);margin-bottom:10px}
 .event-card__title{font-size:27px;line-height:1.05;margin-bottom:10px;color:#fff}
 .event-card__desc{font-size:14px;line-height:1.55;color:rgba(255,255,255,.85)}
-.event-card__cta{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--mint)}
+.event-card__cta{display:inline-block;margin-top:10px;padding:6px 0;font-size:13.5px;font-weight:600;color:var(--mint)}
 .event-card__cta:hover{color:#fff}
 
 /* ---------- Trust / reviews ----------
@@ -407,11 +417,13 @@ button{font-family:inherit}
 .review-arrow[disabled]:hover{background:var(--card);color:var(--ink);border-color:var(--line)}
 .no-js .review-arrow{display:none}
 
-.review-dots{display:flex;justify-content:center;gap:9px;margin-top:22px}
+.review-dots{display:flex;justify-content:center;gap:16px;margin-top:22px}
 .review-dot{
+  position:relative;
   width:9px;height:9px;padding:0;border:none;border-radius:999px;cursor:pointer;
   background:rgba(34,48,31,.22);transition:all .3s ease;
 }
+.review-dot::after{content:"";position:absolute;inset:-10px}
 .review-dot.is-active{width:26px;background:var(--green)}
 /* main.js hides dots for snap positions that cannot be reached at the current
    width; be explicit rather than relying on the UA [hidden] rule. */
@@ -440,7 +452,7 @@ button{font-family:inherit}
 .contact-panel__title{font-size:clamp(34px,4.5vw,58px);line-height:1;margin-bottom:18px;color:#fff}
 .contact-panel__desc{font-size:17px;line-height:1.6;color:rgba(255,255,255,.86);margin-bottom:30px;max-width:42ch}
 .contact-panel__details{display:flex;flex-direction:column;gap:12px;font-size:15px;color:rgba(255,255,255,.9);margin-top:28px}
-.contact-panel__details a,.contact-panel__detail{color:#fff;display:flex;gap:10px}
+.contact-panel__details a,.contact-panel__detail{color:#fff;display:flex;gap:10px;padding:4px 0}
 .contact-panel__cta{margin-bottom:28px}
 .contact-panel__map{position:relative;min-height:360px;display:block}
 .contact-panel__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -458,13 +470,13 @@ button{font-family:inherit}
 .site-footer__name{font-family:var(--font-display);font-weight:600;font-size:19px}
 .site-footer__since{font-size:12px;color:var(--ink-faint)}
 .site-footer__links{display:flex;align-items:center;gap:18px;font-size:14px}
-.site-footer__social{display:inline-flex;align-items:center;gap:8px;color:var(--ink-soft)}
+.site-footer__social{display:inline-flex;align-items:center;gap:8px;padding:6px 0;color:var(--ink-soft)}
 .site-footer__social:hover{color:var(--green)}
 /* Brand marks keep their own colours; see assets/logo/brand/NOTICE.md. */
 .site-footer__social-icon{width:18px;height:18px;flex:none;display:block}
 .site-footer__copy{font-size:12px;color:var(--ink-faint)}
 .site-footer__credit{font-size:12px;color:var(--ink-faint)}
-.site-footer__credit a{color:var(--ink-soft);font-weight:600}
+.site-footer__credit a{display:inline-block;padding:6px 2px;color:var(--ink-soft);font-weight:600}
 .site-footer__credit a:hover{color:var(--green)}
 /* Inner pages carry only the credit line, not the full footer row. */
 .site-footer--slim{padding:30px 0 40px;text-align:center;border-top:1px solid var(--line);margin-top:20px}
@@ -616,7 +628,7 @@ button{font-family:inherit}
   .section--tight{padding:44px 0 28px}
   .hero{min-height:560px}
   .hero__content{padding:0 20px 52px}
-  .hero__dots{right:20px;bottom:20px}
+  .hero__dots{bottom:20px}
   .nav-fixed .nav{padding:16px 20px}
   .nav-fixed.is-scrolled .nav{padding:12px 20px}
   .kitchen-grid__text{padding:36px 26px}
@@ -642,7 +654,9 @@ button{font-family:inherit}
 }
 
 @media (max-width:520px){
+  .btn{padding:14px 20px;font-size:14.5px}
   .hero__actions{flex-direction:column;align-items:flex-start}
+  .hero__actions .btn{width:100%;justify-content:center}
   .room-grid{grid-template-columns:1fr}
   .event-grid{grid-template-columns:1fr}
   .masonry{columns:1}

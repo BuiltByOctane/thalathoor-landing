@@ -137,7 +137,16 @@ npm run assets:images   # AVIF + JPEG variants -> assets/images/opt/
 npm run assets:video    # hero loop + poster
 npm run assets:svg      # re-minify logo.svg
 npm run check           # drift check + broken asset refs
+npm run check:responsive # real-browser check: overflow, overlaps, touch targets
 ```
+
+`check:responsive` drives the Chrome already on your machine (via puppeteer-core;
+it downloads no browser and skips with a warning if none is found). It loads all
+five pages at six widths and fails on horizontal overflow, overlapping controls,
+or touch targets under 24px. It exists because all three of those shipped once:
+a `white-space:nowrap` button made the document 436px wide on a 360px phone, the
+sticky WhatsApp button sat on top of the hero dots at every width, and the
+carousel dots were 9px. None are visible in a desktop browser.
 
 `npm run check` is the one to wire into CI. It does two things: fails if any page
 has drifted from `data/` (someone edited inside a marker instead of the JSON),
@@ -192,6 +201,13 @@ All three families are SIL OFL 1.1; see `assets/fonts/OFL.txt`.
 - **No inline `style` attributes.** All four pages are at zero; keep them there.
 - **No `!important`** except inside the `prefers-reduced-motion` block. Raise
   specificity instead.
+- **Never add `overflow-x:hidden` to `body`.** It hides overflow instead of
+  fixing it, which is exactly how the 436px-wide-document bug survived. Run
+  `npm run check:responsive` and fix the element that is too wide.
+- **Touch targets** must be at least 24px in both directions, measured by what
+  is actually clickable. Small controls get their hit area enlarged with an
+  `::after { position:absolute; inset:-10px }` rather than by growing visually,
+  and need enough spacing that neighbouring hit areas do not collide.
 - **Fonts** come from the `--font-display`, `--font-body` and `--font-mono`
   variables, never a hard-coded family name.
 - **Gallery `data-tag`** is a space-separated token list, so one tile can appear

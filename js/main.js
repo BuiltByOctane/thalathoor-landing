@@ -13,8 +13,11 @@
      perceived load time. MAX_WAIT is a safety net for a stalled resource. */
   var loader = document.querySelector('.loader');
   if (loader) {
-    var MIN_SHOW = 350;   // let the mark register instead of flashing
-    var MAX_WAIT = 2000;
+    // Deliberately long: the loading screen is an entrance, not a spinner, so
+    // it holds even when the page is already ready. MAX_WAIT caps the wait if
+    // a resource stalls.
+    var MIN_SHOW = 2000;
+    var MAX_WAIT = 4000;
     var shown = Date.now();
     var dismissed = false;
 
