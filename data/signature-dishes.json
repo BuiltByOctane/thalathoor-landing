@@ -1,0 +1,29 @@
+{
+  "_comment": "The 'Signature dishes' grid in the kitchen section of index.html.",
+  "dishes": [
+    {
+      "name": "Banana Flower Cutlet",
+      "note": "Banana flower blended with gentle spices and fried crisp, a wholesome Kerala snack with a rustic touch."
+    },
+    {
+      "name": "Neipathiri with Nadan Chicken Curry.",
+      "note": "Soft, delicate rice flatbreads served with a rich and gently spiced traditional chicken curry, a beloved Malabar combination."
+    },
+    {
+      "name": "Neer Dosa with Cashewnut Curry",
+      "note": "Very thin, soft rice crepes made with fermented rice batter, served with a mild and creamy cashewnut curry."
+    },
+    {
+      "name": "Prawns biriyani",
+      "note": "A fragrant and flavourful rice dish made with succulent prawns, aromatic spices and herbs, prepared in the traditional Thalathoor style."
+    },
+    {
+      "name": "Oottada",
+      "note": "Soft rice cakes layered with coconut and jaggery, gently steamed to make a simple and comforting traditional Kerala treat."
+    },
+    {
+      "name": "Chakka Pradhaman",
+      "note": "Ripe jackfruit slow cooked with jaggery and coconut milk, a rich traditional Kerala dessert with a deep, natural sweetness."
+    }
+  ]
+}

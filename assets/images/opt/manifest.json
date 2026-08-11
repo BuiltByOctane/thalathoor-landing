@@ -1,0 +1,1604 @@
+{
+  "1.jpg": {
+    "source": "assets/images/1.jpg",
+    "width": 800,
+    "height": 599,
+    "variants": [
+      {
+        "width": 480,
+        "height": 359,
+        "avif": "assets/images/opt/1-480.avif",
+        "avifBytes": 30017,
+        "jpg": "assets/images/opt/1-480.jpg",
+        "jpgBytes": 40060
+      },
+      {
+        "width": 768,
+        "height": 575,
+        "avif": "assets/images/opt/1-768.avif",
+        "avifBytes": 74006,
+        "jpg": "assets/images/opt/1-768.jpg",
+        "jpgBytes": 100902
+      },
+      {
+        "width": 800,
+        "height": 599,
+        "avif": "assets/images/opt/1-800.avif",
+        "avifBytes": 85248,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "2.jpg": {
+    "source": "assets/images/2.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/2-480.avif",
+        "avifBytes": 66236,
+        "jpg": "assets/images/opt/2-480.jpg",
+        "jpgBytes": 88166
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/2-768.avif",
+        "avifBytes": 161474,
+        "jpg": "assets/images/opt/2-768.jpg",
+        "jpgBytes": 220056
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/2-960.avif",
+        "avifBytes": 249153,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "3.jpg": {
+    "source": "assets/images/3.jpg",
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/3-480.avif",
+        "avifBytes": 26368,
+        "jpg": "assets/images/opt/3-480.jpg",
+        "jpgBytes": 47171
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/3-768.avif",
+        "avifBytes": 56666,
+        "jpg": "assets/images/opt/3-768.jpg",
+        "jpgBytes": 104357
+      },
+      {
+        "width": 1024,
+        "height": 1365,
+        "avif": "assets/images/opt/3-1024.avif",
+        "avifBytes": 95321,
+        "jpg": null,
+        "jpgBytes": null
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "avif": "assets/images/opt/3-1200.avif",
+        "avifBytes": 143412,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "4.jpg": {
+    "source": "assets/images/4.jpg",
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "avif": "assets/images/opt/4-480.avif",
+        "avifBytes": 32720,
+        "jpg": "assets/images/opt/4-480.jpg",
+        "jpgBytes": 44421
+      },
+      {
+        "width": 768,
+        "height": 576,
+        "avif": "assets/images/opt/4-768.avif",
+        "avifBytes": 81116,
+        "jpg": "assets/images/opt/4-768.jpg",
+        "jpgBytes": 112203
+      },
+      {
+        "width": 800,
+        "height": 600,
+        "avif": "assets/images/opt/4-800.avif",
+        "avifBytes": 94339,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "5.jpg": {
+    "source": "assets/images/5.jpg",
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "avif": "assets/images/opt/5-480.avif",
+        "avifBytes": 36192,
+        "jpg": "assets/images/opt/5-480.jpg",
+        "jpgBytes": 49177
+      },
+      {
+        "width": 768,
+        "height": 576,
+        "avif": "assets/images/opt/5-768.avif",
+        "avifBytes": 86024,
+        "jpg": "assets/images/opt/5-768.jpg",
+        "jpgBytes": 121331
+      },
+      {
+        "width": 800,
+        "height": 600,
+        "avif": "assets/images/opt/5-800.avif",
+        "avifBytes": 98636,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "6.jpg": {
+    "source": "assets/images/6.jpg",
+    "width": 600,
+    "height": 400,
+    "variants": [
+      {
+        "width": 480,
+        "height": 320,
+        "avif": "assets/images/opt/6-480.avif",
+        "avifBytes": 22788,
+        "jpg": "assets/images/opt/6-480.jpg",
+        "jpgBytes": 37966
+      },
+      {
+        "width": 600,
+        "height": 400,
+        "avif": "assets/images/opt/6-600.avif",
+        "avifBytes": 35131,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "ada.jpg": {
+    "source": "assets/images/ada.jpg",
+    "width": 422,
+    "height": 640,
+    "variants": [
+      {
+        "width": 422,
+        "height": 640,
+        "avif": "assets/images/opt/ada-422.avif",
+        "avifBytes": 26887,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "appamstew.jpg": {
+    "source": "assets/images/appamstew.jpg",
+    "width": 736,
+    "height": 981,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/appamstew-480.avif",
+        "avifBytes": 40816,
+        "jpg": "assets/images/opt/appamstew-480.jpg",
+        "jpgBytes": 61675
+      },
+      {
+        "width": 736,
+        "height": 981,
+        "avif": "assets/images/opt/appamstew-736.avif",
+        "avifBytes": 89036,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "ariunda.jpg": {
+    "source": "assets/images/ariunda.jpg",
+    "width": 736,
+    "height": 920,
+    "variants": [
+      {
+        "width": 480,
+        "height": 600,
+        "avif": "assets/images/opt/ariunda-480.avif",
+        "avifBytes": 32320,
+        "jpg": "assets/images/opt/ariunda-480.jpg",
+        "jpgBytes": 51777
+      },
+      {
+        "width": 736,
+        "height": 920,
+        "avif": "assets/images/opt/ariunda-736.avif",
+        "avifBytes": 69185,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "bananaflwrcutlet.jpg": {
+    "source": "assets/images/bananaflwrcutlet.jpg",
+    "width": 736,
+    "height": 493,
+    "variants": [
+      {
+        "width": 480,
+        "height": 322,
+        "avif": "assets/images/opt/bananaflwrcutlet-480.avif",
+        "avifBytes": 13704,
+        "jpg": "assets/images/opt/bananaflwrcutlet-480.jpg",
+        "jpgBytes": 23576
+      },
+      {
+        "width": 736,
+        "height": 493,
+        "avif": "assets/images/opt/bananaflwrcutlet-736.avif",
+        "avifBytes": 24911,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "cb.jpg": {
+    "source": "assets/images/cb.jpg",
+    "width": 561,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "height": 856,
+        "avif": "assets/images/opt/cb-480.avif",
+        "avifBytes": 28992,
+        "jpg": "assets/images/opt/cb-480.jpg",
+        "jpgBytes": 46018
+      },
+      {
+        "width": 561,
+        "height": 1000,
+        "avif": "assets/images/opt/cb-561.avif",
+        "avifBytes": 40841,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "chakkapapaddam.jpg": {
+    "source": "assets/images/chakkapapaddam.jpg",
+    "width": 736,
+    "height": 993,
+    "variants": [
+      {
+        "width": 480,
+        "height": 648,
+        "avif": "assets/images/opt/chakkapapaddam-480.avif",
+        "avifBytes": 25165,
+        "jpg": "assets/images/opt/chakkapapaddam-480.jpg",
+        "jpgBytes": 41877
+      },
+      {
+        "width": 736,
+        "height": 993,
+        "avif": "assets/images/opt/chakkapapaddam-736.avif",
+        "avifBytes": 52342,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "chakkapayasam.jpg": {
+    "source": "assets/images/chakkapayasam.jpg",
+    "width": 236,
+    "height": 354,
+    "variants": [
+      {
+        "width": 236,
+        "height": 354,
+        "avif": "assets/images/opt/chakkapayasam-236.avif",
+        "avifBytes": 7182,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "chinnu1.jpg": {
+    "source": "assets/images/chinnu1.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/chinnu1-480.avif",
+        "avifBytes": 18219,
+        "jpg": "assets/images/opt/chinnu1-480.jpg",
+        "jpgBytes": 35994
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/chinnu1-768.avif",
+        "avifBytes": 34780,
+        "jpg": "assets/images/opt/chinnu1-768.jpg",
+        "jpgBytes": 71271
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/chinnu1-960.avif",
+        "avifBytes": 50667,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "chinnu2.jpg": {
+    "source": "assets/images/chinnu2.jpg",
+    "width": 959,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 641,
+        "avif": "assets/images/opt/chinnu2-480.avif",
+        "avifBytes": 24530,
+        "jpg": "assets/images/opt/chinnu2-480.jpg",
+        "jpgBytes": 41820
+      },
+      {
+        "width": 768,
+        "height": 1025,
+        "avif": "assets/images/opt/chinnu2-768.avif",
+        "avifBytes": 61323,
+        "jpg": "assets/images/opt/chinnu2-768.jpg",
+        "jpgBytes": 96698
+      },
+      {
+        "width": 959,
+        "height": 1280,
+        "avif": "assets/images/opt/chinnu2-959.avif",
+        "avifBytes": 106458,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "chinnu3.jpg": {
+    "source": "assets/images/chinnu3.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/chinnu3-480.avif",
+        "avifBytes": 18219,
+        "jpg": "assets/images/opt/chinnu3-480.jpg",
+        "jpgBytes": 35994
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/chinnu3-768.avif",
+        "avifBytes": 34780,
+        "jpg": "assets/images/opt/chinnu3-768.jpg",
+        "jpgBytes": 71271
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/chinnu3-960.avif",
+        "avifBytes": 50667,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "desttwedd.jpg": {
+    "source": "assets/images/desttwedd.jpg",
+    "width": 1280,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "height": 384,
+        "avif": "assets/images/opt/desttwedd-480.avif",
+        "avifBytes": 28568,
+        "jpg": "assets/images/opt/desttwedd-480.jpg",
+        "jpgBytes": 43495
+      },
+      {
+        "width": 768,
+        "height": 614,
+        "avif": "assets/images/opt/desttwedd-768.avif",
+        "avifBytes": 51903,
+        "jpg": "assets/images/opt/desttwedd-768.jpg",
+        "jpgBytes": 88453
+      },
+      {
+        "width": 1024,
+        "height": 819,
+        "avif": "assets/images/opt/desttwedd-1024.avif",
+        "avifBytes": 72274,
+        "jpg": null,
+        "jpgBytes": null
+      },
+      {
+        "width": 1280,
+        "height": 1024,
+        "avif": "assets/images/opt/desttwedd-1280.avif",
+        "avifBytes": 94923,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "dhalfish.jpg": {
+    "source": "assets/images/dhalfish.jpg",
+    "width": 735,
+    "height": 798,
+    "variants": [
+      {
+        "width": 480,
+        "height": 521,
+        "avif": "assets/images/opt/dhalfish-480.avif",
+        "avifBytes": 27456,
+        "jpg": "assets/images/opt/dhalfish-480.jpg",
+        "jpgBytes": 45330
+      },
+      {
+        "width": 735,
+        "height": 798,
+        "avif": "assets/images/opt/dhalfish-735.avif",
+        "avifBytes": 53197,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food1.jpg": {
+    "source": "assets/images/food1.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food1-480.avif",
+        "avifBytes": 30128,
+        "jpg": "assets/images/opt/food1-480.jpg",
+        "jpgBytes": 52482
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food1-576.avif",
+        "avifBytes": 42021,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food10.jpg": {
+    "source": "assets/images/food10.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food10-480.avif",
+        "avifBytes": 27351,
+        "jpg": "assets/images/opt/food10-480.jpg",
+        "jpgBytes": 51088
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food10-576.avif",
+        "avifBytes": 36342,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food11.jpg": {
+    "source": "assets/images/food11.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food11-480.avif",
+        "avifBytes": 31547,
+        "jpg": "assets/images/opt/food11-480.jpg",
+        "jpgBytes": 50572
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food11-576.avif",
+        "avifBytes": 45865,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food12.jpg": {
+    "source": "assets/images/food12.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food12-480.avif",
+        "avifBytes": 23244,
+        "jpg": "assets/images/opt/food12-480.jpg",
+        "jpgBytes": 41076
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food12-576.avif",
+        "avifBytes": 33439,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food13.jpg": {
+    "source": "assets/images/food13.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food13-480.avif",
+        "avifBytes": 28675,
+        "jpg": "assets/images/opt/food13-480.jpg",
+        "jpgBytes": 49413
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food13-576.avif",
+        "avifBytes": 38467,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food14.jpg": {
+    "source": "assets/images/food14.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food14-480.avif",
+        "avifBytes": 37846,
+        "jpg": "assets/images/opt/food14-480.jpg",
+        "jpgBytes": 60364
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food14-576.avif",
+        "avifBytes": 56350,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food15.jpg": {
+    "source": "assets/images/food15.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food15-480.avif",
+        "avifBytes": 30053,
+        "jpg": "assets/images/opt/food15-480.jpg",
+        "jpgBytes": 50041
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food15-576.avif",
+        "avifBytes": 42797,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food16.jpg": {
+    "source": "assets/images/food16.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food16-480.avif",
+        "avifBytes": 29521,
+        "jpg": "assets/images/opt/food16-480.jpg",
+        "jpgBytes": 47187
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food16-576.avif",
+        "avifBytes": 43632,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food17.jpg": {
+    "source": "assets/images/food17.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food17-480.avif",
+        "avifBytes": 30866,
+        "jpg": "assets/images/opt/food17-480.jpg",
+        "jpgBytes": 52014
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food17-576.avif",
+        "avifBytes": 43984,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food18.jpg": {
+    "source": "assets/images/food18.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food18-480.avif",
+        "avifBytes": 31762,
+        "jpg": "assets/images/opt/food18-480.jpg",
+        "jpgBytes": 52487
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food18-576.avif",
+        "avifBytes": 45395,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food2.jpg": {
+    "source": "assets/images/food2.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food2-480.avif",
+        "avifBytes": 25449,
+        "jpg": "assets/images/opt/food2-480.jpg",
+        "jpgBytes": 42432
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food2-576.avif",
+        "avifBytes": 37823,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food3.jpg": {
+    "source": "assets/images/food3.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food3-480.avif",
+        "avifBytes": 29836,
+        "jpg": "assets/images/opt/food3-480.jpg",
+        "jpgBytes": 49497
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food3-576.avif",
+        "avifBytes": 42150,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food4.jpg": {
+    "source": "assets/images/food4.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food4-480.avif",
+        "avifBytes": 40144,
+        "jpg": "assets/images/opt/food4-480.jpg",
+        "jpgBytes": 59831
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food4-576.avif",
+        "avifBytes": 59012,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food5.jpg": {
+    "source": "assets/images/food5.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food5-480.avif",
+        "avifBytes": 24671,
+        "jpg": "assets/images/opt/food5-480.jpg",
+        "jpgBytes": 42639
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food5-576.avif",
+        "avifBytes": 35374,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food6.jpg": {
+    "source": "assets/images/food6.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food6-480.avif",
+        "avifBytes": 30730,
+        "jpg": "assets/images/opt/food6-480.jpg",
+        "jpgBytes": 50286
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food6-576.avif",
+        "avifBytes": 42748,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food7.jpg": {
+    "source": "assets/images/food7.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food7-480.avif",
+        "avifBytes": 22863,
+        "jpg": "assets/images/opt/food7-480.jpg",
+        "jpgBytes": 38941
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food7-576.avif",
+        "avifBytes": 32998,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food8.jpg": {
+    "source": "assets/images/food8.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food8-480.avif",
+        "avifBytes": 22878,
+        "jpg": "assets/images/opt/food8-480.jpg",
+        "jpgBytes": 38801
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food8-576.avif",
+        "avifBytes": 32560,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "food9.jpg": {
+    "source": "assets/images/food9.jpg",
+    "width": 576,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/food9-480.avif",
+        "avifBytes": 25004,
+        "jpg": "assets/images/opt/food9-480.jpg",
+        "jpgBytes": 42509
+      },
+      {
+        "width": 576,
+        "height": 768,
+        "avif": "assets/images/opt/food9-576.avif",
+        "avifBytes": 35784,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "geerice.jpg": {
+    "source": "assets/images/geerice.jpg",
+    "width": 736,
+    "height": 960,
+    "variants": [
+      {
+        "width": 480,
+        "height": 626,
+        "avif": "assets/images/opt/geerice-480.avif",
+        "avifBytes": 29501,
+        "jpg": "assets/images/opt/geerice-480.jpg",
+        "jpgBytes": 48921
+      },
+      {
+        "width": 736,
+        "height": 960,
+        "avif": "assets/images/opt/geerice-736.avif",
+        "avifBytes": 58699,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "geericechicken.jpg": {
+    "source": "assets/images/geericechicken.jpg",
+    "width": 736,
+    "height": 920,
+    "variants": [
+      {
+        "width": 480,
+        "height": 600,
+        "avif": "assets/images/opt/geericechicken-480.avif",
+        "avifBytes": 37194,
+        "jpg": "assets/images/opt/geericechicken-480.jpg",
+        "jpgBytes": 56695
+      },
+      {
+        "width": 736,
+        "height": 920,
+        "avif": "assets/images/opt/geericechicken-736.avif",
+        "avifBytes": 80062,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "gettogether.jpg": {
+    "source": "assets/images/gettogether.jpg",
+    "width": 800,
+    "height": 533,
+    "variants": [
+      {
+        "width": 480,
+        "height": 320,
+        "avif": "assets/images/opt/gettogether-480.avif",
+        "avifBytes": 19189,
+        "jpg": "assets/images/opt/gettogether-480.jpg",
+        "jpgBytes": 29725
+      },
+      {
+        "width": 768,
+        "height": 512,
+        "avif": "assets/images/opt/gettogether-768.avif",
+        "avifBytes": 36817,
+        "jpg": "assets/images/opt/gettogether-768.jpg",
+        "jpgBytes": 60725
+      },
+      {
+        "width": 800,
+        "height": 533,
+        "avif": "assets/images/opt/gettogether-800.avif",
+        "avifBytes": 41847,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "home1.jpg": {
+    "source": "assets/images/home1.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/home1-480.avif",
+        "avifBytes": 45517,
+        "jpg": "assets/images/opt/home1-480.jpg",
+        "jpgBytes": 67697
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/home1-768.avif",
+        "avifBytes": 105941,
+        "jpg": "assets/images/opt/home1-768.jpg",
+        "jpgBytes": 161478
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/home1-960.avif",
+        "avifBytes": 169036,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "home2.jpg": {
+    "source": "assets/images/home2.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/home2-480.avif",
+        "avifBytes": 42650,
+        "jpg": "assets/images/opt/home2-480.jpg",
+        "jpgBytes": 65732
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/home2-768.avif",
+        "avifBytes": 92990,
+        "jpg": "assets/images/opt/home2-768.jpg",
+        "jpgBytes": 148212
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/home2-960.avif",
+        "avifBytes": 160061,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "idiyappam.jpg": {
+    "source": "assets/images/idiyappam.jpg",
+    "width": 736,
+    "height": 920,
+    "variants": [
+      {
+        "width": 480,
+        "height": 600,
+        "avif": "assets/images/opt/idiyappam-480.avif",
+        "avifBytes": 44055,
+        "jpg": "assets/images/opt/idiyappam-480.jpg",
+        "jpgBytes": 63786
+      },
+      {
+        "width": 736,
+        "height": 920,
+        "avif": "assets/images/opt/idiyappam-736.avif",
+        "avifBytes": 88433,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "inhome1.jpg": {
+    "source": "assets/images/inhome1.jpg",
+    "width": 959,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 641,
+        "avif": "assets/images/opt/inhome1-480.avif",
+        "avifBytes": 14884,
+        "jpg": "assets/images/opt/inhome1-480.jpg",
+        "jpgBytes": 28785
+      },
+      {
+        "width": 768,
+        "height": 1025,
+        "avif": "assets/images/opt/inhome1-768.avif",
+        "avifBytes": 30328,
+        "jpg": "assets/images/opt/inhome1-768.jpg",
+        "jpgBytes": 59307
+      },
+      {
+        "width": 959,
+        "height": 1280,
+        "avif": "assets/images/opt/inhome1-959.avif",
+        "avifBytes": 46738,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "inhome2.jpg": {
+    "source": "assets/images/inhome2.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/inhome2-480.avif",
+        "avifBytes": 15663,
+        "jpg": "assets/images/opt/inhome2-480.jpg",
+        "jpgBytes": 30498
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/inhome2-768.avif",
+        "avifBytes": 37276,
+        "jpg": "assets/images/opt/inhome2-768.jpg",
+        "jpgBytes": 67038
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/inhome2-960.avif",
+        "avifBytes": 69329,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "inhome3.jpg": {
+    "source": "assets/images/inhome3.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/inhome3-480.avif",
+        "avifBytes": 18880,
+        "jpg": "assets/images/opt/inhome3-480.jpg",
+        "jpgBytes": 34069
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/inhome3-768.avif",
+        "avifBytes": 43766,
+        "jpg": "assets/images/opt/inhome3-768.jpg",
+        "jpgBytes": 73194
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/inhome3-960.avif",
+        "avifBytes": 72561,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "kappafish.jpg": {
+    "source": "assets/images/kappafish.jpg",
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "width": 480,
+        "height": 480,
+        "avif": "assets/images/opt/kappafish-480.avif",
+        "avifBytes": 35965,
+        "jpg": "assets/images/opt/kappafish-480.jpg",
+        "jpgBytes": 58657
+      },
+      {
+        "width": 512,
+        "height": 512,
+        "avif": "assets/images/opt/kappafish-512.avif",
+        "avifBytes": 41840,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "leaf-tile.png": {
+    "source": "assets/images/leaf-tile.png",
+    "width": 512,
+    "height": 512,
+    "variants": [
+      {
+        "width": 480,
+        "height": 480,
+        "avif": "assets/images/opt/leaf-tile-480.avif",
+        "avifBytes": 7679,
+        "jpg": "assets/images/opt/leaf-tile-480.jpg",
+        "jpgBytes": 999
+      },
+      {
+        "width": 512,
+        "height": 512,
+        "avif": "assets/images/opt/leaf-tile-512.avif",
+        "avifBytes": 8942,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "muttoncb.jpg": {
+    "source": "assets/images/muttoncb.jpg",
+    "width": 418,
+    "height": 626,
+    "variants": [
+      {
+        "width": 418,
+        "height": 626,
+        "avif": "assets/images/opt/muttoncb-418.avif",
+        "avifBytes": 37126,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "nature1.jpg": {
+    "source": "assets/images/nature1.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/nature1-480.avif",
+        "avifBytes": 62136,
+        "jpg": "assets/images/opt/nature1-480.jpg",
+        "jpgBytes": 82955
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/nature1-768.avif",
+        "avifBytes": 151514,
+        "jpg": "assets/images/opt/nature1-768.jpg",
+        "jpgBytes": 208954
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/nature1-960.avif",
+        "avifBytes": 238222,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "nature2.jpg": {
+    "source": "assets/images/nature2.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/nature2-480.avif",
+        "avifBytes": 54637,
+        "jpg": "assets/images/opt/nature2-480.jpg",
+        "jpgBytes": 77219
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/nature2-768.avif",
+        "avifBytes": 130107,
+        "jpg": "assets/images/opt/nature2-768.jpg",
+        "jpgBytes": 188365
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/nature2-960.avif",
+        "avifBytes": 207439,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "nature3.jpg": {
+    "source": "assets/images/nature3.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/nature3-480.avif",
+        "avifBytes": 82172,
+        "jpg": "assets/images/opt/nature3-480.jpg",
+        "jpgBytes": 106121
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/nature3-768.avif",
+        "avifBytes": 179826,
+        "jpg": "assets/images/opt/nature3-768.jpg",
+        "jpgBytes": 251444
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/nature3-960.avif",
+        "avifBytes": 261761,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "nature4.jpg": {
+    "source": "assets/images/nature4.jpg",
+    "width": 959,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 641,
+        "avif": "assets/images/opt/nature4-480.avif",
+        "avifBytes": 58003,
+        "jpg": "assets/images/opt/nature4-480.jpg",
+        "jpgBytes": 81358
+      },
+      {
+        "width": 768,
+        "height": 1025,
+        "avif": "assets/images/opt/nature4-768.avif",
+        "avifBytes": 139446,
+        "jpg": "assets/images/opt/nature4-768.jpg",
+        "jpgBytes": 203720
+      },
+      {
+        "width": 959,
+        "height": 1280,
+        "avif": "assets/images/opt/nature4-959.avif",
+        "avifBytes": 218319,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "outhome1.jpg": {
+    "source": "assets/images/outhome1.jpg",
+    "width": 959,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 641,
+        "avif": "assets/images/opt/outhome1-480.avif",
+        "avifBytes": 73946,
+        "jpg": "assets/images/opt/outhome1-480.jpg",
+        "jpgBytes": 96921
+      },
+      {
+        "width": 768,
+        "height": 1025,
+        "avif": "assets/images/opt/outhome1-768.avif",
+        "avifBytes": 181227,
+        "jpg": "assets/images/opt/outhome1-768.jpg",
+        "jpgBytes": 243384
+      },
+      {
+        "width": 959,
+        "height": 1280,
+        "avif": "assets/images/opt/outhome1-959.avif",
+        "avifBytes": 288473,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "palada.jpg": {
+    "source": "assets/images/palada.jpg",
+    "width": 236,
+    "height": 354,
+    "variants": [
+      {
+        "width": 236,
+        "height": 354,
+        "avif": "assets/images/opt/palada-236.avif",
+        "avifBytes": 7083,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "pattayapora.jpg": {
+    "source": "assets/images/pattayapora.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/pattayapora-480.avif",
+        "avifBytes": 73521,
+        "jpg": "assets/images/opt/pattayapora-480.jpg",
+        "jpgBytes": 97103
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/pattayapora-768.avif",
+        "avifBytes": 170426,
+        "jpg": "assets/images/opt/pattayapora-768.jpg",
+        "jpgBytes": 236167
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/pattayapora-960.avif",
+        "avifBytes": 259438,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "PazhamPradhaman.jpg": {
+    "source": "assets/images/PazhamPradhaman.jpg",
+    "width": 736,
+    "height": 1107,
+    "variants": [
+      {
+        "width": 480,
+        "height": 722,
+        "avif": "assets/images/opt/PazhamPradhaman-480.avif",
+        "avifBytes": 29702,
+        "jpg": "assets/images/opt/PazhamPradhaman-480.jpg",
+        "jpgBytes": 51921
+      },
+      {
+        "width": 736,
+        "height": 1107,
+        "avif": "assets/images/opt/PazhamPradhaman-736.avif",
+        "avifBytes": 69829,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "pond2.jpg": {
+    "source": "assets/images/pond2.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/pond2-480.avif",
+        "avifBytes": 60732,
+        "jpg": "assets/images/opt/pond2-480.jpg",
+        "jpgBytes": 84515
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/pond2-768.avif",
+        "avifBytes": 145267,
+        "jpg": "assets/images/opt/pond2-768.jpg",
+        "jpgBytes": 205651
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/pond2-960.avif",
+        "avifBytes": 236908,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "puttu-kadala.jpg": {
+    "source": "assets/images/puttu-kadala.jpg",
+    "width": 736,
+    "height": 920,
+    "variants": [
+      {
+        "width": 480,
+        "height": 600,
+        "avif": "assets/images/opt/puttu-kadala-480.avif",
+        "avifBytes": 22788,
+        "jpg": "assets/images/opt/puttu-kadala-480.jpg",
+        "jpgBytes": 40623
+      },
+      {
+        "width": 736,
+        "height": 920,
+        "avif": "assets/images/opt/puttu-kadala-736.avif",
+        "avifBytes": 42409,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "room1.jpg": {
+    "source": "assets/images/room1.jpg",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "avif": "assets/images/opt/room1-480.avif",
+        "avifBytes": 25525,
+        "jpg": "assets/images/opt/room1-480.jpg",
+        "jpgBytes": 45042
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "avif": "assets/images/opt/room1-768.avif",
+        "avifBytes": 49698,
+        "jpg": "assets/images/opt/room1-768.jpg",
+        "jpgBytes": 94098
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "avif": "assets/images/opt/room1-960.avif",
+        "avifBytes": 80233,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "room2.jpg": {
+    "source": "assets/images/room2.jpg",
+    "width": 959,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "height": 641,
+        "avif": "assets/images/opt/room2-480.avif",
+        "avifBytes": 15751,
+        "jpg": "assets/images/opt/room2-480.jpg",
+        "jpgBytes": 30110
+      },
+      {
+        "width": 768,
+        "height": 1025,
+        "avif": "assets/images/opt/room2-768.avif",
+        "avifBytes": 38299,
+        "jpg": "assets/images/opt/room2-768.jpg",
+        "jpgBytes": 67415
+      },
+      {
+        "width": 959,
+        "height": 1280,
+        "avif": "assets/images/opt/room2-959.avif",
+        "avifBytes": 84304,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "sadhya.jpg": {
+    "source": "assets/images/sadhya.jpg",
+    "width": 735,
+    "height": 1191,
+    "variants": [
+      {
+        "width": 480,
+        "height": 778,
+        "avif": "assets/images/opt/sadhya-480.avif",
+        "avifBytes": 34081,
+        "jpg": "assets/images/opt/sadhya-480.jpg",
+        "jpgBytes": 55831
+      },
+      {
+        "width": 735,
+        "height": 1191,
+        "avif": "assets/images/opt/sadhya-735.avif",
+        "avifBytes": 65798,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  },
+  "supperclub.jpg": {
+    "source": "assets/images/supperclub.jpg",
+    "width": 736,
+    "height": 1103,
+    "variants": [
+      {
+        "width": 480,
+        "height": 719,
+        "avif": "assets/images/opt/supperclub-480.avif",
+        "avifBytes": 34255,
+        "jpg": "assets/images/opt/supperclub-480.jpg",
+        "jpgBytes": 56233
+      },
+      {
+        "width": 736,
+        "height": 1103,
+        "avif": "assets/images/opt/supperclub-736.avif",
+        "avifBytes": 65830,
+        "jpg": null,
+        "jpgBytes": null
+      }
+    ]
+  }
+}

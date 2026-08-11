@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Events &amp; Supper Club | Thalathoor Heritage Homestay, Kasaragod</title>
   <meta name="description"
-    content="Host your supper club, private retreat or destination wedding at Thalathoor Heritage Homestay — courtyard, kitchen and gardens for gatherings of every kind.">
+    content="Host your supper club, private retreat or destination wedding at Thalathoor Heritage Homestay - courtyard, kitchen and gardens for gatherings of every kind.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://www.thalathoorheritage.com/events.html">
   <meta name="robots" content="index, follow">
@@ -32,11 +32,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet">
+  <!-- Self-hosted fonts: no third-party host, no extra DNS/TLS handshake.
+       The two faces below are the ones needed for first paint. -->
+  <link rel="preload" href="assets/fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -58,7 +58,7 @@
 </head>
 
 <body>
-  <div class="wrap-narrow" style="padding-top:18px;padding-bottom:70px;">
+  <div class="wrap-narrow page-shell page-shell--events">
 
     <nav class="nav-simple">
       <a href="index.html" class="nav-simple__brand">
@@ -71,7 +71,14 @@
       <a href="index.html" class="nav-simple__back">← Back to home</a>
     </nav>
 
-    <header class="events-hero" style="background-image:url('assets/images/nature2.jpg')">
+    <header class="events-hero">
+      <picture>
+        <source type="image/avif" srcset="assets/images/opt/nature2-480.avif 480w, assets/images/opt/nature2-768.avif 768w, assets/images/opt/nature2-960.avif 960w" sizes="100vw">
+        <img class="media-fill" src="assets/images/opt/nature2-768.jpg"
+          srcset="assets/images/opt/nature2-480.jpg 480w, assets/images/opt/nature2-768.jpg 768w" sizes="100vw"
+          width="960" height="1280" alt="Green grounds around the heritage house"
+          fetchpriority="high" decoding="async">
+      </picture>
       <div class="events-hero__inner">
         <div class="eyebrow eyebrow--light">Events &amp; supper club</div>
         <h1 class="events-hero__title">Your occasion, held in a heritage home.</h1>
@@ -80,15 +87,23 @@
       </div>
     </header>
 
-    <section class="offering">
+    <!-- @data:events -->
+    <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+    <section class="offering" id="supper-club">
       <div class="offering__grid">
-        <div class="offering__media" style="background-image:url('assets/images/supperclub.jpg');order:1;"></div>
-        <div style="order:2;">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/supperclub-480.avif 480w, assets/images/opt/supperclub-736.avif 736w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/supperclub-480.jpg"
+              srcset="assets/images/opt/supperclub-480.jpg 480w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="736" height="1103" alt="A supper club dinner laid out at the shared table"
+              loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div>
           <div class="eyebrow">Supper Club</div>
           <h2 class="offering__title">An evening at the shared table</h2>
-          <p class="offering__body">Our supper club is a curated, multi-course dinner drawn from Kasaragod&rsquo;s home
-            kitchens — cooked on the heritage stove and served at one long table. A slow evening of regional dishes,
-            most of which never made it to a restaurant menu.</p>
+          <p class="offering__body">Our supper club is a curated, multi-course dinner drawn from Kasaragod’s home kitchens - cooked on the heritage stove and served at one long table. A slow evening of regional dishes, most of which never made it to a restaurant menu.</p>
           <div class="offering__points">
             <div class="offering__point"><span class="offering__point-check">✓</span><span
                 class="offering__point-text">Curated multi-course Malabar menu</span></div>
@@ -99,59 +114,101 @@
             <div class="offering__point"><span class="offering__point-check">✓</span><span
                 class="offering__point-text">By reservation, on select evenings</span></div>
           </div>
-          <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20An%20evening%20at%20the%20shared%20table%20at%20Thalathoor."
-            target="_blank" rel="noopener" class="btn btn-primary">Reserve a seat</a>
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20supper%20club%20at%20Thalathoor.%20Preferred%20dates%3A%20" target="_blank" rel="noopener" class="btn btn-primary">Reserve a seat</a>
         </div>
       </div>
     </section>
 
-    <section class="offering">
-      <div class="offering__grid">
-        <div class="offering__media" style="background-image:url('assets/images/gettogether.jpg');order:2;"></div>
-        <div style="order:1;">
-          <div class="eyebrow">Corporate &amp; Private</div>
-          <h2 class="offering__title">Retreats, offsites &amp; get-togethers</h2>
-          <p class="offering__body">Take the whole house for an offsite, a reunion or a milestone celebration. Meals,
-            rooms and the grounds are yours, with the quiet and the green that the everyday city event never has.</p>
+    <section class="offering" id="corporate-private">
+      <div class="offering__grid offering__grid--flip">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/gettogether-480.avif 480w, assets/images/opt/gettogether-768.avif 768w, assets/images/opt/gettogether-800.avif 800w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/gettogether-768.jpg"
+              srcset="assets/images/opt/gettogether-480.jpg 480w, assets/images/opt/gettogether-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="800" height="533" alt="Guests gathered for a get-together at the house"
+              loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div>
+          <div class="eyebrow">Corporate & Private</div>
+          <h2 class="offering__title">Retreats, offsites & get-togethers</h2>
+          <p class="offering__body">Take the whole house for an offsite, a reunion or a milestone celebration. Meals, rooms and the grounds are yours, with the quiet and the green that the everyday city event never has.</p>
           <div class="offering__points">
             <div class="offering__point"><span class="offering__point-check">✓</span><span
-                class="offering__point-text">Exclusive use of the house &amp; grounds</span></div>
+                class="offering__point-text">Exclusive use of the house & grounds</span></div>
             <div class="offering__point"><span class="offering__point-check">✓</span><span
                 class="offering__point-text">All meals from the heritage kitchen</span></div>
             <div class="offering__point"><span class="offering__point-check">✓</span><span
-                class="offering__point-text">Space for sessions, dinners &amp; downtime</span></div>
+                class="offering__point-text">Space for sessions, dinners & downtime</span></div>
             <div class="offering__point"><span class="offering__point-check">✓</span><span
                 class="offering__point-text">Group stays across both rooms</span></div>
           </div>
-          <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Retreats%2C%20offsites%20%26%20get-togethers%20at%20Thalathoor."
-            target="_blank" rel="noopener" class="btn btn-primary">Plan a private event</a>
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20retreat%20or%20private%20get-together%20at%20Thalathoor.%20Dates%3A%20%2F%20Number%20of%20guests%3A%20" target="_blank" rel="noopener" class="btn btn-primary">Plan a private event</a>
         </div>
       </div>
     </section>
 
-    <section class="offering">
+    <section class="offering" id="weddings">
       <div class="offering__grid">
-        <div class="offering__media" style="background-image:url('assets/images/desttwedd.jpg');order:1;"></div>
-        <div style="order:2;">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/desttwedd-480.avif 480w, assets/images/opt/desttwedd-768.avif 768w, assets/images/opt/desttwedd-1024.avif 1024w, assets/images/opt/desttwedd-1280.avif 1280w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/desttwedd-768.jpg"
+              srcset="assets/images/opt/desttwedd-480.jpg 480w, assets/images/opt/desttwedd-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="1280" height="1024" alt="A wedding celebration in the courtyard"
+              loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div>
           <div class="eyebrow">Weddings</div>
-          <h2 class="offering__title">Destination weddings &amp; Haldi</h2>
-          <p class="offering__body">Intimate ceremonies, haldi mornings and receptions set in the courtyard and gardens.
-            A heritage backdrop for the day, with food and hospitality handled by the family.</p>
+          <h2 class="offering__title">Destination weddings & Haldi</h2>
+          <p class="offering__body">Intimate ceremonies, haldi mornings and receptions set in the courtyard and gardens. A heritage backdrop for the day, with food and hospitality handled by the family.</p>
           <div class="offering__points">
             <div class="offering__point"><span class="offering__point-check">✓</span><span
-                class="offering__point-text">Courtyard &amp; garden ceremony settings</span></div>
+                class="offering__point-text">Courtyard & garden ceremony settings</span></div>
             <div class="offering__point"><span class="offering__point-check">✓</span><span
-                class="offering__point-text">Haldi, mehendi &amp; reception mornings</span></div>
+                class="offering__point-text">Haldi, mehendi & reception mornings</span></div>
             <div class="offering__point"><span class="offering__point-check">✓</span><span
                 class="offering__point-text">In-house catering, Malabar menus</span></div>
             <div class="offering__point"><span class="offering__point-check">✓</span><span
                 class="offering__point-text">Intimate guest numbers</span></div>
           </div>
-          <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Destination%20weddings%20%26%20Haldi%20at%20Thalathoor."
-            target="_blank" rel="noopener" class="btn btn-primary">Enquire about weddings</a>
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20wedding%20or%20haldi%20at%20Thalathoor.%20Dates%3A%20%2F%20Number%20of%20guests%3A%20" target="_blank" rel="noopener" class="btn btn-primary">Enquire about weddings</a>
         </div>
       </div>
     </section>
+
+    <section class="offering" id="photoshoots">
+      <div class="offering__grid offering__grid--flip">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/chinnu2-480.avif 480w, assets/images/opt/chinnu2-768.avif 768w, assets/images/opt/chinnu2-959.avif 959w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/chinnu2-768.jpg"
+              srcset="assets/images/opt/chinnu2-480.jpg 480w, assets/images/opt/chinnu2-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="959" height="1280" alt="A portrait session in the heritage house, against a dark doorway and red oxide floor"
+              loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div>
+          <div class="eyebrow">Photoshoots</div>
+          <h2 class="offering__title">A location that needs no set dressing</h2>
+          <p class="offering__body">The house is open for portrait, fashion, wedding and editorial shoots. Red oxide floors, teakwood ceilings, carved doorways, the courtyard and the verandah - plus paddy fields, an arecanut plantation and the pond within the grounds. Shoots can run alongside a stay or as a day visit.</p>
+          <div class="offering__points">
+            <div class="offering__point"><span class="offering__point-check">✓</span><span
+                class="offering__point-text">Interiors, courtyard, verandah and grounds</span></div>
+            <div class="offering__point"><span class="offering__point-check">✓</span><span
+                class="offering__point-text">Natural light through the day; green on every side</span></div>
+            <div class="offering__point"><span class="offering__point-check">✓</span><span
+                class="offering__point-text">Meals from the heritage kitchen on request</span></div>
+            <div class="offering__point"><span class="offering__point-check">✓</span><span
+                class="offering__point-text">Day visits or shoots alongside a stay</span></div>
+          </div>
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20photoshoot%20at%20Thalathoor.%20Type%20of%20shoot%3A%20%2F%20Preferred%20dates%3A%20%2F%20Crew%20size%3A%20" target="_blank" rel="noopener" class="btn btn-primary">Enquire about a shoot</a>
+        </div>
+      </div>
+    </section>
+    <!-- /@data:events -->
 
     <section class="steps">
       <div class="steps__head">
@@ -185,20 +242,27 @@
     <section class="events-cta">
       <div class="events-cta__inner">
         <h2 class="events-cta__title">Planning something?</h2>
-        <p class="events-cta__desc">Tell us the occasion, rough dates and how many guests — we'll come back with what's
+        <p class="events-cta__desc">Tell us the occasion, rough dates and how many guests - we'll come back with what's
           possible and a quote.</p>
-        <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20plan%20an%20event%20at%20Thalathoor.%20Occasion%3A%20%2F%20Dates%3A%20%2F%20Guests%3A%20"
+        <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20plan%20an%20event%20at%20Thalathoor.%20Occasion%3A%20%2F%20Dates%3A%20%2F%20Guests%3A%20"
           target="_blank" rel="noopener" class="btn btn-white">Enquire on WhatsApp</a>
       </div>
     </section>
 
   </div>
 
-  <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
+  <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
     target="_blank" rel="noopener" class="wa-fab"><span aria-hidden="true">💬</span><span class="wa-fab__label">WhatsApp
       us</span></a>
 
-  <script src="js/main.js"></script>
+  <footer class="site-footer site-footer--slim">
+    <!-- @data:credit -->
+    <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+        <div class="site-footer__credit">Handcrafted by <a href="https://octane.team" target="_blank" rel="noopener">Octane</a></div>
+    <!-- /@data:credit -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,41 @@
+{
+  "_comment": "Practical-information accordion on index.html. Policy wording lives here.",
+  "items": [
+    {
+      "q": "Check-in / check-out",
+      "a": "Check-in 12:00 PM · Check-out 12:00 PM."
+    },
+    {
+      "q": "Tariff structure",
+      "a": "Per room, double occupancy, including all taxes and meals. Extra adult ₹1,200 (10 yrs+); extra child ₹1,000 (5–10 yrs). Pricing is dynamic on weekends, public holidays and peak season - call for the latest quote."
+    },
+    {
+      "q": "Children, pets & smoking",
+      "a": "Children are welcome. Pets are not permitted at the property. Smoking is not permitted indoors."
+    },
+    {
+      "q": "Alcohol",
+      "a": "Not permitted."
+    },
+    {
+      "q": "Payment",
+      "a": "50% advance confirms the booking; the balance is due 7 days before check-in."
+    },
+    {
+      "q": "Cancellation",
+      "a": "For Indian passport holders, a cancellation is issued as a credit note valid for one year from booking. It is transferable and can be redeemed once against a future stay."
+    },
+    {
+      "q": "Wifi / room service",
+      "a": "Free Wi-Fi throughout the property. Room service is not available."
+    },
+    {
+      "q": "Getting here / pickup",
+      "a": "Kasaragod station ~6 km (20 min); Mangaluru airport ~65 km (1.5 hr); Kannur airport ~91 km (2.5 hr). Pickup is available on request, at extra charge."
+    },
+    {
+      "q": "Languages spoken",
+      "a": "English, Hindi, Malayalam and Tamil."
+    }
+  ]
+}

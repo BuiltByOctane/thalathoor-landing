@@ -35,11 +35,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
-    rel="stylesheet">
+  <!-- Self-hosted fonts: no third-party host, no extra DNS/TLS handshake.
+       The two faces below are the ones needed for first paint. -->
+  <link rel="preload" href="assets/fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -49,7 +49,8 @@
   "name": "Thalathoor Heritage Homestay",
   "description": "A three-generation heritage home in Kasaragod, north Kerala, offering two rooms, home-cooked Kasaragod meals, and grounds with a natural pool overlooking paddy fields and a river.",
   "url": "https://www.thalathoorheritage.com/",
-  "telephone": "+91-8129798721",
+  "telephone": "+91-9447489949",
+  "email": "k.shyamala.nair@gmail.com",
   "priceRange": "₹₹",
   "image": [
     "https://www.thalathoorheritage.com/assets/images/1.jpg",
@@ -58,15 +59,138 @@
   ],
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Thalathoor Heritage, Perumbala",
     "addressLocality": "Kasaragod",
     "addressRegion": "Kerala",
+    "postalCode": "671317",
     "addressCountry": "IN"
   },
   "foundingDate": "2013",
   "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "All meals included", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Natural swimming pool", "value": true }
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free Wi-Fi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "All meals included",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Natural swimming pool",
+      "value": true
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "115",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "name": "An Authentic Kerala Experience to Remember",
+      "reviewBody": "A peaceful stay in an 80+ year old traditional Tharavadu, hosted by warm, inspiring Shyamala Ma'am. Every meal was freshly prepared authentic Malabar cuisine and was the highlight of the trip.",
+      "datePublished": "2026-07",
+      "author": {
+        "@type": "Person",
+        "name": "Yuvaraj"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Where Every Meal Feels Like Home",
+      "reviewBody": "Felt like joining a family from the moment of arrival, thanks to Shyamala Madam's warmth. Her home-cooked Malabar dishes, from fresh fish curry to kappa made with local, organic ingredients, were the real highlight.",
+      "datePublished": "2025-11",
+      "author": {
+        "@type": "Person",
+        "name": "Odyssey04998055244"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Hospitality at the Max with Authentic Malabar Food",
+      "reviewBody": "One night here felt like visiting family, with the kids greeted with mango pudding on arrival. Though Shyamala aunty is vegetarian herself, she cooked a full non-veg Malabar spread including fish cutlets and fish curry beautifully.",
+      "datePublished": "2024-12",
+      "author": {
+        "@type": "Person",
+        "name": "Tharani T"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Its Like Visiting Your Parents' Place with all the Love and Amazing Food",
+      "reviewBody": "Three nights in a 200-year-old home with modern comforts, hosted by a caring, resourceful aunty who arranged a boat ride and a local Theyyam performance. Meals were eaten together like family, full of laughter.",
+      "datePublished": "2024-11",
+      "author": {
+        "@type": "Person",
+        "name": "Preeti Kothari"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Great Hospitality & Culinary Delights",
+      "reviewBody": "A short but memorable stay surrounded by palm groves, with spotless, recently modernized rooms. Mrs. Nair even whipped up a special butter chicken on request alongside her usual home cooking.",
+      "datePublished": "2025-02",
+      "author": {
+        "@type": "Person",
+        "name": "Sightseer35908895304"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Wonderful Experience",
+      "reviewBody": "A lovely visit with great home-style vegetarian food and engaging conversation with the host. Also got to see the nearby hanging bridge and part of a local Theyyam performance.",
+      "datePublished": "2024-03",
+      "author": {
+        "@type": "Person",
+        "name": "sjagadish"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/thalathoor_heritage_/",
+    "https://www.tripadvisor.com/Hotel_Review-g1809068-d4415061-Reviews-Thalathoor_Heritage-Kasaragod_Kasaragod_District_Kerala.html"
   ]
 }
 </script>
@@ -105,7 +229,7 @@
         <a href="#gallery" class="nav__link">Gallery</a>
         <a href="#contact" class="nav__link">Contact</a>
       </div>
-      <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
+      <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
         target="_blank" rel="noopener" class="btn btn-outline-light nav__cta">Enquire</a>
       <button type="button" class="nav__burger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -121,28 +245,39 @@
     <a href="#events" class="nav-drawer__link">Events</a>
     <a href="#gallery" class="nav-drawer__link">Gallery</a>
     <a href="#contact" class="nav-drawer__link">Contact</a>
-    <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
+    <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
       target="_blank" rel="noopener" class="btn btn-mint nav-drawer__cta">Enquire on WhatsApp</a>
   </div>
 
-  <!-- HERO — full-viewport carousel -->
-  <section id="top" class="hero">
-    <div class="hero__slide is-active" style="background:#22301f">
-      <video src="assets/images/main.mp4" muted loop playsinline autoplay></video>
+  <!-- HERO - full-viewport carousel -->
+  <section id="top" class="hero" data-autoplay-seconds="4">
+    <!-- @data:hero -->
+    <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+    <div class="hero__slide is-active">
+      <video class="media-fill" src="assets/videos/opt/hero-video-1.mp4" preload="metadata" autoplay
+        poster="assets/videos/opt/hero-video-1-poster.jpg" width="832" height="464"
+        muted loop playsinline aria-label="A guest room with a wooden armchair, a writing desk and a bed made up in white linen, beside a window opening onto green"></video>
     </div>
-    <div class="hero__slide" style="background-image:url('assets/images/6.jpg')"></div>
-    <div class="hero__slide" style="background-image:url('assets/images/5.jpg')"></div>
-    <div class="hero__slide" style="background-image:url('assets/images/1.jpg')"></div>
-    <div class="hero__slide" style="background-image:url('assets/images/2.jpg')"></div>
+    <div class="hero__slide">
+      <video class="media-fill" data-src="assets/videos/opt/hero-video-2.mp4" preload="none"
+        poster="assets/videos/opt/hero-video-2-poster.jpg" width="1024" height="576"
+        muted loop playsinline aria-label="A guest room with a dark wood desk and armchair on a red oxide floor, light coming through a barred window"></video>
+    </div>
+    <div class="hero__slide">
+      <video class="media-fill" data-src="assets/videos/opt/hero-video-3.mp4" preload="none"
+        poster="assets/videos/opt/hero-video-3-poster.jpg" width="1024" height="576"
+        muted loop playsinline aria-label="Rain falling past the tiled roof of the house, onto the verandah and the arecanut trees beyond"></video>
+    </div>
+    <!-- /@data:hero -->
 
     <div class="hero__overlay">
       <div class="hero__content">
         <div class="hero__kicker">Since 2013 · Kasaragod, Kerala</div>
         <h1 class="hero__title">A house in Kasaragod that still cooks the <em>old way.</em></h1>
-        <p class="hero__desc">A heritage home in <span class="tbd">Perumbala , Kasaragod</span>, north
+        <p class="hero__desc">A heritage home in Perumbala, Kasaragod, north
           Kerala. Rooms that open onto green, and food cooked from whatever the season gives us.</p>
         <div class="hero__actions">
-          <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
             target="_blank" rel="noopener" class="btn btn-primary">Enquire on WhatsApp</a>
           <a href="#rooms" class="hero__scroll"><span class="hero__scroll-ring">↓</span>Scroll to rooms</a>
         </div>
@@ -150,11 +285,12 @@
     </div>
 
     <div class="hero__dots">
+      <!-- @data:hero-dots -->
+      <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
       <button class="hero__dot is-active" aria-label="Go to slide 1"></button>
       <button class="hero__dot" aria-label="Go to slide 2"></button>
       <button class="hero__dot" aria-label="Go to slide 3"></button>
-      <button class="hero__dot" aria-label="Go to slide 4"></button>
-      <button class="hero__dot" aria-label="Go to slide 5"></button>
+      <!-- /@data:hero-dots -->
     </div>
   </section>
 
@@ -165,21 +301,28 @@
       <div class="split">
         <div>
           <div class="eyebrow">The house</div>
-          <h2 style="font-size:clamp(32px,4vw,52px);line-height:1.04;margin:0 0 22px;">A home, kept as a home.</h2>
+          <h2 class="title-lg title--gap-lg">A home, kept as a home.</h2>
           <div class="prose">
             <p>The house has been with the family for three generations. Its compound once held a school, where Dr.
-              Nair's great-grandfather taught the village children — and the walls still carry those stories. The rooms
+              Nair's great-grandfather taught the village children - and the walls still carry those stories. The rooms
               are kept much as they were, filled with local handicrafts and flowers cut from the surrounding gardens.
             </p>
-            <p>It is run by Shyamala Nair, one of the pioneers of hospitality in north Kerala. travelers and neighbours
-              were welcomed into her kitchen and served a meal, reflecting the timeless tradition that anyone who
+            <p>It is run by Shyamala Nair, one of the pioneers of hospitality in north Kerala. Travellers and neighbours have always been
+              welcomed into her kitchen and served a meal, reflecting the timeless tradition that anyone who
               arrived during mealtime was invited to share the family's table. This cherished custom continues to this
               day, with every guest dining alongside the family, not as a visitor, but as one of their own.</p>
-            <p>Nothing here has been turned into something else. The architecture, the courtyard, the kitchen — all
+            <p>Nothing here has been turned into something else. The architecture, the courtyard, the kitchen - all
               kept, not restored. Mornings are quiet. Evenings are quieter.</p>
           </div>
         </div>
-        <div class="media-panel" style="background-image:url('assets/images/4.jpg')"></div>
+        <div class="media-panel">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/4-480.avif 480w, assets/images/opt/4-768.avif 768w, assets/images/opt/4-800.avif 800w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/4-768.jpg"
+              srcset="assets/images/opt/4-480.jpg 480w, assets/images/opt/4-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="800" height="600" alt="Verandah of the heritage house"
+              loading="lazy" decoding="async">
+          </picture></div>
       </div>
     </section>
 
@@ -188,69 +331,68 @@
       <div class="section-head">
         <div>
           <div class="eyebrow">Rooms</div>
-          <h2 style="font-size:clamp(32px,4vw,52px);line-height:1.02;margin:0;max-width:16ch;">Each different. All of
+          <h2 class="title-lg measure-16">Each different. All of
             them open to green.</h2>
         </div>
-        <p class="section-head__note">Two rooms, none of them off a corridor. Tariff includes <span
-            class="tbd">[[TBD-10: what the rate covers]]</span>.</p>
+        <p class="section-head__note">Two rooms, none of them off a corridor. Tariff includes all meals and taxes.</p>
       </div>
       <div class="room-grid">
+        <!-- @data:rooms -->
+        <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
         <div class="room-card">
-          <div class="room-card__media" style="background-image:url('assets/images/room1.jpg')"
-            data-lightbox-src="assets/images/room1.jpg" data-lightbox-type="image">
+          <div class="room-card__media" data-lightbox-src="assets/images/room1.jpg" data-lightbox-type="image">
+            <picture>
+              <source type="image/avif" srcset="assets/images/opt/room1-480.avif 480w, assets/images/opt/room1-768.avif 768w, assets/images/opt/room1-960.avif 960w" sizes="(max-width:520px) 100vw, (max-width:900px) 50vw, 620px">
+              <img class="media-fill" src="assets/images/opt/room1-768.jpg"
+                srcset="assets/images/opt/room1-480.jpg 480w, assets/images/opt/room1-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:900px) 50vw, 620px"
+                width="960" height="1280" alt="The most spacious room in the house, defined by its ancestral character and soft natural light"
+                loading="lazy" decoding="async">
+            </picture>
             <span class="room-card__tier">Premium</span>
-            <span class="room-card__tag room-card__tag--tl">gallery · 5–8 photos ✓</span>
-            <span class="room-card__tag room-card__tag--bl">▶ walkthrough · 15–30s ✓</span>
           </div>
           <div class="room-card__body">
             <h3 class="room-card__name">Royal Thampuraan</h3>
             <div class="room-card__meta">250 sq ft · 1 room</div>
-            <p class="room-card__desc">The most spacious room in the house, defined by its ancestral character and soft
-              natural light. A comfortable bed, air-conditioning and an attached bathroom make for a quiet, restful
-              stay.</p>
+            <p class="room-card__desc">The most spacious room in the house, defined by its ancestral character and soft natural light. A comfortable bed, air-conditioning and an attached bathroom make for a quiet, restful stay.</p>
             <div class="room-card__facts">
               <div class="room-card__fact"><span>Sleeps</span><span>2 adults</span></div>
               <div class="room-card__fact"><span>Opens to</span><span>Plantation view</span></div>
-              <div class="room-card__fact"><span>Amenities</span><span style="text-align:right;">AC · attached bath ·
-                  wifi</span></div>
+              <div class="room-card__fact"><span>Amenities</span><span>AC · attached bath · wifi</span></div>
             </div>
             <div class="room-card__footer">
-              <div><span class="room-card__price-from">from </span><span class="room-card__price">₹6,500</span><span
-                  class="room-card__price-unit"> / night</span></div>
-              <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20check%20availability%20for%20the%20Royal%20Thampuraan%20at%20Thalathoor.%20Dates%3A%20"
-                target="_blank" rel="noopener" class="room-card__cta">Check dates</a>
+              <div><span class="room-card__price-from">from </span><span class="room-card__price">₹6,500</span><span class="room-card__price-unit"> / night</span></div>
+              <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20check%20availability%20for%20the%20Royal%20Thampuraan%20at%20Thalathoor.%20Dates%3A%20" target="_blank" rel="noopener" class="room-card__cta">Check dates</a>
             </div>
           </div>
         </div>
-
         <div class="room-card">
-          <div class="room-card__media" style="background-image:url('assets/images/room2.jpg')"
-            data-lightbox-src="assets/images/room2.jpg" data-lightbox-type="image">
+          <div class="room-card__media" data-lightbox-src="assets/images/room2.jpg" data-lightbox-type="image">
+            <picture>
+              <source type="image/avif" srcset="assets/images/opt/room2-480.avif 480w, assets/images/opt/room2-768.avif 768w, assets/images/opt/room2-959.avif 959w" sizes="(max-width:520px) 100vw, (max-width:900px) 50vw, 620px">
+              <img class="media-fill" src="assets/images/opt/room2-768.jpg"
+                srcset="assets/images/opt/room2-480.jpg 480w, assets/images/opt/room2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:900px) 50vw, 620px"
+                width="959" height="1280" alt="A cosy room with an intimate layout and the calm, old-world character of the house"
+                loading="lazy" decoding="async">
+            </picture>
             <span class="room-card__tier">Standard</span>
-            <span class="room-card__tag room-card__tag--tl">gallery · 5–8 photos ✓</span>
-            <span class="room-card__tag room-card__tag--bl">▶ walkthrough · 15–30s ✓</span>
           </div>
           <div class="room-card__body">
             <h3 class="room-card__name">Thamburatti</h3>
             <div class="room-card__meta">200 sq ft · 1 room</div>
-            <p class="room-card__desc">A cosy room with an intimate layout and the calm, old-world character of the
-              house. Thoughtfully arranged for quiet comfort within a warm heritage setting.</p>
+            <p class="room-card__desc">A cosy room with an intimate layout and the calm, old-world character of the house. Thoughtfully arranged for quiet comfort within a warm heritage setting.</p>
             <div class="room-card__facts">
               <div class="room-card__fact"><span>Sleeps</span><span>2 adults</span></div>
               <div class="room-card__fact"><span>Opens to</span><span>Plantation view</span></div>
-              <div class="room-card__fact"><span>Amenities</span><span style="text-align:right;">AC · attached bath ·
-                  wifi ·
-                  fan</span></div>
+              <div class="room-card__fact"><span>Amenities</span><span>AC · attached bath · wifi · fan</span></div>
             </div>
             <div class="room-card__footer">
-              <div><span class="room-card__price-from">from </span><span class="room-card__price">₹6,000</span><span
-                  class="room-card__price-unit"> / night</span></div>
-              <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20check%20availability%20for%20the%20Thamburatti%20at%20Thalathoor.%20Dates%3A%20"
-                target="_blank" rel="noopener" class="room-card__cta">Check dates</a>
+              <div><span class="room-card__price-from">from </span><span class="room-card__price">₹6,000</span><span class="room-card__price-unit"> / night</span></div>
+              <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20check%20availability%20for%20the%20Thamburatti%20at%20Thalathoor.%20Dates%3A%20" target="_blank" rel="noopener" class="room-card__cta">Check dates</a>
             </div>
           </div>
         </div>
-      </div>
+        <!-- /@data:rooms -->
+</div>
     </section>
 
     <!-- THE KITCHEN -->
@@ -264,59 +406,74 @@
               <p>Kasaragod cooks differently from the rest of Kerala. Closer to the Tulu and Kannada border, heavier on
                 coconut, lighter on the things that travelled south. Most of it never made it onto a restaurant menu,
                 because it was never restaurant food it was the family traditional food.</p>
-              <p>Nothing is prepped the day before. Vegetables are what the season and the local market gave us that
-                morning, which means the menu shifts through the year and we won't pretend otherwise.</p>
-              <p>Shyamala's home cooking is what guests remember most — and breakfast, lunch and dinner are all included
-                in the stay. Kerala staples are here too — <span class="tbd">[[TBD-17: 2–3 dishes]]</span> — but the
-                dish people write to us about afterwards is usually something they hadn't eaten since childhood, and
-                couldn't name.</p>
+              <p>Nothing is prepared the day before. Each morning, the kitchen begins with a visit to the local market, where the freshest vegetables of the season decide what finds its way onto the table. The menu changes with the seasons, with the market, and sometimes simply with what looks too good to leave behind. We make no attempt to make it predictable.</p>
+              <p>At the heart of the stay is Shyamala’s home cooking - generous, unhurried and deeply rooted in Kerala. The most memorable dish, though, is often the one a guest recognises before they can name it - a taste they haven't had since childhood, 
+                bringing back a place, a person, or a forgotten moment around the family table.</p>
             </div>
             <div>
-              <div class="dishes-label">Signature dishes <span class="tbd">[[TBD-18]]</span></div>
+              <div class="dishes-label">Signature dishes</div>
               <div class="dish-grid">
+                <!-- @data:signature-dishes -->
+                <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
                 <div class="dish-item">
                   <div class="dish-item__name">Banana Flower Cutlet</div>
-                  <div class="dish-item__note">Banana flower blended with gentle spices and fried crisp, a wholesome
-                    Kerala snack with a rustic touch.</div>
+                  <div class="dish-item__note">Banana flower blended with gentle spices and fried crisp, a wholesome Kerala snack with a rustic touch.</div>
                 </div>
                 <div class="dish-item">
                   <div class="dish-item__name">Neipathiri with Nadan Chicken Curry.</div>
-                  <div class="dish-item__note">Soft, delicate rice flatbreads served with a rich and gently spiced
-                    traditional chicken curry, a beloved Malabar combination.</div>
+                  <div class="dish-item__note">Soft, delicate rice flatbreads served with a rich and gently spiced traditional chicken curry, a beloved Malabar combination.</div>
                 </div>
                 <div class="dish-item">
-                  <div class="dish-item__name">Neer Dosa with Cashewnut Curry </div>
-                  <div class="dish-item__note">Very thin, soft rice crepes made with fermented rice batter, served with
-                    a mild and creamy cashewnut curry.</div>
+                  <div class="dish-item__name">Neer Dosa with Cashewnut Curry</div>
+                  <div class="dish-item__note">Very thin, soft rice crepes made with fermented rice batter, served with a mild and creamy cashewnut curry.</div>
                 </div>
                 <div class="dish-item">
                   <div class="dish-item__name">Prawns biriyani</div>
-                  <div class="dish-item__note">A fragrant and flavourful rice dish made with succulent prawns, aromatic
-                    spices and herbs, prepared in the traditional Thalathoor style.</div>
+                  <div class="dish-item__note">A fragrant and flavourful rice dish made with succulent prawns, aromatic spices and herbs, prepared in the traditional Thalathoor style.</div>
                 </div>
                 <div class="dish-item">
                   <div class="dish-item__name">Oottada</div>
-                  <div class="dish-item__note">Soft rice cakes layered with coconut and jaggery, gently steamed to make
-                    a simple and comforting traditional Kerala treat.</div>
+                  <div class="dish-item__note">Soft rice cakes layered with coconut and jaggery, gently steamed to make a simple and comforting traditional Kerala treat.</div>
                 </div>
                 <div class="dish-item">
                   <div class="dish-item__name">Chakka Pradhaman</div>
-                  <div class="dish-item__note">Ripe jackfruit slow cooked with jaggery and coconut milk, a rich
-                    traditional Kerala dessert with a deep, natural sweetness.</div>
+                  <div class="dish-item__note">Ripe jackfruit slow cooked with jaggery and coconut milk, a rich traditional Kerala dessert with a deep, natural sweetness.</div>
                 </div>
-              </div>
+                <!-- /@data:signature-dishes -->
+</div>
             </div>
             <div class="kitchen-grid__actions">
               <a href="menu.html" class="btn btn-mint">Explore the full menu →</a>
-              <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20what%27s%20usually%20on%20the%20menu%20at%20Thalathoor."
+              <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20what%27s%20usually%20on%20the%20menu%20at%20Thalathoor."
                 target="_blank" rel="noopener" class="btn btn-outline-light">Ask about the menu</a>
             </div>
           </div>
           <div class="kitchen-grid__media">
-            <div class="kitchen-grid__media-main" style="background-image:url('assets/images/food9.jpg')"></div>
+            <div class="kitchen-grid__media-main">
+              <picture>
+                <source type="image/avif" srcset="assets/images/opt/food9-480.avif 480w, assets/images/opt/food9-576.avif 576w" sizes="(max-width:1080px) 100vw, 50vw">
+                <img class="media-fill" src="assets/images/opt/food9-480.jpg"
+                  srcset="assets/images/opt/food9-480.jpg 480w" sizes="(max-width:1080px) 100vw, 50vw"
+                  width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
+                  loading="lazy" decoding="async">
+              </picture></div>
             <div class="kitchen-grid__media-sub">
-              <div style="background-image:url('assets/images/food14.jpg')"></div>
-              <div style="background-image:url('assets/images/food5.jpg')"></div>
+              <div >
+                <picture>
+                  <source type="image/avif" srcset="assets/images/opt/food14-480.avif 480w, assets/images/opt/food14-576.avif 576w" sizes="100vw">
+                  <img class="media-fill" src="assets/images/opt/food14-480.jpg"
+                    srcset="assets/images/opt/food14-480.jpg 480w" sizes="100vw"
+                    width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
+                    loading="lazy" decoding="async">
+                </picture></div>
+              <div >
+                <picture>
+                  <source type="image/avif" srcset="assets/images/opt/food5-480.avif 480w, assets/images/opt/food5-576.avif 576w" sizes="100vw">
+                  <img class="media-fill" src="assets/images/opt/food5-480.jpg"
+                    srcset="assets/images/opt/food5-480.jpg 480w" sizes="100vw"
+                    width="576" height="768" alt="A home-cooked Kasaragod dish served at Thalathoor"
+                    loading="lazy" decoding="async">
+                </picture></div>
             </div>
           </div>
         </div>
@@ -324,7 +481,7 @@
       <div class="meal-facts">
         <div class="meal-fact">
           <div class="meal-fact__k">Meals</div>
-          <div class="meal-fact__v">Breakfast, lunch &amp; dinner — all included</div>
+          <div class="meal-fact__v">Breakfast, lunch &amp; dinner - all included</div>
         </div>
         <div class="meal-fact">
           <div class="meal-fact__k">Timings</div>
@@ -336,7 +493,7 @@
         </div>
         <div class="meal-fact">
           <div class="meal-fact__k">Non-staying guests</div>
-          <div class="meal-fact__v">Welcome — outside visitors may dine with prior reservation</div>
+          <div class="meal-fact__v">Welcome - outside visitors may dine with prior reservation</div>
         </div>
       </div>
     </section>
@@ -344,38 +501,66 @@
     <!-- AROUND THE HOUSE -->
     <section id="nature" class="section" data-reveal>
       <div class="split split--reverse">
-        <div class="media-panel" style="background-image:url('assets/images/nature1.jpg')"></div>
+        <div class="media-panel">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/nature1-480.avif 480w, assets/images/opt/nature1-768.avif 768w, assets/images/opt/nature1-960.avif 960w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/nature1-768.jpg"
+              srcset="assets/images/opt/nature1-480.jpg 480w, assets/images/opt/nature1-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="960" height="1280" alt="Paddy fields beside the house"
+              loading="lazy" decoding="async">
+          </picture></div>
         <div>
           <div class="eyebrow">The natural setting</div>
-          <h2 style="font-size:clamp(32px,4vw,52px);line-height:1.04;margin:0 0 20px;max-width:15ch;">Paddy fields, a
+          <h2 class="title-lg title--gap-md measure-15">Paddy fields, a
             river, and time to spare.</h2>
-          <p style="font-size:16.5px;line-height:1.7;color:var(--ink-soft);margin:0 0 14px;max-width:50ch;">The house
+          <p class="lead lead--gap">The house
             sits beside open paddy fields, across an arecanut plantation, with views that open toward the river. Within
             the property is a natural pond filled with clear rainwater, free from chlorine, with its waters flowing
-            gently toward the river. The pond is perfect for a refreshing dip or swim on a warm afternoon..</p>
-          <p style="font-size:16.5px;line-height:1.7;color:var(--ink-soft);margin:0;max-width:50ch;">Afterwards, enjoy a
+            gently toward the river. The pond is perfect for a refreshing dip or swim on a warm afternoon.</p>
+          <p class="lead">Afterwards, enjoy a
             cup of hot tea and freshly prepared snacks on the verandah, overlooking the paddy fields, arecanut trees and
             river beyond.</p>
         </div>
       </div>
 
       <div class="nature-highlights">
-        <div class="nature-card" style="background-image:url('assets/images/nature4.jpg')">
+        <div class="nature-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/nature4-480.avif 480w, assets/images/opt/nature4-768.avif 768w, assets/images/opt/nature4-959.avif 959w" sizes="(max-width:760px) 100vw, 33vw">
+            <img class="media-fill" src="assets/images/opt/nature4-768.jpg"
+              srcset="assets/images/opt/nature4-480.jpg 480w, assets/images/opt/nature4-768.jpg 768w" sizes="(max-width:760px) 100vw, 33vw"
+              width="959" height="1280" alt="Open paddy fields on every side of the house"
+              loading="lazy" decoding="async">
+          </picture>
           <div class="nature-card__body">
             <div class="nature-card__title">Paddy fields</div>
             <div class="nature-card__note">Open green on every side of the house.</div>
           </div>
         </div>
-        <div class="nature-card" style="background-image:url('assets/images/nature3.jpg')">
+        <div class="nature-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/nature3-480.avif 480w, assets/images/opt/nature3-768.avif 768w, assets/images/opt/nature3-960.avif 960w" sizes="(max-width:760px) 100vw, 33vw">
+            <img class="media-fill" src="assets/images/opt/nature3-768.jpg"
+              srcset="assets/images/opt/nature3-480.jpg 480w, assets/images/opt/nature3-768.jpg 768w" sizes="(max-width:760px) 100vw, 33vw"
+              width="960" height="1280" alt="The river near the property"
+              loading="lazy" decoding="async">
+          </picture>
           <div class="nature-card__body">
             <div class="nature-card__title">The river</div>
             <div class="nature-card__note">The grounds open toward the water.</div>
           </div>
         </div>
-        <div class="nature-card" style="background-image:url('assets/images/2.jpg')">
+        <div class="nature-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/2-480.avif 480w, assets/images/opt/2-768.avif 768w, assets/images/opt/2-960.avif 960w" sizes="(max-width:760px) 100vw, 33vw">
+            <img class="media-fill" src="assets/images/opt/2-768.jpg"
+              srcset="assets/images/opt/2-480.jpg 480w, assets/images/opt/2-768.jpg 768w" sizes="(max-width:760px) 100vw, 33vw"
+              width="960" height="1280" alt="The natural rainwater pond on the property"
+              loading="lazy" decoding="async">
+          </picture>
           <div class="nature-card__body">
             <div class="nature-card__title">Natural pool</div>
-            <div class="nature-card__note">A water body inside the property — a dip on warm afternoons.</div>
+            <div class="nature-card__note">A water body inside the property - a dip on warm afternoons.</div>
           </div>
         </div>
       </div>
@@ -383,53 +568,91 @@
       <div class="getting-here">
         <div class="getting-here__label">Getting here</div>
         <div class="distance-grid">
-          <div class="distance-row"><span class="distance-row__place">Kasaragod Railway Station</span><span
-              class="distance-row__dist">~6 km · 20 min</span></div>
-          <div class="distance-row"><span class="distance-row__place">Mangaluru airport</span><span
-              class="distance-row__dist">~65 km · 1.5 hr</span></div>
-          <div class="distance-row"><span class="distance-row__place">Kannur airport</span><span
-              class="distance-row__dist">~91 km · 2.5 hr</span></div>
-        </div>
+          <!-- @data:getting-here -->
+          <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+          <div class="distance-row"><span class="distance-row__place">Kasaragod Railway Station</span><span class="distance-row__dist">~6 km · 20 min</span></div>
+          <div class="distance-row"><span class="distance-row__place">Mangaluru airport</span><span class="distance-row__dist">~65 km · 1.5 hr</span></div>
+          <div class="distance-row"><span class="distance-row__place">Kannur airport</span><span class="distance-row__dist">~91 km · 2.5 hr</span></div>
+          <!-- /@data:getting-here -->
+</div>
       </div>
     </section>
 
     <!-- SUPPER CLUB & EVENTS -->
     <section id="events" class="section" data-reveal>
-      <div style="text-align:center;max-width:640px;margin:0 auto 40px;">
+      <div class="section-intro">
         <div class="eyebrow">Gatherings</div>
-        <h2 style="font-size:clamp(32px,4vw,52px);line-height:1.02;margin:0 0 16px;">More than a place to stay.</h2>
-        <p style="font-size:16.5px;line-height:1.7;color:var(--ink-soft);margin:0;">The house opens up for supper clubs,
-          private celebrations and destination weddings — the same courtyard, kitchen and green, given over to your
-          occasion.</p>
+        <h2 class="title-lg title--gap-sm">More than a place to stay.</h2>
+        <p class="lead lead--full">The house opens up for supper clubs, private celebrations, destination
+          weddings and photoshoots - the same courtyard, kitchen and green, given over to your occasion.</p>
       </div>
       <div class="event-grid">
-        <div class="event-card" style="background-image:url('assets/images/supperclub.jpg')">
+        <!-- @data:events-teaser -->
+        <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+        <div class="event-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/supperclub-480.avif 480w, assets/images/opt/supperclub-736.avif 736w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px">
+            <img class="media-fill" src="assets/images/opt/supperclub-480.jpg"
+              srcset="assets/images/opt/supperclub-480.jpg 480w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px"
+              width="736" height="1103" alt="A supper club dinner laid out at the shared table"
+              loading="lazy" decoding="async">
+          </picture>
           <div class="event-card__body">
             <div class="event-card__tag">Supper Club</div>
             <h3 class="event-card__title">Supper Club</h3>
-            <p class="event-card__desc">An evening of curated, multi-course Malabar dishes cooked in the heritage
-              kitchen and served at a shared table.</p>
+            <p class="event-card__desc">An evening of curated, multi-course Malabar dishes cooked in the heritage kitchen and served at a shared table.</p>
+            <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20supper%20club%20at%20Thalathoor.%20Preferred%20dates%3A%20" target="_blank" rel="noopener" class="event-card__cta">Enquire on WhatsApp →</a>
           </div>
         </div>
-        <div class="event-card" style="background-image:url('assets/images/gettogether.jpg')">
+        <div class="event-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/gettogether-480.avif 480w, assets/images/opt/gettogether-768.avif 768w, assets/images/opt/gettogether-800.avif 800w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px">
+            <img class="media-fill" src="assets/images/opt/gettogether-768.jpg"
+              srcset="assets/images/opt/gettogether-480.jpg 480w, assets/images/opt/gettogether-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px"
+              width="800" height="533" alt="Guests gathered for a get-together at the house"
+              loading="lazy" decoding="async">
+          </picture>
           <div class="event-card__body">
-            <div class="event-card__tag">Corporate &amp; Private</div>
-            <h3 class="event-card__title">Retreats &amp; get-togethers</h3>
-            <p class="event-card__desc">Offsites, reunions and intimate celebrations — the whole house and grounds for
-              your group.</p>
+            <div class="event-card__tag">Corporate & Private</div>
+            <h3 class="event-card__title">Retreats & get-togethers</h3>
+            <p class="event-card__desc">Offsites, reunions and intimate celebrations - the whole house and grounds for your group.</p>
+            <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20retreat%20or%20private%20get-together%20at%20Thalathoor.%20Dates%3A%20%2F%20Number%20of%20guests%3A%20" target="_blank" rel="noopener" class="event-card__cta">Enquire on WhatsApp →</a>
           </div>
         </div>
-        <div class="event-card" style="background-image:url('assets/images/desttwedd.jpg')">
+        <div class="event-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/desttwedd-480.avif 480w, assets/images/opt/desttwedd-768.avif 768w, assets/images/opt/desttwedd-1024.avif 1024w, assets/images/opt/desttwedd-1280.avif 1280w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px">
+            <img class="media-fill" src="assets/images/opt/desttwedd-768.jpg"
+              srcset="assets/images/opt/desttwedd-480.jpg 480w, assets/images/opt/desttwedd-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px"
+              width="1280" height="1024" alt="A wedding celebration in the courtyard"
+              loading="lazy" decoding="async">
+          </picture>
           <div class="event-card__body">
             <div class="event-card__tag">Weddings</div>
-            <h3 class="event-card__title">Destination weddings &amp; Haldi</h3>
-            <p class="event-card__desc">Intimate ceremonies, haldi mornings and receptions set in the courtyard and
-              gardens.</p>
+            <h3 class="event-card__title">Destination weddings & Haldi</h3>
+            <p class="event-card__desc">Intimate ceremonies, haldi mornings and receptions set in the courtyard and gardens.</p>
+            <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20wedding%20or%20haldi%20at%20Thalathoor.%20Dates%3A%20%2F%20Number%20of%20guests%3A%20" target="_blank" rel="noopener" class="event-card__cta">Enquire on WhatsApp →</a>
           </div>
         </div>
+        <div class="event-card">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/chinnu2-480.avif 480w, assets/images/opt/chinnu2-768.avif 768w, assets/images/opt/chinnu2-959.avif 959w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px">
+            <img class="media-fill" src="assets/images/opt/chinnu2-768.jpg"
+              srcset="assets/images/opt/chinnu2-480.jpg 480w, assets/images/opt/chinnu2-768.jpg 768w" sizes="(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px"
+              width="959" height="1280" alt="A portrait session in the heritage house, against a dark doorway and red oxide floor"
+              loading="lazy" decoding="async">
+          </picture>
+          <div class="event-card__body">
+            <div class="event-card__tag">Photoshoots</div>
+            <h3 class="event-card__title">Photo &amp; film shoots</h3>
+            <p class="event-card__desc">Verandahs, red oxide floors, teakwood and old doorways - the house photographs the way it looks, with no set dressing.</p>
+            <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20photoshoot%20at%20Thalathoor.%20Type%20of%20shoot%3A%20%2F%20Preferred%20dates%3A%20%2F%20Crew%20size%3A%20" target="_blank" rel="noopener" class="event-card__cta">Enquire on WhatsApp →</a>
+          </div>
+        </div>
+        <!-- /@data:events-teaser -->
       </div>
-      <div style="text-align:center;margin-top:34px;">
-        <a href="events.html" class="btn btn-primary">Know more about events &amp; supper club →</a>
+      <div class="section-outro">
+        <a href="events.html" class="btn btn-primary">Know more about events, shoots &amp; supper club →</a>
       </div>
     </section>
 
@@ -438,25 +661,48 @@
       <div class="section-head">
         <div>
           <div class="eyebrow">Our stories</div>
-          <h2 style="font-size:clamp(36px,5vw,64px);line-height:1;margin:0;">Photo Gallery</h2>
+          <h2 class="title-xl">Photo Gallery</h2>
         </div>
-        <p class="section-head__note" style="max-width:30ch;">The house, the food and the green around it. Room
+        <p class="section-head__note measure-30">The house, the food and the green around it. Room
           walkthroughs included.</p>
       </div>
       <div class="teaser-grid">
-        <div class="teaser-item" style="grid-column:1;grid-row:1 / 2;background-image:url('assets/images/home1.jpg')"
-          data-lightbox-src="assets/images/home1.jpg" data-lightbox-type="image"></div>
-        <div class="teaser-item" style="grid-column:2;grid-row:1 / 2;background-image:url('assets/images/2.jpg')"
-          data-lightbox-src="assets/images/2.jpg" data-lightbox-type="image"></div>
-        <div class="teaser-item" style="grid-column:1;grid-row:2 / 3;background-image:url('assets/images/3.jpg')"
-          data-lightbox-src="assets/images/main.mp4" data-lightbox-type="video"
-          data-lightbox-poster="assets/images/3.jpg">
+        <div class="teaser-item teaser-item--a"  data-lightbox-src="assets/images/home1.jpg" data-lightbox-type="image">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/home1-480.avif 480w, assets/images/opt/home1-768.avif 768w, assets/images/opt/home1-960.avif 960w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw">
+            <img class="media-fill" src="assets/images/opt/home1-768.jpg"
+              srcset="assets/images/opt/home1-480.jpg 480w, assets/images/opt/home1-768.jpg 768w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw"
+              width="960" height="1280" alt="Front elevation of the heritage house"
+              loading="lazy" decoding="async">
+          </picture></div>
+        <div class="teaser-item teaser-item--b"  data-lightbox-src="assets/images/2.jpg" data-lightbox-type="image">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/2-480.avif 480w, assets/images/opt/2-768.avif 768w, assets/images/opt/2-960.avif 960w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw">
+            <img class="media-fill" src="assets/images/opt/2-768.jpg"
+              srcset="assets/images/opt/2-480.jpg 480w, assets/images/opt/2-768.jpg 768w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw"
+              width="960" height="1280" alt="The natural rainwater pond on the property"
+              loading="lazy" decoding="async">
+          </picture></div>
+        <div class="teaser-item teaser-item--c"  data-lightbox-src="assets/videos/opt/hero-video-3.mp4" data-lightbox-type="video" data-lightbox-poster="assets/videos/opt/hero-video-3-poster.jpg">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/3-480.avif 480w, assets/images/opt/3-768.avif 768w, assets/images/opt/3-1024.avif 1024w, assets/images/opt/3-1200.avif 1200w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw">
+            <img class="media-fill" src="assets/images/opt/3-768.jpg"
+              srcset="assets/images/opt/3-480.jpg 480w, assets/images/opt/3-768.jpg 768w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw"
+              width="1200" height="1600" alt="The heritage house and its grounds"
+              loading="lazy" decoding="async">
+          </picture>
           <span class="teaser-item__play"></span>
         </div>
-        <div class="teaser-item" style="grid-column:2;grid-row:2 / 3;background-image:url('assets/images/4.jpg')"
-          data-lightbox-src="assets/images/4.jpg" data-lightbox-type="image"></div>
+        <div class="teaser-item teaser-item--d"  data-lightbox-src="assets/images/4.jpg" data-lightbox-type="image">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/4-480.avif 480w, assets/images/opt/4-768.avif 768w, assets/images/opt/4-800.avif 800w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw">
+            <img class="media-fill" src="assets/images/opt/4-768.jpg"
+              srcset="assets/images/opt/4-480.jpg 480w, assets/images/opt/4-768.jpg 768w" sizes="(max-width:760px) 100vw, (max-width:1080px) 50vw, 60vw"
+              width="800" height="600" alt="Verandah of the heritage house"
+              loading="lazy" decoding="async">
+          </picture></div>
       </div>
-      <div style="text-align:center;margin-top:32px;">
+      <div class="section-outro section-outro--gallery">
         <a href="gallery.html" class="btn btn-outline">View all photos &amp; videos →</a>
       </div>
     </section>
@@ -464,51 +710,67 @@
 
     <!-- GUEST VOICES -->
     <section class="section--tight" data-reveal>
-      <div style="text-align:center;margin-bottom:34px;">
+      <div class="section-intro">
         <div class="eyebrow">Guest voices</div>
-        <h2 style="font-size:clamp(30px,4vw,50px);margin:0;">What people write afterwards.</h2>
+        <h2 class="title-md">What people write afterwards.</h2>
       </div>
+      <!-- @data:reviews -->
+      <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
       <div class="trust-strip">
         <div class="trust-item">
-          <div class="trust-item__headline">4.9 / 5</div>
-          <div class="trust-item__source">[[TripAdvisor rating]]</div>
+          <div class="trust-item__headline">4.8 / 5</div>
+          <div class="trust-item__source">115 TripAdvisor reviews</div>
         </div>
         <div class="trust-item">
-          <div class="trust-item__headline">Certified</div>
-          <div class="trust-item__source">[[Kerala Tourism]]</div>
+          <div class="trust-item__headline">#1 of 11</div>
+          <div class="trust-item__source">B&amp;Bs &amp; inns in Kasaragod</div>
         </div>
         <div class="trust-item">
           <div class="trust-item__headline">Since 2013</div>
-          <div class="trust-item__source">Guest favourite</div>
+          <div class="trust-item__source">Family-run</div>
         </div>
       </div>
-      <div class="review-cols">
-        <div class="review-card">
-          <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">"[[Review excerpt — TBD-33. Prioritise ones that mention the food
-            specifically.]]"</p>
-          <div class="review-card__by">[[Name · City/Country · Date]]</div>
+      <div class="review-carousel">
+        <div class="review-track" tabindex="0" role="region" aria-label="Guest reviews">
+          <figure class="review-card" role="group" aria-roledescription="review" aria-label="1 of 4">
+            <div class="review-card__stars" aria-label="5 out of 5">★★★★★</div>
+            <h3 class="review-card__title">An Authentic Kerala Experience to Remember</h3>
+            <blockquote class="review-card__quote">A peaceful stay in an 80+ year old traditional Tharavadu, hosted by warm, inspiring Shyamala Ma'am. Every meal was freshly prepared authentic Malabar cuisine and was the highlight of the trip.</blockquote>
+            <figcaption class="review-card__by">Yuvaraj · Chennai (Madras), India · July 2026</figcaption>
+          </figure>
+          <figure class="review-card" role="group" aria-roledescription="review" aria-label="2 of 4">
+            <div class="review-card__stars" aria-label="5 out of 5">★★★★★</div>
+            <h3 class="review-card__title">Hospitality at the Max with Authentic Malabar Food</h3>
+            <blockquote class="review-card__quote">One night here felt like visiting family, with the kids greeted with mango pudding on arrival. Though Shyamala aunty is vegetarian herself, she cooked a full non-veg Malabar spread including fish cutlets and fish curry beautifully.</blockquote>
+            <figcaption class="review-card__by">Tharani T · December 2024</figcaption>
+          </figure>
+          <figure class="review-card" role="group" aria-roledescription="review" aria-label="3 of 4">
+            <div class="review-card__stars" aria-label="5 out of 5">★★★★★</div>
+            <h3 class="review-card__title">Its Like Visiting Your Parents' Place with all the Love and Amazing Food</h3>
+            <blockquote class="review-card__quote">Three nights in a 200-year-old home with modern comforts, hosted by a caring, resourceful aunty who arranged a boat ride and a local Theyyam performance. Meals were eaten together like family, full of laughter.</blockquote>
+            <figcaption class="review-card__by">Preeti Kothari · November 2024</figcaption>
+          </figure>
+          <figure class="review-card" role="group" aria-roledescription="review" aria-label="4 of 4">
+            <div class="review-card__stars" aria-label="5 out of 5">★★★★★</div>
+            <h3 class="review-card__title">Wonderful Experience</h3>
+            <blockquote class="review-card__quote">A lovely visit with great home-style vegetarian food and engaging conversation with the host. Also got to see the nearby hanging bridge and part of a local Theyyam performance.</blockquote>
+            <figcaption class="review-card__by">sjagadish · Bengaluru, India · March 2024</figcaption>
+          </figure>
         </div>
-        <div class="review-card">
-          <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">"[[Review excerpt — TBD-33]]"</p>
-          <div class="review-card__by">[[Name · City/Country · Date]]</div>
-        </div>
-        <div class="review-card">
-          <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">"[[Review excerpt — TBD-33]]"</p>
-          <div class="review-card__by">[[Name · City/Country · Date]]</div>
-        </div>
-        <div class="review-card">
-          <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">"[[Review excerpt — TBD-33]]"</p>
-          <div class="review-card__by">[[Name · City/Country · Date]]</div>
+        <button type="button" class="review-arrow review-arrow--prev" aria-label="Previous reviews">←</button>
+        <button type="button" class="review-arrow review-arrow--next" aria-label="Next reviews">→</button>
+        <div class="review-dots">
+          <button type="button" class="review-dot is-active" data-index="0" aria-label="Go to review 1"></button>
+          <button type="button" class="review-dot" data-index="1" aria-label="Go to review 2"></button>
+          <button type="button" class="review-dot" data-index="2" aria-label="Go to review 3"></button>
+          <button type="button" class="review-dot" data-index="3" aria-label="Go to review 4"></button>
         </div>
       </div>
-      <div style="text-align:center;margin-top:14px;">
-        <a href="#" target="_blank" rel="noopener" style="font-size:14px;font-weight:600;">Read all reviews on
+      <div class="section-outro section-outro--tight">
+        <a href="https://www.tripadvisor.com/Hotel_Review-g1809068-d4415061-Reviews-Thalathoor_Heritage-Kasaragod_Kasaragod_District_Kerala.html" target="_blank" rel="noopener" class="section-outro__link">Read all 115 reviews on
           TripAdvisor →</a>
       </div>
+      <!-- /@data:reviews -->
     </section>
 
     <!-- PRACTICAL -->
@@ -516,77 +778,65 @@
       <div class="faq-layout">
         <div class="faq-layout__sticky">
           <div class="eyebrow">Good to know</div>
-          <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.04;margin:0;">Practical information.</h2>
+          <h2 class="title-md">Practical information.</h2>
         </div>
         <div>
+          <!-- @data:faq -->
+          <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Check-in /
-                check-out</span><span class="faq-item__sign">+</span></button>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Check-in / check-out</span><span class="faq-item__sign">+</span></button>
             <p class="faq-item__a">Check-in 12:00 PM · Check-out 12:00 PM.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Tariff
-                structure</span><span class="faq-item__sign">+</span></button>
-            <p class="faq-item__a">Per room, double occupancy, including all taxes and meals. Extra adult ₹1,200 (10
-              yrs+); extra child ₹1,000 (5–10 yrs). Pricing is dynamic on weekends, public holidays and peak season —
-              call for the latest quote.</p>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Tariff structure</span><span class="faq-item__sign">+</span></button>
+            <p class="faq-item__a">Per room, double occupancy, including all taxes and meals. Extra adult ₹1,200 (10 yrs+); extra child ₹1,000 (5–10 yrs). Pricing is dynamic on weekends, public holidays and peak season - call for the latest quote.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Children, pets &amp;
-                smoking</span><span class="faq-item__sign">+</span></button>
-            <p class="faq-item__a">Children are welcome. Pets are not permitted at the property. Smoking is not
-              permitted indoors.</p>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Children, pets &amp; smoking</span><span class="faq-item__sign">+</span></button>
+            <p class="faq-item__a">Children are welcome. Pets are not permitted at the property. Smoking is not permitted indoors.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Alcohol</span><span
-                class="faq-item__sign">+</span></button>
-            <p class="faq-item__a"><span class="tbd">Not Permitted</span></p>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Alcohol</span><span class="faq-item__sign">+</span></button>
+            <p class="faq-item__a">Not permitted.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Payment</span><span
-                class="faq-item__sign">+</span></button>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Payment</span><span class="faq-item__sign">+</span></button>
             <p class="faq-item__a">50% advance confirms the booking; the balance is due 7 days before check-in.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Cancellation</span><span
-                class="faq-item__sign">+</span></button>
-            <p class="faq-item__a">For Indian passport holders, a cancellation is issued as a credit note valid for one
-              year from booking. It is transferable and can be redeemed once against a future stay.</p>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Cancellation</span><span class="faq-item__sign">+</span></button>
+            <p class="faq-item__a">For Indian passport holders, a cancellation is issued as a credit note valid for one year from booking. It is transferable and can be redeemed once against a future stay.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Wifi / room
-                service</span><span class="faq-item__sign">+</span></button>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Wifi / room service</span><span class="faq-item__sign">+</span></button>
             <p class="faq-item__a">Free Wi-Fi throughout the property. Room service is not available.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Getting here /
-                pickup</span><span class="faq-item__sign">+</span></button>
-            <p class="faq-item__a">Kasaragod station ~6 km (20 min); Mangaluru airport ~65 km (1.5 hr); Kannur airport
-              ~91 km (2.5 hr). <span class="tbd">Pickup — available on request at extra charges.</span></p>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Getting here / pickup</span><span class="faq-item__sign">+</span></button>
+            <p class="faq-item__a">Kasaragod station ~6 km (20 min); Mangaluru airport ~65 km (1.5 hr); Kannur airport ~91 km (2.5 hr). Pickup is available on request, at extra charge.</p>
           </div>
           <div class="faq-item">
-            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Languages
-                spoken</span><span class="faq-item__sign">+</span></button>
-            <p class="faq-item__a"><span class="tbd">English, Hindi, Malayalam, Tamil</span></p>
+            <button class="faq-item__q" aria-expanded="false"><span class="faq-item__q-text">Languages spoken</span><span class="faq-item__sign">+</span></button>
+            <p class="faq-item__a">English, Hindi, Malayalam and Tamil.</p>
           </div>
+          <!-- /@data:faq -->
         </div>
       </div>
     </section>
 
     <!-- ENQUIRE -->
-    <section id="contact" class="section--tight" style="padding-bottom:30px;" data-reveal>
+    <section id="contact" class="section--tight section--pb-sm" data-reveal>
       <div class="contact-panel">
         <div class="contact-panel__text">
           <h2 class="contact-panel__title">Come and see.</h2>
           <p class="contact-panel__desc">Message us with your dates and how many of you there are. We usually reply
-            within <span class="tbd-light">24 hours</span>.</p>
-          <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20staying%20at%20Thalathoor.%20Dates%3A%20%2F%20Number%20of%20guests%3A%20"
-            target="_blank" rel="noopener" class="btn btn-white" style="margin-bottom:28px;">Enquire on WhatsApp</a>
+            within 24 hours.</p>
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20staying%20at%20Thalathoor.%20Dates%3A%20%2F%20Number%20of%20guests%3A%20"
+            target="_blank" rel="noopener" class="btn btn-white contact-panel__cta">Enquire on WhatsApp</a>
           <div class="contact-panel__details">
-            <a href="tel:+919447489949">📞 <span class="tbd-light"> +919447489949</span></a>
-            <a href="mailto:[EMAIL_ADDRESS]">✉ <span class="tbd-light">k.shyamala.nair@gmail.com</span></a>
-            <div style="display:flex;gap:10px;">📍 <span class="tbd-light">Thalathoor Heritage, Perumbala, Kasaragod,
-                Kerala 671317</span></div>
+            <a href="tel:+919447489949">📞 +91 94474 89949</a>
+            <a href="mailto:k.shyamala.nair@gmail.com">✉ k.shyamala.nair@gmail.com</a>
+            <div class="contact-panel__detail">📍 Thalathoor Heritage, Perumbala, Kasaragod, Kerala 671317</div>
           </div>
         </div>
         <a href="https://maps.app.goo.gl/TSk8uLsRXq9odp1N7" target="_blank" rel="noopener" class="contact-panel__map">
@@ -604,14 +854,22 @@
         <div class="site-footer__brand">
           <img src="assets/logo/logo.svg" alt="Thalathoor Heritage Homestay" class="site-footer__mark">
           <div>
-            <div class="site-footer__name" style="font-family:'Cormorant Garamond',serif;font-weight:600;">Thalathoor
+            <div class="site-footer__name">Thalathoor
               Heritage Homestay</div>
             <div class="site-footer__since">Since 2013 · Kasaragod, Kerala</div>
           </div>
         </div>
         <div class="site-footer__links">
-          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TripAdvisor</a>
-        </div>
+          <!-- @data:footer-links -->
+          <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+          <a class="site-footer__social" href="https://www.instagram.com/thalathoor_heritage_/" target="_blank" rel="noopener"><svg class="site-footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 2500"><defs><radialGradient id="instagram__a" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"/><stop offset=".78" stop-color="#d82d7e"/></radialGradient><radialGradient id="instagram__b" cx="1516.14" cy="2623.81" r="2572.12" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"/><stop offset="1" stop-color="#8c3aaa"/></radialGradient></defs><path fill="url(#instagram__a)" d="M833.4 1250c0-230.11 186.49-416.7 416.6-416.7s416.7 186.59 416.7 416.7-186.59 416.7-416.7 416.7-416.6-186.59-416.6-416.7m-225.26 0c0 354.5 287.36 641.86 641.86 641.86s641.86-287.36 641.86-641.86S1604.5 608.14 1250 608.14 608.14 895.5 608.14 1250m1159.13-667.31a150 150 0 1 0 150.06-149.94h-.06a150.07 150.07 0 0 0-150 149.94M745 2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28 7.27-505.15c5.55-121.87 26-188 43-232.13 22.72-58.36 49.78-100 93.5-143.78s85.32-70.88 143.78-93.5c44-17.16 110.26-37.46 232.13-43 131.76-6.06 171.34-7.27 505-7.27s373.28 1.31 505.15 7.27c121.87 5.55 188 26 232.13 43 58.36 22.62 100 49.78 143.78 93.5s70.78 85.42 93.5 143.78c17.16 44 37.46 110.26 43 232.13 6.06 131.87 7.27 171.34 7.27 505.15s-1.21 373.28-7.27 505.15c-5.55 121.87-25.95 188.11-43 232.13-22.72 58.36-49.78 100-93.5 143.68s-85.42 70.78-143.78 93.5c-44 17.16-110.26 37.46-232.13 43-131.76 6.06-171.34 7.27-505.15 7.27s-373.28-1.21-505-7.27M734.65 7.57c-133.07 6.06-224 27.16-303.41 58.06C349 97.54 279.38 140.35 209.81 209.81S97.54 349 65.63 431.24c-30.9 79.46-52 170.34-58.06 303.41C1.41 867.93 0 910.54 0 1250s1.41 382.07 7.57 515.35c6.06 133.08 27.16 223.95 58.06 303.41 31.91 82.19 74.62 152 144.18 221.43S349 2402.37 431.24 2434.37c79.56 30.9 170.34 52 303.41 58.06C868 2498.49 910.54 2500 1250 2500s382.07-1.41 515.35-7.57c133.08-6.06 223.95-27.16 303.41-58.06 82.19-32 151.86-74.72 221.43-144.18s112.18-139.24 144.18-221.43c30.9-79.46 52.1-170.34 58.06-303.41 6.06-133.38 7.47-175.89 7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95 97.54 2068.86 65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17 1.51 1589.56 0 1250.1 0S868 1.41 734.65 7.57"/><path fill="url(#instagram__b)" d="M833.4 1250c0-230.11 186.49-416.7 416.6-416.7s416.7 186.59 416.7 416.7-186.59 416.7-416.7 416.7-416.6-186.59-416.6-416.7m-225.26 0c0 354.5 287.36 641.86 641.86 641.86s641.86-287.36 641.86-641.86S1604.5 608.14 1250 608.14 608.14 895.5 608.14 1250m1159.13-667.31a150 150 0 1 0 150.06-149.94h-.06a150.07 150.07 0 0 0-150 149.94M745 2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28 7.27-505.15c5.55-121.87 26-188 43-232.13 22.72-58.36 49.78-100 93.5-143.78s85.32-70.88 143.78-93.5c44-17.16 110.26-37.46 232.13-43 131.76-6.06 171.34-7.27 505-7.27s373.28 1.31 505.15 7.27c121.87 5.55 188 26 232.13 43 58.36 22.62 100 49.78 143.78 93.5s70.78 85.42 93.5 143.78c17.16 44 37.46 110.26 43 232.13 6.06 131.87 7.27 171.34 7.27 505.15s-1.21 373.28-7.27 505.15c-5.55 121.87-25.95 188.11-43 232.13-22.72 58.36-49.78 100-93.5 143.68s-85.42 70.78-143.78 93.5c-44 17.16-110.26 37.46-232.13 43-131.76 6.06-171.34 7.27-505.15 7.27s-373.28-1.21-505-7.27M734.65 7.57c-133.07 6.06-224 27.16-303.41 58.06C349 97.54 279.38 140.35 209.81 209.81S97.54 349 65.63 431.24c-30.9 79.46-52 170.34-58.06 303.41C1.41 867.93 0 910.54 0 1250s1.41 382.07 7.57 515.35c6.06 133.08 27.16 223.95 58.06 303.41 31.91 82.19 74.62 152 144.18 221.43S349 2402.37 431.24 2434.37c79.56 30.9 170.34 52 303.41 58.06C868 2498.49 910.54 2500 1250 2500s382.07-1.41 515.35-7.57c133.08-6.06 223.95-27.16 303.41-58.06 82.19-32 151.86-74.72 221.43-144.18s112.18-139.24 144.18-221.43c30.9-79.46 52.1-170.34 58.06-303.41 6.06-133.38 7.47-175.89 7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95 97.54 2068.86 65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17 1.51 1589.56 0 1250.1 0S868 1.41 734.65 7.57"/></svg><span>Instagram</span></a>
+          <a class="site-footer__social" href="https://www.tripadvisor.com/Hotel_Review-g1809068-d4415061-Reviews-Thalathoor_Heritage-Kasaragod_Kasaragod_District_Kerala.html" target="_blank" rel="noopener"><svg class="site-footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 713.5 713.5"><circle cx="356.75" cy="356.75" r="356.75" fill="#34E0A1"/><path d="m577.1 287.15 43.04-46.83h-95.46c-47.8-32.65-105.51-51.66-167.93-51.66a295.7 295.7 0 0 0-167.61 51.66h-95.7l43.04 46.83a131.3 131.3 0 0 0-42.93 97.26c0 72.67 58.92 131.58 131.58 131.58 34.52 0 65.97-13.31 89.45-35.08l42.17 45.92 42.17-45.88a131 131 0 0 0 89.4 35.04C561 515.99 620 457.08 620 384.4a131 131 0 0 0-42.9-97.26m-351.93 186.3c-49.19 0-89.05-39.85-89.05-89.04s39.86-89.05 89.05-89.05 89.05 39.86 89.05 89.05-39.86 89.05-89.05 89.05m131.62-91.63c0-58.6-42.61-108.9-98.85-130.38 30.4-12.72 63.77-19.77 98.8-19.77s68.45 7.05 98.86 19.77c-56.2 21.52-98.81 71.79-98.81 130.38m131.58 91.64c-49.2 0-89.05-39.86-89.05-89.05s39.86-89.05 89.05-89.05 89.04 39.86 89.04 89.05-39.86 89.05-89.04 89.05m0-135.77a46.66 46.66 0 0 0-46.68 46.68 46.66 46.66 0 0 0 46.68 46.68 46.69 46.69 0 0 0 0-93.35m-216.52 46.72a46.67 46.67 0 1 1-93.36 0 46.66 46.66 0 0 1 46.68-46.68 46.64 46.64 0 0 1 46.68 46.68"/></svg><span>Tripadvisor</span></a>
+          <!-- /@data:footer-links -->
+</div>
+        <!-- @data:credit -->
+        <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+        <div class="site-footer__credit">Handcrafted by <a href="https://octane.team" target="_blank" rel="noopener">Octane</a></div>
+        <!-- /@data:credit -->
         <div class="site-footer__copy">© Thalathoor Heritage Homestay</div>
       </div>
     </footer>
@@ -619,7 +877,7 @@
   </div>
 
   <!-- STICKY WHATSAPP -->
-  <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
+  <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
     target="_blank" rel="noopener" class="wa-fab"><span aria-hidden="true">💬</span><span class="wa-fab__label">WhatsApp
       us</span></a>
 
@@ -629,7 +887,7 @@
     <button class="lightbox__close" aria-label="Close">×</button>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

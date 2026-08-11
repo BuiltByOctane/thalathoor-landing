@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Our Menu | Thalathoor Heritage Homestay, Kasaragod</title>
   <meta name="description"
-    content="Kasaragod home cooking at Thalathoor — puttu, appam, fish moilee, avial and more. Breakfast, lunch and dinner included in every stay, cooked fresh each day.">
+    content="Kasaragod home cooking at Thalathoor - puttu, appam, fish moilee, avial and more. Breakfast, lunch and dinner included in every stay, cooked fresh each day.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://www.thalathoorheritage.com/menu.html">
   <meta name="robots" content="index, follow">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="Thalathoor Heritage Homestay">
   <meta property="og:title" content="Our Menu | Thalathoor Heritage Homestay">
   <meta property="og:description"
-    content="Kasaragod home cooking — heavier on coconut, lighter on what travelled south. Breakfast, lunch and dinner included in every stay.">
+    content="Kasaragod home cooking - heavier on coconut, lighter on what travelled south. Breakfast, lunch and dinner included in every stay.">
   <meta property="og:url" content="https://www.thalathoorheritage.com/menu.html">
   <meta property="og:image" content="https://www.thalathoorheritage.com/assets/images/3.jpg">
   <meta property="og:locale" content="en_IN">
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Menu | Thalathoor Heritage Homestay">
   <meta name="twitter:description"
-    content="Kasaragod home cooking — heavier on coconut, lighter on what travelled south.">
+    content="Kasaragod home cooking - heavier on coconut, lighter on what travelled south.">
   <meta name="twitter:image" content="https://www.thalathoorheritage.com/assets/images/3.jpg">
 
   <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
@@ -32,18 +32,18 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet">
+  <!-- Self-hosted fonts: no third-party host, no extra DNS/TLS handshake.
+       The two faces below are the ones needed for first paint. -->
+  <link rel="preload" href="assets/fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Menu",
-  "name": "Thalathoor Heritage Homestay — Kasaragod Home Cooking",
+  "name": "Thalathoor Heritage Homestay - Kasaragod Home Cooking",
   "url": "https://www.thalathoorheritage.com/menu.html",
   "hasMenuSection": [
     { "@type": "MenuSection", "name": "Breakfast" },
@@ -56,7 +56,7 @@
 </head>
 
 <body>
-  <div class="wrap-narrow" style="padding-top:18px;padding-bottom:70px;">
+  <div class="wrap-narrow page-shell page-shell--events">
 
     <nav class="nav-simple">
       <a href="index.html" class="nav-simple__brand">
@@ -72,7 +72,7 @@
     <header class="menu-header">
       <div class="menu-header__badge">The kitchen</div>
       <h1 class="menu-header__title">Our Menu</h1>
-      <p class="menu-header__desc">Kasaragod home cooking — heavier on coconut, lighter on what travelled south. The
+      <p class="menu-header__desc">Kasaragod home cooking - heavier on coconut, lighter on what travelled south. The
         menu shifts with the season and the morning market, so this is a taste of what usually appears, not a fixed
         card. Breakfast, lunch and dinner are included in every stay.</p>
     </header>
@@ -84,6 +84,8 @@
       <a href="#sweets" class="cat-nav__link">Sweets &amp; payasam</a>
     </nav>
 
+    <!-- @data:menu -->
+    <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
     <section id="breakfast" class="menu-section">
       <div class="menu-section__head">
         <h2 class="menu-section__title">Breakfast</h2>
@@ -91,45 +93,74 @@
         <span class="menu-section__note">Served every morning</span>
       </div>
       <div class="dish-grid-cards">
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/puttu&kadala.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Puttu &amp; Kadala</h3>
-            <div class="dish-card__local">പുട്ട്</div>
-            <p class="dish-card__desc">Steamed rice-and-coconut cylinders with a black chickpea curry — the classic
-              Malabar start to the day.</p>
-          </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/puttu-kadala-480.avif 480w, assets/images/opt/puttu-kadala-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/puttu-kadala-480.jpg"
+              srcset="assets/images/opt/puttu-kadala-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="920" alt="Puttu &amp; Kadala"
+              fetchpriority="high" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/appamstew.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Appam &amp; Stew</h3>
-            <div class="dish-card__local">അപ്പം</div>
-            <p class="dish-card__desc">Lace-edged fermented rice hoppers with a mild coconut-milk vegetable stew.</p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Puttu &amp; Kadala</h3>
+          <div class="dish-card__local">പുട്ട്</div>
+          <p class="dish-card__desc">Steamed rice-and-coconut cylinders with a black chickpea curry - the classic Malabar start to the day.</p>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/idiyappam.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Idiyappam</h3>
-            <div class="dish-card__local">ഇടിയപ്പം</div>
-            <p class="dish-card__desc">Soft steamed rice string-hoppers, eaten with sweetened coconut milk or curry.</p>
-          </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/appamstew-480.avif 480w, assets/images/opt/appamstew-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/appamstew-480.jpg"
+              srcset="assets/images/opt/appamstew-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="981" alt="Appam &amp; Stew"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/bananaflwrcutlet.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Banana Flower Cutlet</h3>
-            <div class="dish-card__local">വാഴക്കൂമ്പ് കട്ട്ലറ്റ്</div>
-            <p class="dish-card__desc">Banana flower cutlet, delicately spiced and fried golden, a rustic Kerala savoury
-              perfect with a warm cup of tea.
-            </p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Appam &amp; Stew</h3>
+          <div class="dish-card__local">അപ്പം</div>
+          <p class="dish-card__desc">Lace-edged fermented rice hoppers with a mild coconut-milk vegetable stew.</p>
         </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/idiyappam-480.avif 480w, assets/images/opt/idiyappam-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/idiyappam-480.jpg"
+              srcset="assets/images/opt/idiyappam-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="920" alt="Idiyappam"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Idiyappam</h3>
+          <div class="dish-card__local">ഇടിയപ്പം</div>
+          <p class="dish-card__desc">Soft steamed rice string-hoppers, eaten with sweetened coconut milk or curry.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/bananaflwrcutlet-480.avif 480w, assets/images/opt/bananaflwrcutlet-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/bananaflwrcutlet-480.jpg"
+              srcset="assets/images/opt/bananaflwrcutlet-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="493" alt="Banana Flower Cutlet"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Banana Flower Cutlet</h3>
+          <div class="dish-card__local">വാഴക്കൂമ്പ് കട്ട്ലറ്റ്</div>
+          <p class="dish-card__desc">Banana flower cutlet, delicately spiced and fried golden, a rustic Kerala savoury perfect with a warm cup of tea.</p>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -140,64 +171,105 @@
         <span class="menu-section__note">The heart of the table</span>
       </div>
       <div class="dish-grid-cards">
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/sadhya.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Kerala rice sadya</h3>
-            <div class="dish-card__local">ഊണ്</div>
-            <p class="dish-card__desc">Red parboiled rice with a rotating spread of seasonal vegetable curries served on
-              a plantain leaf.</p>
-          </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/sadhya-480.avif 480w, assets/images/opt/sadhya-735.avif 735w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/sadhya-480.jpg"
+              srcset="assets/images/opt/sadhya-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="735" height="1191" alt="Kerala rice sadya"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/cb.jpg')"></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Biriyani</h3>
-            <div class="dish-card__local">ബിരിയാണി</div>
-            <p class="dish-card__desc">Fragrant basmati rice layered with tender chicken and warm spices, slow cooked to
-              bring together the flavours of a traditional Malabar kitchen.</p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Kerala rice sadya</h3>
+          <div class="dish-card__local">ഊണ്</div>
+          <p class="dish-card__desc">Red parboiled rice with a rotating spread of seasonal vegetable curries served on a plantain leaf.</p>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/geerice.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Gee Rice Chicken Curry / Casunet curry</h3>
-            <div class="dish-card__local">നെയ്ച്ചോറും ചിക്കൻ കറിയും / കാഷ്യൂനട്ട് കറിയും</div>
-            <p class="dish-card__desc">Fragrant ghee rice served with tender chicken simmered in a rich, gently spiced
-              curry, a comforting Malabar classic made for a hearty meal.</p>
-          </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/cb-480.avif 480w, assets/images/opt/cb-561.avif 561w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/cb-480.jpg"
+              srcset="assets/images/opt/cb-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="561" height="1000" alt="Biriyani"
+              loading="lazy" decoding="async">
+          </picture>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/dhalfish.jpg')"></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Dhal, Rice, and Fish Curry</h3>
-            <div class="dish-card__local">പരിപ്പ്, ചോറ്, മീൻകറി</div>
-            <p class="dish-card__desc">Warm rice served with creamy dal and a traditional Kerala fish curry, a simple
-              homestyle meal full of comforting flavours.</p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Biriyani</h3>
+          <div class="dish-card__local">ബിരിയാണി</div>
+          <p class="dish-card__desc">Fragrant basmati rice layered with tender chicken and warm spices, slow cooked to bring together the flavours of a traditional Malabar kitchen.</p>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/kappafish.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Kappa and Fish Curry</h3>
-            <div class="dish-card__local">കപ്പയും മീൻകറിയും</div>
-            <p class="dish-card__desc">Soft cassava served with a traditional Kerala fish curry, a rustic combination of
-              earthy flavours and gentle spice.
-            </p>
-          </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/geerice-480.avif 480w, assets/images/opt/geerice-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/geerice-480.jpg"
+              srcset="assets/images/opt/geerice-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="960" alt="Gee Rice Chicken Curry / Casunet curry"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/muttoncb.jpg')"></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Mutton Biriyani</h3>
-            <div class="dish-card__local">മട്ടൻ ബിരിയാണി</div>
-            <p class="dish-card__desc">Tender mutton layered with fragrant rice and warm spices, slow cooked to create a
-              rich and comforting Malabar classic.</p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Gee Rice Chicken Curry / Casunet curry</h3>
+          <div class="dish-card__local">നെയ്ച്ചോറും ചിക്കൻ കറിയും / കാഷ്യൂനട്ട് കറിയും</div>
+          <p class="dish-card__desc">Fragrant ghee rice served with tender chicken simmered in a rich, gently spiced curry, a comforting Malabar classic made for a hearty meal.</p>
         </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/dhalfish-480.avif 480w, assets/images/opt/dhalfish-735.avif 735w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/dhalfish-480.jpg"
+              srcset="assets/images/opt/dhalfish-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="735" height="798" alt="Dhal, Rice, and Fish Curry"
+              loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Dhal, Rice, and Fish Curry</h3>
+          <div class="dish-card__local">പരിപ്പ്, ചോറ്, മീൻകറി</div>
+          <p class="dish-card__desc">Warm rice served with creamy dal and a traditional Kerala fish curry, a simple homestyle meal full of comforting flavours.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/kappafish-480.avif 480w, assets/images/opt/kappafish-512.avif 512w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/kappafish-480.jpg"
+              srcset="assets/images/opt/kappafish-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="512" height="512" alt="Kappa and Fish Curry"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Kappa and Fish Curry</h3>
+          <div class="dish-card__local">കപ്പയും മീൻകറിയും</div>
+          <p class="dish-card__desc">Soft cassava served with a traditional Kerala fish curry, a rustic combination of earthy flavours and gentle spice.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/muttoncb-418.avif 418w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/muttoncb-418.avif"
+              srcset="" sizes="(max-width:520px) 100vw, 300px"
+              width="418" height="626" alt="Mutton Biriyani"
+              loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Mutton Biriyani</h3>
+          <div class="dish-card__local">മട്ടൻ ബിരിയാണി</div>
+          <p class="dish-card__desc">Tender mutton layered with fragrant rice and warm spices, slow cooked to create a rich and comforting Malabar classic.</p>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -208,36 +280,57 @@
         <span class="menu-section__note">Verandah, late afternoon</span>
       </div>
       <div class="dish-grid-cards">
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/ariunda.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Ari Unda</h3>
-            <div class="dish-card__local">അരിയുണ്ട</div>
-            <p class="dish-card__desc">Roasted rice and coconut shaped into little bites, a simple traditional Kerala
-              snack with a gentle sweetness.</p>
-          </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/ariunda-480.avif 480w, assets/images/opt/ariunda-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/ariunda-480.jpg"
+              srcset="assets/images/opt/ariunda-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="920" alt="Ari Unda"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/chakkapapaddam.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Chakka Pappadam</h3>
-            <div class="dish-card__local">ചക്ക പപ്പടം</div>
-            <p class="dish-card__desc">Ripe jackfruit blended with traditional spices and crisp fried, a light and
-              crunchy Kerala snack with a hint of sweetness.</p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Ari Unda</h3>
+          <div class="dish-card__local">അരിയുണ്ട</div>
+          <p class="dish-card__desc">Roasted rice and coconut shaped into little bites, a simple traditional Kerala snack with a gentle sweetness.</p>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/ada.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Ada</h3>
-            <div class="dish-card__local">അട</div>
-            <p class="dish-card__desc">Delicate rice parcels filled with sweet coconut and jaggery, gently steamed to
-              create a soft and comforting traditional Kerala treat.</p>
-          </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/chakkapapaddam-480.avif 480w, assets/images/opt/chakkapapaddam-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/chakkapapaddam-480.jpg"
+              srcset="assets/images/opt/chakkapapaddam-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="993" alt="Chakka Pappadam"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Chakka Pappadam</h3>
+          <div class="dish-card__local">ചക്ക പപ്പടം</div>
+          <p class="dish-card__desc">Ripe jackfruit blended with traditional spices and crisp fried, a light and crunchy Kerala snack with a hint of sweetness.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/ada-422.avif 422w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/ada-422.avif"
+              srcset="" sizes="(max-width:520px) 100vw, 300px"
+              width="422" height="640" alt="Ada"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Ada</h3>
+          <div class="dish-card__local">അട</div>
+          <p class="dish-card__desc">Delicate rice parcels filled with sweet coconut and jaggery, gently steamed to create a soft and comforting traditional Kerala treat.</p>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -248,37 +341,60 @@
         <span class="menu-section__note">To finish</span>
       </div>
       <div class="dish-grid-cards">
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/chakkapayasam.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Chakka Pradhaman</h3>
-            <div class="dish-card__local">ചക്ക പ്രഥമൻ</div>
-            <p class="dish-card__desc">Ripe jackfruit slow cooked with jaggery and coconut milk, a rich and comforting
-              Kerala dessert with a deep, natural sweetness.</p>
-          </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/chakkapayasam-236.avif 236w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/chakkapayasam-236.avif"
+              srcset="" sizes="(max-width:520px) 100vw, 300px"
+              width="236" height="354" alt="Chakka Pradhaman"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
         </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/palada.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Palada payasam</h3>
-            <div class="dish-card__local">പാലട</div>
-            <p class="dish-card__desc">Slow-cooked milk payasam with rice ada, delicately sweet.</p>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-card__media" style="background-image:url('assets/images/PazhamPradhaman.jpg')"><span
-              class="dish-card__veg"></span></div>
-          <div class="dish-card__body">
-            <h3 class="dish-card__name">Pazham Pradhaman</h3>
-            <div class="dish-card__local">പഴം പ്രഥമൻ</div>
-            <p class="dish-card__desc">Ripe banana slow cooked with jaggery and coconut milk, a rich and traditional
-              Kerala dessert with a warm, natural sweetness.</p>
-          </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Chakka Pradhaman</h3>
+          <div class="dish-card__local">ചക്ക പ്രഥമൻ</div>
+          <p class="dish-card__desc">Ripe jackfruit slow cooked with jaggery and coconut milk, a rich and comforting Kerala dessert with a deep, natural sweetness.</p>
         </div>
       </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/palada-236.avif 236w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/palada-236.avif"
+              srcset="" sizes="(max-width:520px) 100vw, 300px"
+              width="236" height="354" alt="Palada payasam"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Palada payasam</h3>
+          <div class="dish-card__local">പാലട</div>
+          <p class="dish-card__desc">Slow-cooked milk payasam with rice ada, delicately sweet.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-card__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/PazhamPradhaman-480.avif 480w, assets/images/opt/PazhamPradhaman-736.avif 736w" sizes="(max-width:520px) 100vw, 300px">
+            <img class="media-fill" src="assets/images/opt/PazhamPradhaman-480.jpg"
+              srcset="assets/images/opt/PazhamPradhaman-480.jpg 480w" sizes="(max-width:520px) 100vw, 300px"
+              width="736" height="1107" alt="Pazham Pradhaman"
+              loading="lazy" decoding="async">
+          </picture>
+          <span class="dish-card__veg" aria-label="Vegetarian"></span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Pazham Pradhaman</h3>
+          <div class="dish-card__local">പഴം പ്രഥമൻ</div>
+          <p class="dish-card__desc">Ripe banana slow cooked with jaggery and coconut milk, a rich and traditional Kerala dessert with a warm, natural sweetness.</p>
+        </div>
+      </div>
+      </div>
     </section>
+    <!-- /@data:menu -->
 
     <!-- More on request banner -->
     <section class="more-request">
@@ -287,7 +403,7 @@
         <div class="more-request__text">
           <h2 class="more-request__title">This is just a taste</h2>
           <p class="more-request__desc">The menu you see here is only a glimpse of what our kitchen can offer. We also
-            prepare <strong>Tulu Nadu cuisine</strong> and authentic <strong>Kasargod cuisine</strong> — dishes rooted
+            prepare <strong>Tulu Nadu cuisine</strong> and authentic <strong>Kasargod cuisine</strong> - dishes rooted
             in the distinct flavours of this border region that rarely appear anywhere else. Just let us know your
             preference when you reach out and we'll plan the meals around you.</p>
           <div class="more-request__tags">
@@ -296,7 +412,7 @@
             <span class="more-request__tag">Regional specialities</span>
             <span class="more-request__tag">Made to order</span>
           </div>
-          <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20cuisine%20options%20at%20Thalathoor%20%E2%80%94%20especially%20Tulu%20Nadu%20and%20Kasargod%20dishes."
+          <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20cuisine%20options%20at%20Thalathoor%20%E2%80%94%20especially%20Tulu%20Nadu%20and%20Kasargod%20dishes."
             target="_blank" rel="noopener" class="btn btn-green more-request__cta">Enquire about the full menu</a>
         </div>
       </div>
@@ -305,20 +421,27 @@
     <section class="menu-cta">
       <div class="menu-cta__inner">
         <h2 class="menu-cta__title">Hungry yet?</h2>
-        <p class="menu-cta__desc">Tell us about allergies or preferences when you book — the kitchen adjusts with a
+        <p class="menu-cta__desc">Tell us about allergies or preferences when you book - the kitchen adjusts with a
           little notice.</p>
-        <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20menu%20at%20Thalathoor.%20Any%20notes%3A%20"
+        <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20menu%20at%20Thalathoor.%20Any%20notes%3A%20"
           target="_blank" rel="noopener" class="btn btn-mint">Ask about the menu</a>
       </div>
     </section>
 
   </div>
 
-  <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
+  <a href="https://wa.me/919447489949?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staying%20at%20Thalathoor."
     target="_blank" rel="noopener" class="wa-fab"><span aria-hidden="true">💬</span><span class="wa-fab__label">WhatsApp
       us</span></a>
 
-  <script src="js/main.js"></script>
+  <footer class="site-footer site-footer--slim">
+    <!-- @data:credit -->
+    <!-- Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block. -->
+        <div class="site-footer__credit">Handcrafted by <a href="https://octane.team" target="_blank" rel="noopener">Octane</a></div>
+    <!-- /@data:credit -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
