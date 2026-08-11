@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Events &amp; Supper Club | Thalathoor Heritage Homestay, Kasaragod</title>
   <meta name="description"
-    content="Host your supper club, private retreat or destination wedding at Thalathoor Heritage Homestay — courtyard, kitchen and gardens for gatherings of every kind.">
+    content="Host your supper club, private retreat or destination wedding at Thalathoor Heritage Homestay - courtyard, kitchen and gardens for gatherings of every kind.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://www.thalathoorheritage.com/events.html">
   <meta name="robots" content="index, follow">
@@ -32,11 +32,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet">
+  <!-- Self-hosted fonts: no third-party host, no extra DNS/TLS handshake.
+       The two faces below are the ones needed for first paint. -->
+  <link rel="preload" href="assets/fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -58,7 +58,7 @@
 </head>
 
 <body>
-  <div class="wrap-narrow" style="padding-top:18px;padding-bottom:70px;">
+  <div class="wrap-narrow page-shell page-shell--events">
 
     <nav class="nav-simple">
       <a href="index.html" class="nav-simple__brand">
@@ -71,7 +71,14 @@
       <a href="index.html" class="nav-simple__back">← Back to home</a>
     </nav>
 
-    <header class="events-hero" style="background-image:url('assets/images/nature2.jpg')">
+    <header class="events-hero">
+      <picture>
+        <source type="image/avif" srcset="assets/images/opt/nature2-480.avif 480w, assets/images/opt/nature2-768.avif 768w, assets/images/opt/nature2-960.avif 960w" sizes="100vw">
+        <img class="media-fill" src="assets/images/opt/nature2-768.jpg"
+          srcset="assets/images/opt/nature2-480.jpg 480w, assets/images/opt/nature2-768.jpg 768w" sizes="100vw"
+          width="960" height="1280" alt="Green grounds around the heritage house"
+          fetchpriority="high" decoding="async">
+      </picture>
       <div class="events-hero__inner">
         <div class="eyebrow eyebrow--light">Events &amp; supper club</div>
         <h1 class="events-hero__title">Your occasion, held in a heritage home.</h1>
@@ -82,12 +89,19 @@
 
     <section class="offering">
       <div class="offering__grid">
-        <div class="offering__media" style="background-image:url('assets/images/supperclub.jpg');order:1;"></div>
-        <div style="order:2;">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/supperclub-480.avif 480w, assets/images/opt/supperclub-736.avif 736w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/supperclub-480.jpg"
+              srcset="assets/images/opt/supperclub-480.jpg 480w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="736" height="1103" alt="A supper club dinner laid out at the shared table"
+              loading="lazy" decoding="async">
+          </picture></div>
+        <div>
           <div class="eyebrow">Supper Club</div>
           <h2 class="offering__title">An evening at the shared table</h2>
           <p class="offering__body">Our supper club is a curated, multi-course dinner drawn from Kasaragod&rsquo;s home
-            kitchens — cooked on the heritage stove and served at one long table. A slow evening of regional dishes,
+            kitchens - cooked on the heritage stove and served at one long table. A slow evening of regional dishes,
             most of which never made it to a restaurant menu.</p>
           <div class="offering__points">
             <div class="offering__point"><span class="offering__point-check">✓</span><span
@@ -106,9 +120,16 @@
     </section>
 
     <section class="offering">
-      <div class="offering__grid">
-        <div class="offering__media" style="background-image:url('assets/images/gettogether.jpg');order:2;"></div>
-        <div style="order:1;">
+      <div class="offering__grid offering__grid--flip">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/gettogether-480.avif 480w, assets/images/opt/gettogether-768.avif 768w, assets/images/opt/gettogether-800.avif 800w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/gettogether-768.jpg"
+              srcset="assets/images/opt/gettogether-480.jpg 480w, assets/images/opt/gettogether-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="800" height="533" alt="Guests gathered for a get-together at the house"
+              loading="lazy" decoding="async">
+          </picture></div>
+        <div>
           <div class="eyebrow">Corporate &amp; Private</div>
           <h2 class="offering__title">Retreats, offsites &amp; get-togethers</h2>
           <p class="offering__body">Take the whole house for an offsite, a reunion or a milestone celebration. Meals,
@@ -131,8 +152,15 @@
 
     <section class="offering">
       <div class="offering__grid">
-        <div class="offering__media" style="background-image:url('assets/images/desttwedd.jpg');order:1;"></div>
-        <div style="order:2;">
+        <div class="offering__media">
+          <picture>
+            <source type="image/avif" srcset="assets/images/opt/desttwedd-480.avif 480w, assets/images/opt/desttwedd-768.avif 768w, assets/images/opt/desttwedd-1024.avif 1024w, assets/images/opt/desttwedd-1280.avif 1280w" sizes="(max-width:1080px) 100vw, 50vw">
+            <img class="media-fill" src="assets/images/opt/desttwedd-768.jpg"
+              srcset="assets/images/opt/desttwedd-480.jpg 480w, assets/images/opt/desttwedd-768.jpg 768w" sizes="(max-width:1080px) 100vw, 50vw"
+              width="1280" height="1024" alt="A wedding celebration in the courtyard"
+              loading="lazy" decoding="async">
+          </picture></div>
+        <div>
           <div class="eyebrow">Weddings</div>
           <h2 class="offering__title">Destination weddings &amp; Haldi</h2>
           <p class="offering__body">Intimate ceremonies, haldi mornings and receptions set in the courtyard and gardens.
@@ -185,7 +213,7 @@
     <section class="events-cta">
       <div class="events-cta__inner">
         <h2 class="events-cta__title">Planning something?</h2>
-        <p class="events-cta__desc">Tell us the occasion, rough dates and how many guests — we'll come back with what's
+        <p class="events-cta__desc">Tell us the occasion, rough dates and how many guests - we'll come back with what's
           possible and a quote.</p>
         <a href="https://wa.me/918129798721?text=Hi%2C%20I%27d%20like%20to%20plan%20an%20event%20at%20Thalathoor.%20Occasion%3A%20%2F%20Dates%3A%20%2F%20Guests%3A%20"
           target="_blank" rel="noopener" class="btn btn-white">Enquire on WhatsApp</a>
@@ -198,7 +226,7 @@
     target="_blank" rel="noopener" class="wa-fab"><span aria-hidden="true">💬</span><span class="wa-fab__label">WhatsApp
       us</span></a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

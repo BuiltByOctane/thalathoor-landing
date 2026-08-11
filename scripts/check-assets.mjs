@@ -33,10 +33,10 @@ function record(ref, file, line) {
   if (/^(https?:|mailto:|tel:|data:|#|\/\/)/i.test(ref)) return;
   if (IGNORE_REFS.has(ref)) return;
 
-  // srcset can hold a comma-separated candidate list with descriptors.
-  const candidates = ref.includes(',')
-    ? ref.split(',').map((c) => c.trim().split(/\s+/)[0])
-    : [ref];
+  // srcset holds a comma-separated candidate list, each optionally followed by
+  // a width or density descriptor. A single-candidate srcset has no comma but
+  // still carries its descriptor, so always split on both.
+  const candidates = ref.split(',').map((c) => c.trim().split(/\s+/)[0]);
 
   for (const cand of candidates) {
     if (!cand) continue;

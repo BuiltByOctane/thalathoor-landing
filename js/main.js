@@ -6,20 +6,38 @@
 
   document.documentElement.classList.remove('no-js');
 
-  /* ---------------- Loading screen ---------------- */
+  /* ---------------- Loading screen ----------------
+     Dismissed when the page is actually ready rather than after a fixed delay.
+     The previous version held the screen for a hard 1.65s (a CSS animation at
+     1.15s plus a 1650ms timeout), which was the single largest contributor to
+     perceived load time. MAX_WAIT is a safety net for a stalled resource. */
   var loader = document.querySelector('.loader');
   if (loader) {
-    window.setTimeout(function () {
-      loader.setAttribute('aria-hidden', 'true');
-    }, 1650);
+    var MIN_SHOW = 350;   // let the mark register instead of flashing
+    var MAX_WAIT = 2000;
+    var shown = Date.now();
+    var dismissed = false;
+
+    var dismiss = function () {
+      if (dismissed) return;
+      dismissed = true;
+      var waited = Date.now() - shown;
+      window.setTimeout(function () {
+        loader.classList.add('is-done');
+        loader.setAttribute('aria-hidden', 'true');
+      }, Math.max(0, MIN_SHOW - waited));
+    };
+
+    if (document.readyState === 'complete') dismiss();
+    else window.addEventListener('load', dismiss);
+    window.setTimeout(dismiss, MAX_WAIT);
   }
 
   /* ---------------- Nav: scroll shrink + mobile drawer ---------------- */
   var navFixed = document.querySelector('.nav-fixed');
   if (navFixed) {
     var onScroll = function () {
-      var scrolled = window.scrollY > 60;
-      navFixed.classList.toggle('is-scrolled', scrolled);
+      navFixed.classList.toggle('is-scrolled', window.scrollY > 60);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -40,27 +58,53 @@
     document.querySelectorAll('.nav-drawer__link').forEach(function (link) {
       link.addEventListener('click', closeDrawer);
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.documentElement.classList.contains('nav-open')) {
+        closeDrawer();
+        burger.focus();
+      }
+    });
   }
 
-  /* ---------------- Hero carousel ---------------- */
+  /* ---------------- Hero carousel ----------------
+     Slides 2-5 ship with their sources in data-src / data-srcset. They sit
+     inside the viewport even while transparent, so loading="lazy" would not
+     defer them; hydrating on demand keeps roughly 1.5 MB off the initial load.
+     Each slide is hydrated when it is about to be shown, plus one ahead. */
   var slides = document.querySelectorAll('.hero__slide');
   var dots = document.querySelectorAll('.hero__dot');
   if (slides.length) {
     var current = 0;
     var timer = null;
 
+    var hydrate = function (slide) {
+      if (!slide || slide.dataset.hydrated) return;
+      slide.dataset.hydrated = '1';
+      slide.querySelectorAll('source[data-srcset], img[data-srcset], img[data-src]')
+        .forEach(function (el) {
+          if (el.dataset.srcset) el.srcset = el.dataset.srcset;
+          if (el.dataset.src) el.src = el.dataset.src;
+          delete el.dataset.srcset;
+          delete el.dataset.src;
+        });
+    };
+
     var goTo = function (i) {
       current = (i + slides.length) % slides.length;
+      hydrate(slides[current]);
+      hydrate(slides[(current + 1) % slides.length]);
+
       slides.forEach(function (s, idx) {
         s.classList.toggle('is-active', idx === current);
         var video = s.querySelector('video');
         if (video) {
-          if (idx === current) { video.play().catch(function () {}); }
-          else { video.pause(); }
+          if (idx === current) video.play().catch(function () {});
+          else video.pause();
         }
       });
       dots.forEach(function (d, idx) {
         d.classList.toggle('is-active', idx === current);
+        d.setAttribute('aria-current', idx === current ? 'true' : 'false');
       });
     };
 
@@ -78,6 +122,16 @@
         goTo(idx);
         restartAuto();
       });
+    });
+
+    // Pause the rotation while the tab is hidden; nobody is watching.
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+      } else if (!timer) {
+        startAuto();
+      }
     });
 
     goTo(0);
@@ -125,6 +179,7 @@
   if (lightbox) {
     var mediaHost = lightbox.querySelector('.lightbox__media-host');
     var closeBtn = lightbox.querySelector('.lightbox__close');
+    var lastFocused = null;
 
     var openLightbox = function (type, src, poster) {
       mediaHost.innerHTML = '';
@@ -145,6 +200,8 @@
       mediaHost.appendChild(el);
       lightbox.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
+      lastFocused = document.activeElement;
+      if (closeBtn) closeBtn.focus();
     };
 
     var closeLightbox = function () {
@@ -152,6 +209,8 @@
       mediaHost.querySelectorAll('video').forEach(function (v) { v.pause(); });
       mediaHost.innerHTML = '';
       document.body.style.overflow = '';
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+      lastFocused = null;
     };
 
     document.querySelectorAll('[data-lightbox-src]').forEach(function (trigger) {
@@ -173,21 +232,32 @@
     });
   }
 
-  /* ---------------- Gallery filters ---------------- */
+  /* ---------------- Gallery filters ----------------
+     `data-tag` holds a space-separated token list, so one tile can appear under
+     several filters. It was previously an exact string match, which meant the
+     "Video" button matched nothing at all (no tile carried that single value)
+     and a lower-case "nature" typo hid a tile from its own filter. */
   var filterBar = document.querySelector('.gallery-filters');
   if (filterBar) {
     var items = document.querySelectorAll('.masonry-item');
-    filterBar.querySelectorAll('.gallery-filter').forEach(function (btn) {
+    var buttons = filterBar.querySelectorAll('.gallery-filter');
+
+    var apply = function (tag) {
+      items.forEach(function (item) {
+        var tags = (item.getAttribute('data-tag') || '').split(/\s+/);
+        item.hidden = !(tag === 'All' || tags.indexOf(tag) !== -1);
+      });
+    };
+
+    buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        filterBar.querySelectorAll('.gallery-filter').forEach(function (b) {
+        buttons.forEach(function (b) {
           b.classList.remove('is-active');
+          b.setAttribute('aria-pressed', 'false');
         });
         btn.classList.add('is-active');
-        var tag = btn.getAttribute('data-filter');
-        items.forEach(function (item) {
-          var match = tag === 'All' || item.getAttribute('data-tag') === tag;
-          item.hidden = !match;
-        });
+        btn.setAttribute('aria-pressed', 'true');
+        apply(btn.getAttribute('data-filter'));
       });
     });
   }
