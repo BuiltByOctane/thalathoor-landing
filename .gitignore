@@ -17,3 +17,7 @@ package-lock.json.bak
 # Local server / temp
 *.log
 .cache/
+
+# Deploy artifact — rebuilt by `npm run dist`
+dist/
+.wrangler/

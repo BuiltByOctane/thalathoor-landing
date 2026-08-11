@@ -251,6 +251,7 @@ button{font-family:inherit}
    These replace ~30 inline style attributes that repeated the same three
    clamp() display sizes and the same lead-paragraph rule across index.html. */
 .section-intro{text-align:center;max-width:640px;margin:0 auto 40px}
+.section-intro--404{padding:90px 0 60px}
 .section-outro{text-align:center;margin-top:34px}
 .section-outro--tight{margin-top:14px}
 .section-outro__link{font-size:14px;font-weight:600}

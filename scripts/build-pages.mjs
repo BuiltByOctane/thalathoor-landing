@@ -436,7 +436,9 @@ const MARKER = (name) => ({
   close: `<!-- /@data:${name} -->`,
 });
 
-const pages = ['index.html', 'menu.html', 'events.html', 'gallery.html'];
+// Every page in the repo, so a new one picks up the shared regions and the
+// scalar normalisers without needing to be registered here.
+const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html')).sort();
 let changedFiles = 0;
 const report = [];
 
