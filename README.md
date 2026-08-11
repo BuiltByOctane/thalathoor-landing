@@ -63,17 +63,68 @@ npm run serve      # http://localhost:8080, logs 404s
 Any static file server works. Opening `index.html` over `file://` also works,
 apart from the Google Maps iframe.
 
-## Deploying
+## Deploying (Cloudflare Workers)
 
-Serve the repository root as static files. There is no build step.
+The site is served as static assets by Workers. There is no Worker script and
+no server-side code.
 
-Two things worth configuring on the host:
+```sh
+npm run dist       # assemble dist/ (what actually gets served)
+npm run preview    # wrangler dev, serving dist/
+npm run deploy     # check + dist + wrangler deploy
+```
 
-- **Long `Cache-Control` for `assets/`** — filenames in `assets/images/opt/`
-  encode their width, so they can be cached immutably.
-- **Compression** (gzip or brotli) for `.html`, `.css`, `.js` and `.svg`.
-  `logo.svg` alone drops from 24 KB to 10 KB gzipped. Images and video are
-  already compressed; do not re-compress them.
+In the Cloudflare dashboard, under the Worker's build settings:
+
+| Field | Value |
+|---|---|
+| Build command | `npm run check && npm run dist` |
+| Deploy command | `npx wrangler deploy` |
+| Root directory | *(leave empty)* |
+
+`npm run check` runs first on purpose: it fails the build if a page has drifted
+from `data/`, or if anything references a file that is not in the repo. A broken
+deploy is caught before it ships rather than after.
+
+### What lands in `dist/`
+
+`scripts/build-dist.mjs` copies the HTML entry points plus **every asset the
+pages actually reference**, using the same scanner as `check-assets.mjs`. It is
+not a hand-maintained list, because a hand-maintained list gets this wrong in
+both directions — earlier attempts shipped the 10.7 MB source video and the logo
+masters, while a blunter rule would have dropped `leaf-tile.png`, which the CSS
+needs as an `image-set()` fallback.
+
+So `dist/` contains no `node_modules`, no `data/`, no `scripts/`, and none of
+the source images or clips the pipeline derives from — only the generated
+variants the pages request. Roughly 260 files.
+
+`dist/` is generated and gitignored. Never edit it.
+
+### Caching
+
+`dist/_headers` is generated with the build:
+
+- `/assets/*` — one year, `immutable`. Generated variants carry their width in
+  the filename and are replaced rather than edited.
+- `/css/*`, `/js/*` — one hour.
+- HTML — `max-age=0, must-revalidate`, so a deploy is visible immediately.
+
+### Domain
+
+Attach the custom domain in the dashboard under the Worker → Settings → Domains
+& Routes, not via `routes` in `wrangler.jsonc`, so DNS and the certificate stay
+managed.
+
+**Attach both `thalathoorheritage.com` and `www.thalathoorheritage.com`**, or
+change `baseUrl` in `data/site.json` and rebuild. Every canonical URL, Open
+Graph tag and sitemap entry currently points at the `www` host; if only the apex
+is attached, those all point somewhere that does not resolve.
+
+### 404s
+
+`404.html` is served with a real 404 status via `not_found_handling`. It is a
+normal page in the repo and picks up the shared footer credit on build.
 
 ## Asset pipeline
 

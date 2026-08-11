@@ -12,77 +12,27 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './lib/assets.mjs';
+import { entryFiles, scanReferences, derivedOutputs } from './lib/refs.mjs';
 
-/** Files whose references we validate. */
-const PAGES = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html'));
-const SHEETS = ['css/style.css', 'css/fonts.css'];
-/** Non-HTML files that also point at assets. */
-const EXTRAS = ['site.webmanifest'];
-
-/** Directories scanned for unreferenced files. */
+/** Directories scanned for files that nothing references. */
 const ASSET_DIRS = [
   'assets/images', 'assets/images/opt',
   'assets/videos', 'assets/videos/opt',
   'assets/logo', 'assets/logo/brand', 'assets/icons', 'assets/fonts',
 ];
 
-/** Referenced but intentionally absent (generated at runtime, external, etc.). */
-const IGNORE_REFS = new Set();
-
 /**
- * Files that are never served but are kept on purpose: originals the pipeline
- * derives from, and licence text. Reported separately from genuine orphans.
+ * Never served, kept on purpose: originals the pipeline derives from, licence
+ * text, and the brand marks that build-pages.mjs inlines into the HTML.
  */
 const KEPT_SOURCES = [
   /^assets\/fonts\/OFL\.txt$/,
   /^assets\/logo\/brand\/NOTICE\.md$/,
-  /^assets\/logo\/(logo-full\.png|ccf0ada9-.*\.png)$/,
-  // Inlined into the footer by build-pages.mjs, never fetched by URL.
   /^assets\/logo\/brand\/.*\.svg$/,
+  /^assets\/logo\/(logo-full\.png|ccf0ada9-.*\.png)$/,
 ];
 
-const ASSET_RE = /(?:src|href|srcset|poster|data-src|data-srcset|data-lightbox-src|data-lightbox-poster)\s*=\s*["']([^"']+)["']|url\(\s*['"]?([^'")]+)['"]?\s*\)/gi;
-
-const referenced = new Map(); // resolved path -> Set of "file:line"
-const missing = [];
-
-function record(ref, file, line) {
-  // Skip protocol-relative, absolute, external, anchor, and data refs.
-  if (/^(https?:|mailto:|tel:|data:|#|\/\/)/i.test(ref)) return;
-  if (IGNORE_REFS.has(ref)) return;
-
-  // srcset holds a comma-separated candidate list, each optionally followed by
-  // a width or density descriptor. A single-candidate srcset has no comma but
-  // still carries its descriptor, so always split on both.
-  const candidates = ref.split(',').map((c) => c.trim().split(/\s+/)[0]);
-
-  for (const cand of candidates) {
-    if (!cand) continue;
-    const clean = cand.split('#')[0].split('?')[0];
-    if (!clean || /^(https?:|data:)/i.test(clean)) continue;
-    const abs = path.resolve(ROOT, path.dirname(file), clean);
-    const rel = path.relative(ROOT, abs);
-    if (!referenced.has(rel)) referenced.set(rel, new Set());
-    referenced.get(rel).add(`${file}:${line}`);
-    if (!fs.existsSync(abs)) missing.push({ ref: clean, file, line });
-  }
-}
-
-for (const file of [...PAGES, ...SHEETS, ...EXTRAS]) {
-  const abs = path.join(ROOT, file);
-  if (!fs.existsSync(abs)) continue;
-  const lines = fs.readFileSync(abs, 'utf8').split('\n');
-  // JSON files (the webmanifest) express paths as "src": "..." rather than
-  // src="...", so the attribute regex alone would miss them.
-  const isJson = /\.(webmanifest|json)$/.test(file);
-  lines.forEach((text, i) => {
-    if (isJson) {
-      for (const m of text.matchAll(/"(?:src|url|icon)"\s*:\s*"([^"]+)"/g)) record(m[1], file, i + 1);
-      return;
-    }
-    for (const m of text.matchAll(ASSET_RE)) record(m[1] ?? m[2], file, i + 1);
-  });
-}
+const { referenced, missing } = scanReferences(entryFiles());
 
 // ---- report ----------------------------------------------------------------
 
@@ -109,29 +59,9 @@ for (const dir of ASSET_DIRS) {
   }
 }
 
-/**
- * A source asset counts as referenced when any variant generated from it is.
- * Pages point at assets/images/opt/<name>-480.avif, never at the source JPEG,
- * so without this every original would be reported as dead.
- */
-const derivedFrom = new Map();
-for (const [manifestPath, dir] of [
-  ['assets/images/opt/manifest.json', 'assets/images'],
-  ['assets/videos/opt/manifest.json', 'assets/videos'],
-]) {
-  const abs = path.join(ROOT, manifestPath);
-  if (!fs.existsSync(abs)) continue;
-  const m = JSON.parse(fs.readFileSync(abs, 'utf8'));
-  for (const [srcName, entry] of Object.entries(m)) {
-    const outputs = [];
-    for (const v of entry.variants ?? []) {
-      if (v.avif) outputs.push(v.avif);
-      if (v.jpg) outputs.push(v.jpg);
-    }
-    for (const k of ['video', 'posterJpg', 'posterAvif']) if (entry[k]) outputs.push(entry[k]);
-    derivedFrom.set(path.posix.join(dir, srcName), outputs);
-  }
-}
+// A source counts as referenced when any variant generated from it is: pages
+// point at assets/images/opt/<name>-480.avif, never at the source JPEG.
+const derivedFrom = derivedOutputs();
 
 const isReferenced = (f) => {
   if (referenced.has(f)) return true;

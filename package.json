@@ -13,11 +13,15 @@
     "assets:video": "node scripts/optimize-video.mjs",
     "assets:svg": "svgo --precision=2 --multipass -q assets/logo/logo.svg -o assets/logo/logo.svg && svgo --config svgo.brand.mjs -q -f assets/logo/brand",
     "fonts": "node scripts/fetch-fonts.mjs",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "dist": "node scripts/build-dist.mjs",
+    "deploy": "npm run check && npm run dist && wrangler deploy",
+    "preview": "npm run dist && wrangler dev"
   },
   "devDependencies": {
     "ffmpeg-static": "^5.2.0",
     "sharp": "^0.35.3",
-    "svgo": "^3.3.4"
+    "svgo": "^3.3.4",
+    "wrangler": "^4.120.1"
   }
 }

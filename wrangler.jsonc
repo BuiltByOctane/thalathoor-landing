@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "thalathoor-landing",
+  "compatibility_date": "2026-08-11",
+
+  // Purely static: no Worker script, so there is no "main" entry point.
+  // Cloudflare serves dist/ straight from its edge.
+  "assets": {
+    // Built by `npm run dist`, which copies only the files the pages actually
+    // reference. Never point this at the repo root: node_modules alone would
+    // exceed the 20,000-file limit.
+    "directory": "./dist",
+
+    // Serve /menu for menu.html and redirect the .html form to the clean path.
+    "html_handling": "auto-trailing-slash",
+
+    // Unknown paths render 404.html with a real 404 status, rather than the
+    // default empty response or an SPA-style rewrite to index.html.
+    "not_found_handling": "404-page"
+  }
+
+  // Custom domains are attached in the dashboard (Workers & Pages > the Worker
+  // > Settings > Domains & Routes). Doing it there rather than with "routes"
+  // keeps DNS and the certificate managed for you.
+}
