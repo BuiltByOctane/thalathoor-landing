@@ -76,7 +76,7 @@
   var slides = document.querySelectorAll('.hero__slide');
   // Slide interval comes from data/hero.json via a data attribute on the hero.
   var heroEl = document.querySelector('.hero');
-  var autoplayMs = (heroEl && Number(heroEl.dataset.autoplaySeconds) * 1000) || 6000;
+  var autoplayMs = (heroEl && Number(heroEl.dataset.autoplaySeconds) * 1000) || 4000;
   var dots = document.querySelectorAll('.hero__dot');
   if (slides.length) {
     var current = 0;

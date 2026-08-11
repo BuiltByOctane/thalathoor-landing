@@ -359,6 +359,8 @@ button{font-family:inherit}
 .event-card__tag{font:600 10.5px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--mint);margin-bottom:10px}
 .event-card__title{font-size:27px;line-height:1.05;margin-bottom:10px;color:#fff}
 .event-card__desc{font-size:14px;line-height:1.55;color:rgba(255,255,255,.85)}
+.event-card__cta{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--mint)}
+.event-card__cta:hover{color:#fff}
 
 /* ---------- Trust / reviews ----------
    Figures from the TripAdvisor listing; update them together when they move. */

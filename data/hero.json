@@ -1,7 +1,7 @@
 {
   "_comment": "Hero carousel slides. Each `file` is a source clip in assets/videos/ (type video) or an image in assets/images/ (type image); the build reads dimensions, posters and srcsets from the generated manifests, so nothing here needs updating when assets are re-encoded. Only the first slide loads on page load — the rest are hydrated by main.js one slide ahead, so adding slides does not cost first-paint weight. Slide order here is the carousel order.",
 
-  "autoplaySeconds": 6,
+  "autoplaySeconds": 4,
 
   "slides": [
     {

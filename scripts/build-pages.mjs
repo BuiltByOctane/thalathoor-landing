@@ -34,6 +34,7 @@ const menuData = readData('menu.json');
 const signature = readData('signature-dishes.json');
 const galleryData = readData('gallery.json');
 const heroData = readData('hero.json');
+const eventsData = readData('events.json');
 
 const GENERATED = 'Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block.';
 
@@ -217,6 +218,46 @@ ${cards}
   }).join('\n\n');
 }
 
+/** Teaser cards in the Gatherings section of index.html. */
+function eventsTeaserRegion() {
+  return eventsData.items.map((e) =>
+`        <div class="event-card">
+${picture(e.image, { sizes: '(max-width:520px) 100vw, (max-width:1080px) 50vw, 420px', alt: e.alt, indent: 10 })}
+          <div class="event-card__body">
+            <div class="event-card__tag">${e.tag}</div>
+            <h3 class="event-card__title">${e.title}</h3>
+            <p class="event-card__desc">${e.teaser}</p>
+            <a href="${wa(site, e.enquiry)}" target="_blank" rel="noopener" class="event-card__cta">Enquire on WhatsApp →</a>
+          </div>
+        </div>`).join('\n');
+}
+
+/** Full rows on events.html. Media alternates left/right down the page. */
+function eventsRegion() {
+  return eventsData.items.map((e, i) => {
+    const enquiry = wa(site, e.enquiry);
+    const points = e.points.map((pt) =>
+`            <div class="offering__point"><span class="offering__point-check">✓</span><span
+                class="offering__point-text">${pt}</span></div>`).join('\n');
+    return `    <section class="offering" id="${esc(e.id)}">
+      <div class="offering__grid${i % 2 ? ' offering__grid--flip' : ''}">
+        <div class="offering__media">
+${picture(e.image, { sizes: '(max-width:1080px) 100vw, 50vw', alt: e.alt, indent: 10 })}
+        </div>
+        <div>
+          <div class="eyebrow">${e.tag}</div>
+          <h2 class="offering__title">${e.heading}</h2>
+          <p class="offering__body">${e.body}</p>
+          <div class="offering__points">
+${points}
+          </div>
+          <a href="${enquiry}" target="_blank" rel="noopener" class="btn btn-primary">${e.ctaLabel}</a>
+        </div>
+      </div>
+    </section>`;
+  }).join('\n\n');
+}
+
 function galleryFiltersRegion() {
   return galleryData.filters.map((f, i) =>
 `      <button class="gallery-filter${i === 0 ? ' is-active' : ''}" data-filter="${esc(f)}" aria-pressed="${i === 0}">${esc(f)}</button>`
@@ -288,6 +329,8 @@ const REGIONS = {
   faq: faqRegion,
   'signature-dishes': signatureRegion,
   menu: menuRegion,
+  'events-teaser': eventsTeaserRegion,
+  events: eventsRegion,
   'gallery-filters': galleryFiltersRegion,
   gallery: galleryRegion,
   'getting-here': gettingHereRegion,
