@@ -150,8 +150,9 @@ All three families are SIL OFL 1.1; see `assets/fonts/OFL.txt`.
 
 ## Known gaps
 
-- No Facebook URL yet; `links.facebook` in `site.json` is `null` and the link is
-  simply omitted. Set it and rebuild to add it back.
+- No Facebook presence by choice. `links.facebook` in `site.json` is `null`, and
+  the build omits any social link whose URL is null, so nothing renders. If that
+  changes, set the URL and rebuild.
 - TripAdvisor figures (4.8 / 5, 115 reviews, #1 of 11) live in
   `data/reviews.json`. One edit there updates the trust strip, the "Read all N
   reviews" link and the JSON-LD `aggregateRating` together.
