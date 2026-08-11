@@ -404,6 +404,19 @@ button{font-family:inherit}
 .menu-cta__inner{background:var(--dark);border-radius:28px;padding:52px 44px;text-align:center}
 .menu-cta__title{font-size:clamp(28px,3.6vw,46px);line-height:1;margin-bottom:14px;color:#fff}
 .menu-cta__desc{font-size:16px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 auto 26px;max-width:48ch}
+.more-request{padding:56px 0 0}
+.more-request__inner{display:flex;gap:28px;align-items:flex-start;background:#f3f7ee;border:1.5px solid #c8dab8;border-radius:24px;padding:40px 44px}
+.more-request__icon{flex:none;font-size:38px;line-height:1;margin-top:4px}
+.more-request__text{flex:1}
+.more-request__title{font-size:clamp(22px,2.8vw,34px);line-height:1.1;margin-bottom:14px;color:var(--dark)}
+.more-request__desc{font-size:15.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:20px;max-width:60ch}
+.more-request__desc strong{color:var(--green);font-weight:700}
+.more-request__tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+.more-request__tag{padding:7px 16px;border-radius:999px;background:#fff;border:1.5px solid #b5cfa0;color:var(--green);font-size:13px;font-weight:600}
+.more-request__cta{align-self:flex-start}
+.btn-green{background:var(--green);color:#fff;border-color:var(--green)}
+.btn-green:hover{background:#1a2518;border-color:#1a2518;color:#fff}
+@media (max-width:640px){.more-request__inner{flex-direction:column;padding:30px 24px}.more-request__icon{font-size:30px}}
 
 /* ============================================================
    Page-specific: Events
