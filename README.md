@@ -110,10 +110,12 @@ All three families are SIL OFL 1.1; see `assets/fonts/OFL.txt`.
 
 ## Known gaps
 
-- The guest-reviews section is removed pending real content. See the TODO comment
-  in `index.html` for exactly what is needed to restore it.
 - Instagram and Facebook links were removed from the footer; no URLs were
   available. The TripAdvisor link is live.
+- The trust strip and JSON-LD `aggregateRating` carry hard-coded figures
+  (4.8 / 5, 115 reviews, #1 of 11). Update all three places together when the
+  listing moves: the strip in `index.html`, the "Read all 115 reviews" link
+  text, and the JSON-LD block.
 - `assets/logo/logo-full.png` and the UUID-named PNG are unreferenced source
   masters, kept deliberately. They are never served, so they cost page weight
   nothing — `npm run check` lists them as unreferenced.
