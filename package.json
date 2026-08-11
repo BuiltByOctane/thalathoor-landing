@@ -11,7 +11,7 @@
     "assets": "npm run assets:images && npm run assets:video && npm run assets:svg",
     "assets:images": "node scripts/optimize-images.mjs",
     "assets:video": "node scripts/optimize-video.mjs",
-    "assets:svg": "svgo --precision=2 --multipass -q assets/logo/logo.svg -o assets/logo/logo.svg",
+    "assets:svg": "svgo --precision=2 --multipass -q assets/logo/logo.svg -o assets/logo/logo.svg && svgo --config svgo.brand.mjs -q -f assets/logo/brand",
     "fonts": "node scripts/fetch-fonts.mjs",
     "serve": "node scripts/serve.mjs"
   },

@@ -22,7 +22,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './lib/assets.mjs';
-import { readData, esc, wa, picture, posterPicture } from './lib/render.mjs';
+import { readData, esc, wa, picture, posterPicture, manifest, video } from './lib/render.mjs';
 
 const checkOnly = process.argv.includes('--check');
 
@@ -33,10 +33,62 @@ const faqData = readData('faq.json');
 const menuData = readData('menu.json');
 const signature = readData('signature-dishes.json');
 const galleryData = readData('gallery.json');
+const heroData = readData('hero.json');
 
 const GENERATED = 'Generated from data/ by scripts/build-pages.mjs - edit the JSON, not this block.';
 
 /* ------------------------------------------------------------------ regions */
+
+/**
+ * Hero carousel. Only the first slide carries a real src; the rest hold theirs
+ * in data-* and are hydrated by main.js one slide ahead. Hero slides sit inside
+ * the viewport even while transparent, so loading="lazy" would not defer them —
+ * hydration is the only way to keep them off the initial load.
+ */
+function heroRegion() {
+  return heroData.slides.map((slide, i) => {
+    const first = i === 0;
+    const cls = `hero__slide${first ? ' is-active' : ''}`;
+
+    if (slide.type === 'video') {
+      const v = video(slide.file);
+      // preload="metadata" on the first clip so the poster paints and playback
+      // can start early; "none" on the rest until they are hydrated.
+      const src = first
+        ? `src="${v.video}" preload="metadata" autoplay`
+        : `data-src="${v.video}" preload="none"`;
+      return `    <div class="${cls}">
+      <video class="media-fill" ${src}
+        poster="${v.posterJpg}" width="${v.width}" height="${v.height}"
+        muted loop playsinline aria-label="${esc(slide.alt)}"></video>
+    </div>`;
+    }
+
+    const entry = manifest()[slide.file];
+    if (!entry) throw new Error(`${slide.file} is not in the image manifest`);
+    const avif = entry.variants.map((x) => `${x.avif} ${x.width}w`).join(', ');
+    const jpegs = entry.variants.filter((x) => x.jpg);
+    const jpg = jpegs.map((x) => `${x.jpg} ${x.width}w`).join(', ');
+    const attr = first ? 'srcset' : 'data-srcset';
+    const srcAttr = first ? 'src' : 'data-src';
+    return `    <div class="${cls}">
+      <picture>
+        <source type="image/avif" ${attr}="${avif}" sizes="100vw">
+        <img class="media-fill"
+          ${srcAttr}="${jpegs.at(-1).jpg}"
+          ${attr}="${jpg}"
+          sizes="100vw" width="${entry.width}" height="${entry.height}" decoding="async"
+          ${first ? 'fetchpriority="high" ' : ''}alt="${esc(slide.alt)}">
+      </picture>
+    </div>`;
+  }).join('\n');
+}
+
+function heroDotsRegion() {
+  return heroData.slides.map((_, i) =>
+    `      <button class="hero__dot${i === 0 ? ' is-active' : ''}" aria-label="Go to slide ${i + 1}"></button>`
+  ).join('\n');
+}
 
 function roomsRegion() {
   return roomsData.rooms.map((r) => {
@@ -177,12 +229,12 @@ function galleryRegion() {
     const eager = i < 4;                       // roughly the first row
     const isVideo = t.type === 'video';
     const media = isVideo
-      ? posterPicture(t.alt, { eager, indent: 8 })
+      ? posterPicture(t.video, t.alt, { eager, indent: 8 })
       : picture(t.image, { sizes: SIZES, alt: t.alt, eager, indent: 8 });
-    const poster = isVideo ? `\n        data-lightbox-poster="assets/images/opt/hero-poster.jpg"` : '';
+    const poster = isVideo ? `\n        data-lightbox-poster="${video(t.video).posterJpg}"` : '';
     const play = isVideo ? '<span class="teaser-item__play"></span>' : '';
     return `      <div class="masonry-item masonry-item--h${t.height}" data-tag="${esc(t.tags.join(' '))}"
-        data-lightbox-src="assets/images/${esc(t.image)}" data-lightbox-type="${esc(t.type)}"${poster}>
+        data-lightbox-src="${isVideo ? video(t.video).video : 'assets/images/' + esc(t.image)}" data-lightbox-type="${esc(t.type)}"${poster}>
 ${media}${play}<span class="masonry-item__tag">${esc(t.label)}</span></div>`;
   }).join('\n');
 }
@@ -229,6 +281,8 @@ function creditRegion(indent) {
 }
 
 const REGIONS = {
+  hero: heroRegion,
+  'hero-dots': heroDotsRegion,
   rooms: roomsRegion,
   reviews: reviewsRegion,
   faq: faqRegion,
@@ -326,7 +380,10 @@ function normalise(src) {
     // canonical host in canonical/OG/JSON-LD URLs
     .replace(/https:\/\/www\.thalathoorheritage\.com/g, `https://${host}`)
     .replace(/"telephone": "[^"]*"/g, `"telephone": "${c.phoneSchema}"`)
-    .replace(/"email": "[^"]*"/g, `"email": "${c.email}"`);
+    .replace(/"email": "[^"]*"/g, `"email": "${c.email}"`)
+    // Carousel interval lives in data/hero.json; expose it to main.js.
+    .replace(/<section id="top" class="hero"(?: data-autoplay-seconds="[^"]*")?>/,
+      `<section id="top" class="hero" data-autoplay-seconds="${heroData.autoplaySeconds}">`);
 }
 
 /* --------------------------------------------------------------------- main */

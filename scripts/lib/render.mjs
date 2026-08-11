@@ -68,14 +68,35 @@ export function picture(image, { sizes, alt, eager = false, indent = 0 }) {
   ].join('\n');
 }
 
-/** Poster-only <picture>, used for the video tile. */
-export function posterPicture(alt, { eager = true, indent = 0 } = {}) {
+let videoManifestCache = null;
+/** Manifest written by scripts/optimize-video.mjs. */
+export function videoManifest() {
+  if (!videoManifestCache) {
+    const p = path.join(ROOT, 'assets', 'videos', 'opt', 'manifest.json');
+    if (!fs.existsSync(p)) throw new Error('missing video manifest - run `npm run assets:video`');
+    videoManifestCache = JSON.parse(fs.readFileSync(p, 'utf8'));
+  }
+  return videoManifestCache;
+}
+
+export function video(file) {
+  const v = videoManifest()[file];
+  if (!v) throw new Error(`${file} is not in the video manifest - run \`npm run assets:video\``);
+  return v;
+}
+
+/**
+ * Poster-only <picture> for a video clip, used where a still stands in for the
+ * clip (the gallery tile) rather than the clip itself playing.
+ */
+export function posterPicture(file, alt, { eager = true, indent = 0 } = {}) {
+  const v = video(file);
   const i = ' '.repeat(indent);
   return [
     `${i}<picture>`,
-    `${i}  <source type="image/avif" srcset="assets/images/opt/hero-poster.avif">`,
-    `${i}  <img class="media-fill" src="assets/images/opt/hero-poster.jpg"`,
-    `${i}    width="640" height="360" alt="${esc(alt)}"`,
+    `${i}  <source type="image/avif" srcset="${v.posterAvif}">`,
+    `${i}  <img class="media-fill" src="${v.posterJpg}"`,
+    `${i}    width="${v.width}" height="${v.height}" alt="${esc(alt)}"`,
     `${i}    ${eager ? 'fetchpriority="high" decoding="async"' : 'loading="lazy" decoding="async"'}>`,
     `${i}</picture>`,
   ].join('\n');

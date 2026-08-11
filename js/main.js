@@ -67,11 +67,16 @@
   }
 
   /* ---------------- Hero carousel ----------------
-     Slides 2-5 ship with their sources in data-src / data-srcset. They sit
-     inside the viewport even while transparent, so loading="lazy" would not
-     defer them; hydrating on demand keeps roughly 1.5 MB off the initial load.
-     Each slide is hydrated when it is about to be shown, plus one ahead. */
+     Only the first slide ships with a real src; the rest hold theirs in
+     data-src / data-srcset. Slides sit inside the viewport even while
+     transparent, so loading="lazy" would not defer them - hydrating on demand is
+     the only way to keep them off the initial load. Each slide is hydrated when
+     it is about to be shown, plus one ahead, so the next clip is ready in time.
+     Slide composition and the interval come from data/hero.json. */
   var slides = document.querySelectorAll('.hero__slide');
+  // Slide interval comes from data/hero.json via a data attribute on the hero.
+  var heroEl = document.querySelector('.hero');
+  var autoplayMs = (heroEl && Number(heroEl.dataset.autoplaySeconds) * 1000) || 6000;
   var dots = document.querySelectorAll('.hero__dot');
   if (slides.length) {
     var current = 0;
@@ -80,12 +85,18 @@
     var hydrate = function (slide) {
       if (!slide || slide.dataset.hydrated) return;
       slide.dataset.hydrated = '1';
-      slide.querySelectorAll('source[data-srcset], img[data-srcset], img[data-src]')
+      slide.querySelectorAll('source[data-srcset], img[data-srcset], img[data-src], video[data-src]')
         .forEach(function (el) {
           if (el.dataset.srcset) el.srcset = el.dataset.srcset;
           if (el.dataset.src) el.src = el.dataset.src;
           delete el.dataset.srcset;
           delete el.dataset.src;
+          // A <video> whose src is set after parse needs an explicit load()
+          // before play() will resolve.
+          if (el.tagName === 'VIDEO') {
+            el.preload = 'metadata';
+            el.load();
+          }
         });
     };
 
@@ -110,7 +121,7 @@
 
     var startAuto = function () {
       if (reduceMotion) return;
-      timer = window.setInterval(function () { goTo(current + 1); }, 6000);
+      timer = window.setInterval(function () { goTo(current + 1); }, autoplayMs);
     };
     var restartAuto = function () {
       if (timer) window.clearInterval(timer);

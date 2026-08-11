@@ -9,15 +9,15 @@
   ],
   "tiles": [
     {
-      "image": "main.mp4",
       "type": "video",
       "tags": [
         "Heritage",
         "Video"
       ],
       "label": "Video",
-      "alt": "Walkthrough video of the house and grounds",
-      "height": 340
+      "alt": "Rain falling past the tiled roof of the house, onto the verandah and the arecanut trees beyond",
+      "height": 340,
+      "video": "hero-video-3.mp4"
     },
     {
       "image": "home1.jpg",

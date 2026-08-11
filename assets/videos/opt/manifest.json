@@ -1,0 +1,35 @@
+{
+  "hero-video-1.mp4": {
+    "source": "assets/videos/hero-video-1.mp4",
+    "video": "assets/videos/opt/hero-video-1.mp4",
+    "posterJpg": "assets/videos/opt/hero-video-1-poster.jpg",
+    "posterAvif": "assets/videos/opt/hero-video-1-poster.avif",
+    "width": 832,
+    "height": 464,
+    "seconds": 5.57,
+    "fps": 30,
+    "bytes": 123663
+  },
+  "hero-video-2.mp4": {
+    "source": "assets/videos/hero-video-2.mp4",
+    "video": "assets/videos/opt/hero-video-2.mp4",
+    "posterJpg": "assets/videos/opt/hero-video-2-poster.jpg",
+    "posterAvif": "assets/videos/opt/hero-video-2-poster.avif",
+    "width": 1024,
+    "height": 576,
+    "seconds": 7.51,
+    "fps": 29.97,
+    "bytes": 183834
+  },
+  "hero-video-3.mp4": {
+    "source": "assets/videos/hero-video-3.mp4",
+    "video": "assets/videos/opt/hero-video-3.mp4",
+    "posterJpg": "assets/videos/opt/hero-video-3-poster.jpg",
+    "posterAvif": "assets/videos/opt/hero-video-3-poster.avif",
+    "width": 1024,
+    "height": 576,
+    "seconds": 5.47,
+    "fps": 30,
+    "bytes": 504662
+  }
+}
